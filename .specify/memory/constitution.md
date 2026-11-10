@@ -1,13 +1,3 @@
-<!--
-Sync Impact Report
-Version: unratified template -> 1.0.0 (initial adoption)
-Modified principles: template placeholders replaced by I–VI below.
-Added sections: Scope and Interpretation; Development and Review.
-Removed sections: none.
-Dependent templates: reviewed; unchanged. Constitution governs generic optional-test wording.
-Follow-up TODOs: none.
-Remove this temporary report before committing.
--->
 # terraforming-mars-setup Constitution
 
 ## Core Principles

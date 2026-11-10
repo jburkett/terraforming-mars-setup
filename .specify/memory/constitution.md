@@ -1,70 +1,50 @@
-# terraforming-mars-setup Constitution
+# [PROJECT_NAME] Constitution
+<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
 
 ## Core Principles
 
-### I. Simplicity
+### [PRINCIPLE_1_NAME]
+<!-- Example: I. Library-First -->
+[PRINCIPLE_1_DESCRIPTION]
+<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
 
-Solutions MUST use the simplest approach that meets approved requirements. Added abstractions,
-dependencies, or infrastructure MUST have a documented technical need; speculative needs do not
-justify complexity.
+### [PRINCIPLE_2_NAME]
+<!-- Example: II. CLI Interface -->
+[PRINCIPLE_2_DESCRIPTION]
+<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
 
-### II. Separation of Concerns
+### [PRINCIPLE_3_NAME]
+<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
+[PRINCIPLE_3_DESCRIPTION]
+<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
 
-Domain logic MUST remain independent of presentation and infrastructure. Architecture MUST be
-proportionate to the project's size and needs; separation MUST NOT require unnecessary layers or
-services.
+### [PRINCIPLE_4_NAME]
+<!-- Example: IV. Integration Testing -->
+[PRINCIPLE_4_DESCRIPTION]
+<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
 
-### III. Test-Driven Development
+### [PRINCIPLE_5_NAME]
+<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
+[PRINCIPLE_5_DESCRIPTION]
+<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
 
-Behavioral tests MUST be derived from human-approved requirements and written before the
-corresponding implementation. Tests MUST demonstrate failure for the missing behavior before
-implementation and pass afterward. Tests MUST favor observable behavior over implementation
-details so refactoring does not invalidate correct behavior.
+## [SECTION_2_NAME]
+<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
 
-### IV. Code Quality
+[SECTION_2_CONTENT]
+<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
 
-Code MUST be readable, maintainable, and strongly typed. Automated formatting, linting, type
-checking, and relevant behavioral tests MUST verify changes and pass before merge. Review MUST
-address clarity and maintainability beyond what automated checks can establish.
+## [SECTION_3_NAME]
+<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
 
-### V. Human Authority
-
-AI MAY identify ambiguities and propose changes. Substantive requirements and architectural
-decisions MUST receive explicit human approval before implementation; AI MUST NOT treat its own
-assumptions or proposals as approval. Approval MUST be recorded in the relevant specification,
-plan, or review discussion.
-
-### VI. Idiomatic Implementation
-
-Implementation MUST follow established conventions of the chosen language and framework.
-Patterns imported from other ecosystems MUST have a documented technical justification for
-this project.
-
-## Scope and Interpretation
-
-This constitution governs project decisions and development practices. Application requirements
-MUST be defined in approved specifications; technical designs MUST be defined in approved plans.
-Neither may be inferred from template examples or from this constitution. Tool and workflow
-choices MUST comply with these principles without requiring a particular AI agent or experimental
-testing workflow.
-
-## Development and Review
-
-Before implementation, review MUST confirm approved requirements, approval of substantive
-architectural decisions, and behavioral tests covering the intended change. Before merge, review
-MUST confirm compliance with all six principles and successful automated verification. Any
-noncompliance MUST be resolved or addressed through a human-approved constitutional amendment.
+[SECTION_3_CONTENT]
+<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
 
 ## Governance
+<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-This constitution takes precedence over conflicting project guidance and template defaults,
-including any wording that makes required behavioral tests optional. Specifications, plans, tasks,
-and reviews MUST apply its rules.
+[GOVERNANCE_RULES]
+<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
 
-Amendments MUST document the proposed change, rationale, and any effect on existing work, receive
-explicit human approval, and update affected guidance. Versions MUST follow semantic versioning:
-MAJOR for incompatible principle or governance changes, MINOR for additions or material expansions,
-and PATCH for clarifications that do not change obligations. Each amendment MUST update the
-version and last-amended date while preserving the original ratification date.
-
-**Version**: 1.0.0 | **Ratified**: 2026-11-10 | **Last Amended**: 2026-11-10
+**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
+<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->

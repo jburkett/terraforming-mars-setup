@@ -2,7 +2,7 @@
 
 **Feature branch:** `001-guided-game-setup`  
 **Created / consolidated:** 2026-11-10  
-**Status:** **Draft for human review — not approved.** R1–R3 and proposed defaults below require review before approval. No planning, application code, executable tests, commits or PRs are authorized.
+**Status:** **Draft for human review — not approved.** R1 is resolved by an explicit product decision; R2–R3 and proposed defaults below require review before approval. Documentation commits and draft PR #4 are authorized; planning, application code and executable tests are not.
 
 ## Purpose and scope
 
@@ -16,7 +16,7 @@ Automate **only** the board, colony tiles, replacement milestones/awards, and fi
 
 Excluded from v1: solo/Automa, later content, fan expansions/colonies, gameplay or turn-order walkthroughs, recovery after refresh/reopening, completion checkboxes, manual step-progress tracking, and expansion-specific corporation-dealing quotas. No accounts, exports, sharing features or additional product capabilities are introduced by this document.
 
-The setup-rule and component inventory is [rules-reference.md](rules-reference.md). Its SU-01–SU-12 sequence is normative instruction coverage, subject to the explicitly unresolved R1–R3 cases. It contains sources, component families, all board objective sets, all 11 official colonies, and the 70 replacement objective names. Historical discovery notes under `work/` are superseded by these two consolidated documents.
+The setup-rule and component inventory is [rules-reference.md](rules-reference.md). Its SU-01–SU-12 sequence is normative instruction coverage, subject to the R1 product decision and explicitly unresolved R2–R3 cases. It contains sources, component families, all board objective sets, all 11 official colonies, and the 70 replacement objective names. Historical discovery notes under `work/` are superseded by these two consolidated documents.
 
 ## Clarifications and decision status
 
@@ -24,12 +24,12 @@ The setup-rule and component inventory is [rules-reference.md](rules-reference.m
 
 - Q: What content is supported? → A: All non-solo content through the 2023 campaign, including all seven boards; later releases excluded.
 - Q: How is configuration organized? → A: Expansions/player count on page 1, variants on page 2, setup on page 3. Each configuration page has select-all/none at its top, scoped to that page. All applicable options initially on.
-- Q: How do dependencies work? → A: Whole-expansion prerequisites enable required expansions; components filter against enabled content. Prelude 2 enables/keeps Prelude on. Unavailable variants are inactive with an explanation and Back navigation to expansions.
+- Q: How do dependencies work? → A: Whole-expansion prerequisites enable required expansions; components filter against enabled content except fixed printed objectives under R1. Prelude 2 enables/keeps Prelude on. Unavailable variants are inactive with an explanation and Back navigation to expansions.
 - Q: How are boards configured? → A: Expanded boards reveals all seven initially checked. Excluding Tharsis is allowed. Empty pool disables expanded boards; while off, only Tharsis is checked and every board checkbox is inactive; use Tharsis.
 - Q: What is automated? → A: Boards, colonies, milestones/awards and first player as a number. Card decks, including Turmoil, are walkthrough-only.
 - Q: When are results created? → A: On first entry to setup page 3; retain on revisits and regenerate only missing/invalidated results.
 - Q: How are results customized? → A: Customize reveals drop-down choices and a bottom reroll control. Milestones/awards use two-column tables without gridlines, selection then lock. Manual choices lock. Each row excludes values selected in every other row of its table. Update immediately; no sorting. Reroll preserves locks and changes only unlocked choices.
-- Q: Which objective versions apply? → A: Milestones & Awards on uses expansion versions; off uses board-printed versions. Automatically filter dependency-sensitive components, without fine-grained eligibility controls.
+- Q: Which objective versions apply? → A: Milestones & Awards on uses expansion versions and dependency filtering; off retains the complete printed milestone and award sets. Under resolved R1, maps remain available even if a printed objective is unattainable because an expansion is disabled. Identify each such objective and name the disabled expansion; never remove/replace it, enable the missing expansion or prohibit the map. This applies to all seven maps, including Utopia Planitia, Terra Cimmeria and Amazonis Planitia. This is an intentional product decision, not an official game rule.
 - Q: Which dealing rules apply? → A: Any two corporations / four Preludes normally; any three/six with Extended Start. No expansion-source quotas. Extended Start remains available without Prelude and then changes only the corporation deal. All dealing stays physical.
 - Q: Which variants are included? → A: Extended Start, research drafting, WGT. WGT is assumed enabled with Venus and is distinct from Turmoil TR revision. Possible v2 turn guidance is not v1 scope.
 - Q: What happens on edits? → A: **Tentative v1:** confirm before clearing affected results/locks; retain unrelated state. Reconsider for v2.
@@ -68,7 +68,7 @@ As a player, I receive a usable random configuration automatically and can repla
 | AC-07 | First entry to page 3 creates exactly one board and one integer first-player result in 1…N. Only enabled public selections appear. Leave and return without configuration changes: every result and lock is unchanged. |
 | AC-08 | Colonies on with 2/3/4/5 players produces respectively 5/5/6/7 distinct choices from the 11 named official tiles. Colonies off produces no colony selection. Inactive-at-start Titan/Enceladus/Miranda are still in the candidate pool. |
 | AC-09 | MA on, Venus off: exactly five distinct milestone tiles and five distinct award tiles from MA's respective eligible pools. MA on, Venus on: those five-plus-five selections plus fixed Hoverlord and Venuphile, for six of each total. Fixed Venus additions are not rerolled as MA tiles. |
-| AC-10 | MA off, Elysium chosen: display its printed five-plus-five set; do not randomize from MA or provide replacement choices from that pool. Display Tycoon as 15 played blue/green projects, not MA Tycoon 10. R1 blocks cases with unavailable printed entries. |
+| AC-10 | MA off, Elysium chosen: display its printed five-plus-five set; do not randomize from MA or provide replacement choices from that pool. Display Tycoon as 15 played blue/green projects, not MA Tycoon 10. Unavailable printed entries follow AC-31–35; they do not block the map. |
 | AC-11 | MA on, Turmoil off: Lobbyist and Politician cannot be selected. Colonies off: Pioneer cannot be selected. Venus off: Planetologist cannot be selected. Hellas or Utopia: Geologist cannot be selected. Constructor remains eligible without Colonies because cities count. |
 | AC-12 | MA on: Builder uses 7 building tags, Tycoon 10 played blue/green projects, Merchant 2 of each resource. MA off: Tharsis Builder uses 8; Elysium Tycoon 15; Amazonis Merchant 3 of each. No cross-version substitution. |
 | AC-13 | Choose an eligible manual milestone in row 3: it locks; its value immediately disappears from every other milestone row's options, above and below. Award options are unaffected. Its former value becomes available again where otherwise eligible. No row sorting occurs. |
@@ -102,21 +102,33 @@ As a player, I can revise setup while keeping unrelated selections, or deliberat
 
 | Acceptance | Concrete condition and expected behavior |
 | --- | --- |
-| AC-26 | Remove Colonies while colony results and an unrelated eligible milestone are locked: confirmation precedes loss; confirmation clears colonies and any objective requiring Colonies, but preserves the unrelated eligible milestone and lock. Cancellation preserves the entire previous configuration/results. |
+| AC-26 | With MA on, remove Colonies while colony results, Pioneer and an unrelated eligible milestone are locked: confirmation precedes loss; confirmation clears colonies and the ineligible MA Pioneer selection/lock, but preserves the unrelated milestone and lock. Cancellation preserves the entire previous configuration/results. With MA off, retain all printed objectives and update their limitation notices instead (AC-34). |
 | AC-27 | Change N from 4 to 5: after confirmation clear the first-player result and six-colony selection; next setup entry creates a valid first-player number and seven colonies, preserving the selected board and unrelated eligible objectives/locks. |
 | AC-28 | Change board Hellas→Elysium with MA off: confirm before replacing the printed objective sets; retain unrelated colony and first-player results. With MA on, keep still-eligible selected objectives/locks; board-dependent eligibility must be re-evaluated. |
 | AC-29 | Turn Extended Start off: revise physical deal instructions but preserve the board, first-player result, colonies and eligible objective choices; no card identities have been stored or digitally redealt. |
 | AC-30 | Confirm Reset: clear generated choices and locks, restore all content/all seven boards/applicable variants on, WGT on with Venus. Next setup entry generates fresh choices. Cancel Reset: nothing changes. D1 specifies proposed player-count reset behavior. |
 
+### Printed-objective retention — resolved R1 acceptance conditions
+
+These conditions record an intentional product decision, not an official game rule. Existing Venus additions and the printed-Tharsis Turmoil overlay still apply.
+
+| Acceptance | Concrete condition and expected behavior |
+| --- | --- |
+| AC-31 | MA off, Utopia Planitia selected, Colonies off: show all five printed milestones and all five printed awards, including Pioneer. Mark Pioneer unattainable and name disabled Colonies as the cause. Utopia remains available for manual and random board selection; Colonies stays off and no replacement is supplied. |
+| AC-32 | MA off, Terra Cimmeria selected, Venus off: show all five printed milestones and all five printed awards, including Planetologist. Mark Planetologist unattainable and name disabled Venus Next as the cause. Cimmeria remains available for manual and random board selection; Venus stays off and no replacement is supplied. |
+| AC-33 | MA off, Amazonis Planitia selected, Turmoil off: show all five printed milestones and all five printed awards, including Lobbyist. Mark Lobbyist unattainable and name disabled Turmoil as the cause. Amazonis remains available for manual and random board selection; Turmoil stays off and no replacement is supplied. |
+| AC-34 | MA off, Utopia selected with Colonies on: disable Colonies and confirm the loss of colony results. The board and its complete printed objective sets remain unchanged; Pioneer gains the Colonies limitation notice. Re-enable Colonies: the notice disappears without changing the board or printed objective identities. |
+| AC-35 | For any supported map with MA off, each displayed printed objective that is unattainable because an expansion is disabled has a notice naming that objective and every disabled expansion causing the limitation. The summary identifies the same limitations. Retain the complete printed sets; do not substitute objectives, enable expansions or exclude the map. With MA on instead, apply the eligible replacement pools in AC-11, not this printed-set exception. |
+
 ### Edge cases
 
-- All objective rows locked: reroll is a no-op; locks never authorize duplicate or ineligible results.
+- All objective rows locked: reroll is a no-op; locks never authorize duplicate or ineligible replacement results. Unattainable printed objectives are retained under R1, not treated as invalid replacement selections.
 - One board candidate: select that board; do not invent an alternative to guarantee a changed reroll.
-- Component dependencies require all prerequisites, not merely one of them. Optional interactions explicitly ignored by rules are not prerequisites.
+- Component dependencies require all prerequisites, not merely one of them. Optional interactions explicitly ignored by rules are not prerequisites. Missing prerequisites never filter fixed printed objectives or their maps under R1; explain their limitations instead.
 - No eligible set large enough: do not output duplicates or fabricate components; proposed D6 describes the visible fallback.
 - Invalidated locked entries are affected state and need confirmation before clearing; unaffected locks survive.
 - Refresh/reopening has no recovery promise in v1. Live-session Back navigation is distinct from recovery.
-- R1–R3 are explicit review issues, not hidden defaults.
+- R1 is an explicit resolved product decision; R2–R3 remain review issues, not hidden defaults.
 
 ## Requirements *(mandatory)*
 
@@ -128,17 +140,17 @@ Existing identifiers are retained so earlier decisions remain traceable. Each re
 | --- | --- | --- |
 | FR-001 | Support the content boundary, seven boards and 2–5-player multiplayer scope above; exclude solo/later/fan content. Inventory is in the rules reference; R3 bounds remaining historical uncertainty. | AC-01,07–12; R3 |
 | FR-002 | Display every applicable SU-01–SU-12 setup instruction, including private components and physical card exceptions; omit inapplicable expansion instructions. | AC-16–24 |
-| FR-003 | Automate only board, colony/objective sets and first-player number; randomize by default and permit eligible manual overrides. | AC-07–15 |
+| FR-003 | Automate only board, colony/objective sets and first-player number; randomize by default and permit eligible manual overrides. | AC-07–15,31–35 |
 | FR-004 | Show all instructions in order without completion checkboxes/manual progress. All-visible presentation is tentative pending visual review. | AC-16 |
-| FR-005 | Show a configuration summary consistent with the active choices and objective source versions, including first player. | AC-25 |
+| FR-005 | Show a configuration summary consistent with the active choices and objective source versions, including first player and printed-objective limitation notices. | AC-25,35 |
 | FR-006 | Trace rules-derived behavior to source/section and SU ID; identify user overrides and proposals separately. | Source register, AC-17–24 |
 | FR-007 | Provide expansions/player-count page, variants page, then setup page. | AC-01–07 |
 | FR-008 | Derive instruction applicability, quantities and eligibility from the selected configuration. | AC-08–12,16–24 |
 | FR-009 | Show Use expanded boards with all seven initially checked sub-options including Original board (Tharsis). | AC-01,06 |
-| FR-010 | Exclude unchecked boards; empty/disabled pool uses checked/inactive Tharsis; no map-pack selectors. | AC-02,06,15 |
+| FR-010 | Exclude unchecked boards; empty/disabled pool uses checked/inactive Tharsis; no map-pack selectors. Never exclude a map for unattainable printed objectives. | AC-02,06,15,31–35 |
 | FR-011 | Prelude 2 enables/keeps Prelude on with a visible explanation; select-none turns both off together. Component filtering does not enable expansions. | AC-02,04,11 |
-| FR-012 | MA on uses five replacement tiles of each type; off uses printed board sets. Apply verified Venus additions and printed-Tharsis Turmoil overlay; keep distinct versions separate. R1 remains unresolved. | AC-09–12,24; R1 |
-| FR-013 | Automatically filter genuine component prerequisites without eligibility controls; guide physical filtering for card decks. | AC-11,19–23 |
+| FR-012 | MA on uses five eligible replacement tiles of each type; off retains each complete printed set, including unattainable objectives. Identify every unattainable printed objective and the disabled expansion(s) causing its limitation in setup and summary; never replace/remove it or enable missing expansions. This is the R1 product decision, not an official rule. Apply verified Venus additions and printed-Tharsis Turmoil overlay; keep distinct versions separate. | AC-09–12,24,31–35 |
+| FR-013 | Automatically filter genuine component prerequisites without eligibility controls; guide physical filtering for card decks. R1 exempts fixed printed objectives and map availability from this filtering; MA replacement pools remain filtered. | AC-11,19–23,31–35 |
 | FR-014 | Default supported content and available variants on; support base-game teaching through page-local select-none. | AC-01–05 |
 | FR-015 | Put select-all/none controls at the top of each configuration page; affect its toggle options only. Proposed D2 leaves N unchanged. | AC-02–05 |
 | FR-016 | Generate public results on first setup entry, retain on revisits, and regenerate only missing/cleared results after edits; Customize reveals alternatives/reroll. | AC-07,13–15,26–30 |
@@ -161,9 +173,9 @@ Existing identifiers are retained so earlier decisions remain traceable. Each re
 | --- | --- | --- |
 | N | First-player number; required colony set size/choices; player-specific physical quantities | Board; eligible objective sets/locks |
 | Expanded-board option/candidate pool or chosen board | Board result if excluded; printed objectives; board-dependent eligibility and map/supply instructions | First player, colonies, still-eligible MA choices/locks |
-| Colonies | Colony results; colony-dependent objectives; fleet/deck/marker instructions | Unrelated board, first player and eligible objectives |
-| Venus | Venus instructions, fixed objective pair, WGT availability, Venus-dependent components | Unrelated board/colonies/objectives |
-| Turmoil | Physical event/delegate instructions, printed Terraformer overlay, delegate-dependent components | Unrelated random results |
+| Colonies | Colony results; colony-dependent MA selections/locks; printed-objective limitation notices; fleet/deck/marker instructions | Board, complete printed sets, first player and unrelated eligible objectives |
+| Venus | Venus instructions, fixed objective pair, WGT availability, Venus-dependent components; printed-objective limitation notices | Board, complete printed sets, unrelated colonies and eligible MA objectives |
+| Turmoil | Physical event/delegate instructions, printed Terraformer overlay, delegate-dependent MA components; printed-objective limitation notices | Board and printed identities (subject to Terraformer overlay), unrelated random results |
 | MA | Printed/replacement objective source and selection state | Board, first player, colonies |
 | CE | Marked-card/production instructions and source-dependent thresholds (e.g. Generalist); selections only if their identity/eligibility actually changes | Board, first player, colonies, eligible objective identities |
 | Prelude / Prelude2 / Extended Start | Physical deck/deal/discard instructions and dependent card eligibility; dependency enforcement still applies | Unrelated public random results |
@@ -183,12 +195,12 @@ Clearing is dependency-based, not a global restart. No physical action is claime
 ### Measurable outcomes for requirements acceptance
 
 - **SC-001:** For every supported configuration, all applicable SU-01–SU-12 rows appear and every displayed instruction has a cited rules source or recorded human override. No solo-only row appears.
-- **SC-002:** Every generated/manual public selection meets the exact counts and membership conditions in AC-07–15; there are zero duplicates within each colony/objective set and zero missing prerequisite violations.
+- **SC-002:** Every generated/manual public selection meets the exact counts and membership conditions in AC-07–15; there are zero duplicates within each colony/objective set and zero prerequisite violations in replacement selection pools. Fixed printed sets instead meet AC-31–35: retain every objective and identify all disabled-expansion limitations without excluding maps.
 - **SC-003:** Reroll changes zero locked selections; unchanged setup-page revisits change zero generated selections/locks.
 - **SC-004:** Every accepted configuration edit clears only dependency-affected state; every cancelled edit/Reset changes zero prior values. Reset restores the specified defaults.
 - **SC-005:** Summary fields match the current configuration/results exactly; there are zero digital standard-card draws and zero private-card entry requirements.
 
-These are correctness/completeness outcomes, not implementation tests or claimed measured results. No unsupported setup-time reduction, satisfaction percentage or performance target is invented. Full completeness cannot be accepted until R1–R3 are resolved.
+These are correctness/completeness outcomes, not implementation tests or claimed measured results. No unsupported setup-time reduction, satisfaction percentage or performance target is invented. Full completeness cannot be accepted until R2–R3 are resolved and proposed defaults are accepted.
 
 ## Assumptions, proposed defaults and remaining review issues
 
@@ -210,10 +222,13 @@ The constitution is existing **v1.0.0**, with Simplicity, Separation of Concerns
 
 These proposals are not blanket authorization to infer new behavior. Existing tentative decisions are the all-visible instruction layout (review for busyness) and selective invalidation (v1, revisit in v2). No rendered UI or implementation is being produced now.
 
+### Resolved product decision
+
+**R1 — retain printed objectives:** explicitly resolved by the user. With MA off, retain complete printed milestone/award sets on every map, even when disabled expansions make objectives unattainable. Identify each limitation and its missing expansion(s). No removal, replacement, automatic expansion enabling or map prohibition. This intentional product decision overrides generic component filtering for fixed printed sets; it is not attributed to official rules. See AC-31–35 and the rules reference.
+
 ### Material issues requiring human resolution
 
-- **R1:** Missing-expansion printed objectives: filtering versus preserving the board's fixed set lacks a defined resolution. The rules reference gives the concrete Utopia/Cimmeria/Amazonis cases. Do not invent replacement tiles or force expansions. Related acceptance coverage remains blocked.
 - **R2:** The physical optional longer Venus board is in inventory, but no default/selector behavior was approved and its complete use conditions are not established by the reviewed sheet. Proposed standard-board treatment is in the rules reference; it needs review before declaring all-content coverage complete.
 - **R3:** The 2023 seasonal promo boundary needs card-level historical confirmation or a human interpretation of the campaign cutoff. Other core/campaign component families and all digital pools are enumerated. The remaining uncertainty does not justify silently including later releases.
 
-**Readiness:** coherent for human review, with concrete acceptance conditions for the settled behavior. **Not yet ready for unconditional approval or technical planning** until R1–R3 and D1–D7 are accepted/resolved and the corresponding evidence/acceptance entries updated. No commit or PR has been created.
+**Readiness:** coherent for human review, with concrete acceptance conditions for the settled behavior. **Not yet ready for unconditional approval or technical planning** until R2–R3 and D1–D7 are accepted/resolved and the corresponding evidence/acceptance entries updated. Documentation is published for review in draft PR #4; full requirements approval remains outstanding.

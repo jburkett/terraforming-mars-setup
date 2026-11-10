@@ -45,7 +45,7 @@ Counts are the cited editions' package counts, not instructions to put every car
 
 ### Board objective inventory
 
-Every row has exactly five printed milestones and five printed awards. These are separate versions from MA tiles even when names match.
+Every row has exactly five printed milestones and five printed awards. These are separate versions from MA tiles even when names match. Under the resolved R1 product decision below, retain each complete printed set when MA is off, including unattainable entries; this retention policy is not an official game rule.
 
 | Board | Milestones | Awards | Source |
 | --- | --- | --- | --- |
@@ -97,7 +97,7 @@ This is an ordered **physical setup sequence**, not an implementation plan. IDs 
 | SU-02 | Prepare board, supplies, player colors/boards and tracks: generation 1, oxygen 0%, temperature −30°C, initial TR 20. Use nine oceans normally, eleven on Amazonis; prepare its extra supplies and printed project tile. | B, AV. Apply corporation effects later, not now. |
 | SU-03 | Place Turmoil boards; each player puts one of seven delegates in Lobby and six in reserve; neutral chairman and remaining neutrals in reserve. Physically prepare the eligible event deck (including dependency-filtered promos), shuffle, reveal Coming and Distant, place neutral delegates/dominance as indicated; same-party second delegate goes into delegate area. Current event stays empty; Greens policy starts on top. | T explicitly inserts this after base supplies (base setup step 2), before opening cards. No digital event draws or policy randomization. |
 | SU-04 | Prepare Venus board at 0 and the enabled expansion components. Select colony tiles; place fleets and active/inactive colony markers. | V, C; before effects can interact with these components. Map-specific optional interactions are explained, not used to force expansions on. |
-| SU-05 | Establish milestones/awards from the selected source. When MA is on choose five distinct of each; otherwise use printed sets. Add Hoverlord and Venuphile with Venus. Apply Turmoil's TR 26 replacement only to the original Tharsis Terraformer, not MA's TR 29 tile. | MA explicitly requires selection before any player cards are dealt. Cross-source rule precedence is derived: MA replaces printed objectives, Venus expressly remains additive, T's tile addresses the printed Tharsis objective. R1 covers unavailable printed entries. |
+| SU-05 | Establish milestones/awards from the selected source. When MA is on choose five distinct of each; otherwise use printed sets. Add Hoverlord and Venuphile with Venus. Apply Turmoil's TR 26 replacement only to the original Tharsis Terraformer, not MA's TR 29 tile. | MA explicitly requires selection before any player cards are dealt. Cross-source rule precedence is derived: MA replaces printed objectives, Venus expressly remains additive, T's tile addresses the printed Tharsis objective. Resolved R1 requires retaining unavailable printed entries and explaining their disabled-expansion limitations; this is a product decision, not an official rule. |
 | SU-06 | Physically form and shuffle eligible project/corporation decks, with space for facedown discards. Include/exclude CE-marked cards appropriately; combine enabled eligible expansion/promos, removing duplicate originals when replacements are used. Prepare a separate eligible Prelude deck when enabled. | B/P/P2/V/C/T/QB/QT/Q2. P2 permits filtering beforehand or discard-and-redraw; the draft proposes prefiltering guidance (D4). |
 | SU-07 | Explain initial production: 1 in each resource without CE; 0 with CE, before corporation effects. Identify the ordinary-corporation and Beginner Corporation branches. | B. Beginner Corporation gives 42 M€ and ten free starting projects; do not apply the ordinary initial-project purchase rule to that branch. No new beginner selector is introduced. |
 | SU-08 | Guide physical dealing: ten projects per ordinary player; two corporations normally or three with Extended Start. With Prelude deal four/six Preludes respectively and keep two at no purchase cost. With no Prelude, no Prelude deal. Beginners follow their printed corporation instructions instead of ordinary corporation choice. | B/P/P2 plus explicit user override eliminating expansion-source quotas. Drafting does not add an initial-hand draft. |
@@ -117,9 +117,21 @@ The full list is visible on setup page 3; it is not a wizard or a checklist. Gen
 - **Gameplay distinction:** WGT depends on Venus and can be omitted for a longer game. Turmoil TR revision is separate and is not disabled by turning WGT off (V/T).
 - **Card exceptions:** eligible decks are physically prepared; printed corporation/Prelude effects may modify setup. A reminder to resolve those effects is in scope; enumerating/executing every card's effect in the app is not.
 
-## Remaining evidence conflicts for human review
+## Resolved product decision R1 — fixed printed objectives
 
-**R1 — printed objectives versus filtering:** printed Utopia Pioneer needs colonies; Cimmeria Planetologist needs Venus tags; Amazonis Lobbyist needs delegates. When those expansions are absent, “use the printed set” and “filter expansion-dependent components” do not define whether to leave an unattainable printed entry or reduce/replace it. The reviewed map sheets do not prescribe a universal replacement pool. Do not silently draw MA tiles while MA is off, force an expansion, or exclude an otherwise allowed board. Representative acceptance cases remain blocked pending a human resolution.
+**Source of policy: explicit human product decision, not an official game rule.** The reviewed map sheets do not prescribe a universal replacement pool for unavailable printed objectives. With MA disabled, the assistant retains the board's complete printed milestone and award sets. Maps remain available for manual selection and randomization even when a disabled expansion makes a printed objective unattainable. Never remove or replace the objective, enable the missing expansion or prohibit the map for this reason.
+
+Identify every such objective in setup and summary, mark it unattainable, and name each disabled expansion causing the limitation. Apply this consistently to all seven maps, not only the known cases below. An optional interaction with a valid non-expansion route does not by itself make an objective unattainable. Enabling the missing expansion removes the corresponding notice without changing printed identities. Existing Venus additions and the Tharsis Turmoil overlay remain in effect.
+
+| Verified printed objective dependency | Disabled-expansion limitation shown under the product decision | Acceptance |
+| --- | --- | --- |
+| Utopia Planitia: Pioneer requires colonies (UC) | Colonies off: Pioneer unattainable; requires Colonies. | AC-31,34 |
+| Terra Cimmeria: Planetologist requires Venus tags (UC) | Venus Next off: Planetologist unattainable; requires Venus Next. | AC-32 |
+| Amazonis Planitia: Lobbyist requires delegates (AV) | Turmoil off: Lobbyist unattainable; requires Turmoil. | AC-33 |
+
+The dependency facts come from UC/AV; preserving and labeling the objectives is the product decision. This exception does not apply to MA's replacement pools or physically prepared card decks: their prerequisite filtering remains unchanged. AC-35 covers the universal retention/notice policy and its summary behavior.
+
+## Remaining evidence conflicts for human review
 
 **R2 — optional longer Venus board:** AV explicitly includes this physical option, but the reviewed sheet does not establish a default or a complete usage rule. The selected variant catalog has no extended-Venus setting. Proposed review assumption: standard Venus board in v1; note the physical optional board but do not silently add a selector or auto-select it with Amazonis. Human acceptance of this default is required; no content has been silently removed.
 

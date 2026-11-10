@@ -4,7 +4,7 @@
 **Reviewed:** 2026-11-10  
 **Feature:** [spec.md](../spec.md)  
 **Evidence:** [rules-reference.md](../rules-reference.md)  
-**Result:** **15/18 passing**, up from 12/18 after resolving R3. Ready for human review; not yet ready for unconditional approval or planning. This is a document review, not executed application testing.
+**Result:** **16/18 passing**, after defaults approval and the final WGT scope exclusion. Ready for explicit human approval review; not approved and no later phase authorized. This is a document review, not executed application testing.
 
 ## Content Quality
 
@@ -16,7 +16,7 @@
 ## Requirement Completeness
 
 - [x] No clarification markers remain
-- [ ] Requirements are fully testable and unambiguous
+- [x] Requirements are fully testable and unambiguous
 - [x] Success criteria are measurable
 - [x] Success criteria are technology-agnostic
 - [x] All acceptance scenarios are defined
@@ -33,23 +33,26 @@
 - [x] Existing ratified constitution reviewed and draft aligned
 - [ ] Requirements explicitly approved by user
 
-## Changes in this review
+## Final requirements-quality review
 
-R1–R3 are resolved by explicit human decisions. R1 is covered by AC-31–35; R2 by AC-18/36–37. R3 excludes individual card inventories, promo-card identification and card-level release-date tracking. Expansion-based physical deck guidance remains, without app identification, cataloging, filtering or validation of individual cards (AC-17/38). The former promo inventory, historical card-eligibility research and card-level acceptance obligations are removed; D4 is retired.
+The user approved D1–D7 as documented: D1–D3 and D5–D7 are active approved decisions; D4 remains retired under R3. R1–R3 remain resolved. No individual-card research or optional-longer-board obligation is reopened.
 
-Newly passing: all acceptance scenarios defined, clearly bounded scope, and functional-requirement acceptance mapping. The packet now contains 38 concrete conditions and mappings for FR-001–FR-028. Proposed defaults have explicit behaviors and acceptance references; those references do not mean the user has accepted the proposals. SU-01–SU-12 remains the source-backed physical sequence, subject to the explicit scope decisions. No regressions.
+The final review identified a WGT state-restoration ambiguity (F1). The user resolved it by excluding WGT configuration, tracking and guidance from v1 as immaterial to setup. AC-39 covers the exclusion; FR-027/028 are retired rather than renumbered. The packet contains 26 active requirements, two retired identifiers and 39 concrete acceptance conditions. Existing mappings are updated for the remaining two variants.
 
-Obsolete requirements removed: single configuration page, completion checkboxes/manual step progress, sorting locked rows, directional duplicate filtering, expansion-source corporation quotas, automation of standard-card draws, the Big Box-era content cutoff, exhaustive promo-card inventories and card-level release-history certification. Confirmed decisions are not being reopened.
+Two editorial inconsistencies were corrected: AC-26 no longer assumes colony locks beyond approved D5, and SU-06 prepares P2 discard piles before SU-09 uses them, with SU-10 as a reminder. No new scope or product behavior was inferred. Reviewed expansion compatibility, printed/replacement objective boundaries, instruction ordering, configuration state changes, randomness/defaults, summary consistency and the limits of automation against the recorded decisions.
 
-## Why three items remain incomplete
+Newly passing: requirements are fully testable and unambiguous at this review's document level. No unresolved material contradiction or acceptance gap was identified after these corrections. The complete document is still a draft; this assessment is not a declaration of full approval or exhaustive correctness.
+
+## Why two items remain incomplete
 
 | Incomplete item | Exact reason / closure condition |
 | --- | --- |
-| Fully testable and unambiguous requirements | Settled behavior and the remaining proposals have concrete observable conditions, but D1–D3 and D5–D7 still require acceptance or amendment to establish the final behavior. D4 is retired by R3. No R1–R3 ambiguity remains. |
-| Measurable outcomes agreed | SC-001–SC-005 are measurable correctness outcomes, but the consolidated outcomes/defaults have not been explicitly accepted as the full specification. No arbitrary timing/adoption metric is required merely to fill a template. |
-| Requirements approved | No full-spec approval received. Tentative v1 selective clearing and all-visible instruction layout remain tentative. Resolve the remaining proposed defaults and explicitly approve the complete requirements before planning. |
+| Measurable outcomes agreed | SC-001–SC-005 are measurable correctness outcomes; the user approved the defaults, not these consolidated outcomes as part of the complete specification. Explicit acceptance is outstanding. No application testing is claimed or required during this requirements review. |
+| Requirements approved | No full-spec approval received. Explicit human approval must include the complete packet and the tentative v1 presentation/selective-clearing behavior before any later phase. |
 
-“No clarification markers remain” is a formatting fact, not a claim of full approval. R1–R3 are labeled resolved product decisions; the remaining proposed defaults and tentative behaviors remain visible for review.
+## Low-risk limits for human review
+
+The all-visible instruction presentation and selective clearing remain explicit tentative v1 choices, with later usability review and possible v2 revision. No rendered-layout validation is claimed. Story priorities are advisory review labels, not an approved implementation order. D5 leaves exact colony visual arrangement open while fixing observable count/uniqueness and customization behavior; no additional lock system is assumed. These limits do not introduce unresolved behavior that blocks approval in this document review.
 
 ## Evidence and limits
 

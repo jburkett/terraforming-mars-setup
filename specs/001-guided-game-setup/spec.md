@@ -2,21 +2,21 @@
 
 **Feature branch:** `001-guided-game-setup`  
 **Created / consolidated:** 2026-11-10  
-**Status:** **Draft for human review — not approved.** R1 and R2 are resolved by explicit product decisions; R3 and proposed defaults below require review before approval. Documentation commits and draft PR #4 are authorized; planning, application code and executable tests are not.
+**Status:** **Draft for human review — not approved.** R1–R3 are resolved by explicit product decisions; the remaining proposed defaults and complete specification still require human approval. Documentation commits and draft PR #4 are authorized; planning, application code and executable tests are not.
 
 ## Purpose and scope
 
 A browser-based assistant for preparing a physical, multiplayer Terraforming Mars game. Players configure content, receive randomized public selections, optionally customize them, and follow all applicable physical setup instructions. The primary cases are all-content games and base-game teaching.
 
-Support 2–5 players and non-solo content through the **2023 More Terraforming Mars! Kickstarter**, including that campaign's later-delivered components, with the deliberate v1 scope exception of the optional longer Venus board (R2). The standard Venus board remains supported. Seven boards are supported: Tharsis, Hellas, Elysium, Utopia Planitia, Terra Cimmeria, Amazonis Planitia and Vastitas Borealis. Corporate Era, Venus Next, Prelude, Prelude 2, Colonies, Turmoil and Milestones & Awards are selectable content. Map packs are represented by **Use expanded boards** and board sub-options, not separate Hellas & Elysium or other map-pack selectors.
+Support 2–5 players and non-solo content through the **2023 More Terraforming Mars! Kickstarter**, including that campaign's later-delivered components, with the deliberate v1 scope exception of the optional longer Venus board (R2). The standard Venus board remains supported. The campaign cutoff bounds supported expansions and setup components, not promotional-card membership or individual release dates (R3). Seven boards are supported: Tharsis, Hellas, Elysium, Utopia Planitia, Terra Cimmeria, Amazonis Planitia and Vastitas Borealis. Corporate Era, Venus Next, Prelude, Prelude 2, Colonies, Turmoil and Milestones & Awards are selectable content. Map packs are represented by **Use expanded boards** and board sub-options, not separate Hellas & Elysium or other map-pack selectors.
 
 The selected variants are **Extended Start**, **research drafting**, and **World Government Terraforming (WGT)**. All applicable options default on; WGT specifically defaults to its standard **enabled** behavior when Venus is used. Turning WGT off selects its longer-game omission variant.
 
-Automate **only** the board, colony tiles, replacement milestones/awards, and first-player number. Every standard card deck used during play stays physically shuffled and drawn, including publicly revealed Turmoil events. Display private-component setup instructions without digital dealing, private card entry or card-effect execution.
+Automate **only** the board, colony tiles, replacement milestones/awards, and first-player number. Every standard card deck used during play stays physically shuffled and drawn, including publicly revealed Turmoil events. Display private-component setup instructions without digital dealing, private card entry or card-effect execution. Guide physical deck preparation from selected expansions and printed rules; the assistant does not identify, catalog, filter or validate individual cards.
 
-Excluded from v1: the official optional longer Venus board, solo/Automa, later content, fan expansions/colonies, gameplay or turn-order walkthroughs, recovery after refresh/reopening, completion checkboxes, manual step-progress tracking, and expansion-specific corporation-dealing quotas. No accounts, exports, sharing features or additional product capabilities are introduced by this document.
+Excluded from v1: individual card inventories, promo-card identification, card-level release-date tracking, the official optional longer Venus board, solo/Automa, later content, fan expansions/colonies, gameplay or turn-order walkthroughs, recovery after refresh/reopening, completion checkboxes, manual step-progress tracking, and expansion-specific corporation-dealing quotas. No accounts, exports, sharing features or additional product capabilities are introduced by this document.
 
-The setup-rule and component inventory is [rules-reference.md](rules-reference.md). Its SU-01–SU-12 sequence is normative instruction coverage, subject to the R1 product decision, the R2 scope exception and explicitly unresolved R3 cases. It contains sources, component families, all board objective sets, all 11 official colonies, and the 70 replacement objective names. Historical discovery notes under `work/` are superseded by these two consolidated documents.
+The setup-rule and component inventory is [rules-reference.md](rules-reference.md). Its SU-01–SU-12 sequence is normative instruction coverage, subject to the explicit product decisions and scope exceptions R1–R3. It contains sources, component families, all board objective sets, all 11 official colonies, and the 70 replacement objective names. Historical discovery notes under `work/` are superseded by these two consolidated documents.
 
 ## Clarifications and decision status
 
@@ -24,13 +24,14 @@ The setup-rule and component inventory is [rules-reference.md](rules-reference.m
 
 - Q: What content is supported? → A: All non-solo content through the 2023 campaign, including all seven boards; later releases excluded.
 - Q: How is configuration organized? → A: Expansions/player count on page 1, variants on page 2, setup on page 3. Each configuration page has select-all/none at its top, scoped to that page. All applicable options initially on.
-- Q: How do dependencies work? → A: Whole-expansion prerequisites enable required expansions; components filter against enabled content except fixed printed objectives under R1. Prelude 2 enables/keeps Prelude on. Unavailable variants are inactive with an explanation and Back navigation to expansions.
+- Q: How do dependencies work? → A: Whole-expansion prerequisites enable required expansions; automated public-component pools filter against enabled content except fixed printed objectives under R1. Individual cards are outside app filtering under R3; physical deck preparation stays guided. Prelude 2 enables/keeps Prelude on. Unavailable variants are inactive with an explanation and Back navigation to expansions.
 - Q: How are boards configured? → A: Expanded boards reveals all seven initially checked. Excluding Tharsis is allowed. Empty pool disables expanded boards; while off, only Tharsis is checked and every board checkbox is inactive; use Tharsis.
 - Q: What is automated? → A: Boards, colonies, milestones/awards and first player as a number. Card decks, including Turmoil, are walkthrough-only.
 - Q: When are results created? → A: On first entry to setup page 3; retain on revisits and regenerate only missing/invalidated results.
 - Q: How are results customized? → A: Customize reveals drop-down choices and a bottom reroll control. Milestones/awards use two-column tables without gridlines, selection then lock. Manual choices lock. Each row excludes values selected in every other row of its table. Update immediately; no sorting. Reroll preserves locks and changes only unlocked choices.
 - Q: Which objective versions apply? → A: Milestones & Awards on uses expansion versions and dependency filtering; off retains the complete printed milestone and award sets. Under resolved R1, maps remain available even if a printed objective is unattainable because an expansion is disabled. Identify each such objective and name the disabled expansion; never remove/replace it, enable the missing expansion or prohibit the map. This applies to all seven maps, including Utopia Planitia, Terra Cimmeria and Amazonis Planitia. This is an intentional product decision, not an official game rule.
 - Q: Which dealing rules apply? → A: Any two corporations / four Preludes normally; any three/six with Extended Start. No expansion-source quotas. Extended Start remains available without Prelude and then changes only the corporation deal. All dealing stays physical.
+- Q: Does the assistant inventory or validate cards? → A: No. R3 excludes individual card inventories, promo-card identification and card-level release-date tracking. Guide players through physical deck preparation using selected expansions; players handle cards and printed dependency rules themselves. The campaign cutoff is a general expansion/setup-component boundary, not a promotional-card research obligation.
 - Q: Which Venus board is supported? → A: The standard Venus board only. The official optional longer board is deliberately excluded from v1: it adds no meaningful setup-assistant functionality and conflicts with the all-on-by-default configuration philosophy. This is an approved scope exception, not an assumption or a claim that the component is unofficial.
 - Q: Which variants are included? → A: Extended Start, research drafting, WGT. WGT is assumed enabled with Venus and is distinct from Turmoil TR revision. Possible v2 turn guidance is not v1 scope.
 - Q: What happens on edits? → A: **Tentative v1:** confirm before clearing affected results/locks; retain unrelated state. Reconsider for v2.
@@ -85,7 +86,7 @@ As a player, I see every applicable setup instruction in order, including physic
 | Acceptance | Concrete condition and expected behavior |
 | --- | --- |
 | AC-16 | Setup shows the applicable SU sequence as one ordered instruction list without completion checkboxes, hidden mandatory wizard steps, or private-card entry. Off expansions contribute no expansion-specific instruction. |
-| AC-17 | Tharsis, CE off: initial TR 20, generation 1, oxygen 0%, temperature −30°C, nine oceans and production 1 in every resource before corporation effects; CE-marked corporations/projects excluded. CE on changes production to 0 and includes marked cards. Ordinary corporations remain available in both. |
+| AC-17 | Tharsis, CE off: initial TR 20, generation 1, oxygen 0%, temperature −30°C, nine oceans and production 1 in every resource before corporation effects; instruct players to exclude CE-marked corporations/projects physically. CE on changes the production instruction to 0 and instructs players to include marked cards. Explain that ordinary corporations remain available in both; do not identify or validate any card. |
 | AC-18 | Amazonis chosen: instruct eleven oceans, extra city/greenery supply and its Standard Project tile/printed tracks; do not reuse the ordinary nine-ocean instruction. No-volcano-map placement notes and ignored delegate/colony bonuses follow the source-specific SU reminders. Use the standard Venus board when Venus is enabled; never substitute the optional longer board because Amazonis is selected (AC-36). |
 | AC-19 | Colonies: one fleet per player at the fleet tile. Ordinary selected tiles start at the highlighted second position; selected Titan/Enceladus/Miranda start on their pictures with the activation explanation. |
 | AC-20 | Turmoil: instructions show one lobby/six reserve delegates per player, neutral chairman, physical shuffle, Coming and Distant events, event-indicated neutral delegates/dominance, no Current event in generation 1, and Greens policy on top. There is no digitally selected event or random ruling party. |
@@ -128,6 +129,12 @@ These conditions record an intentional product decision, not an official game ru
 | AC-36 | Venus Next on, with any supported Mars map including Amazonis Planitia: instruct preparation of the standard Venus board at 0 and retain the applicable Venus setup instructions and WGT setting. Do not instruct use of the optional longer Venus board. |
 | AC-37 | In a new session, after select-all on either configuration page, and after confirmed Reset: the optional longer Venus board is never enabled, offered as a board/variant choice, randomized or reported as selected in the summary. The supported options retain their specified all-on defaults; the longer board's exclusion does not disable standard Venus support. |
 
+### Physical-deck boundary — resolved R3 acceptance condition
+
+| Acceptance | Concrete condition and expected behavior |
+| --- | --- |
+| AC-38 | With Prelude 2 and Turmoil enabled, setup instructs players to prepare and shuffle the physical project, corporation, Prelude and Global Event decks using the selected expansions and applicable printed rules, then perform the prescribed deals/reveals. No card name, image, inventory, promo identity or release date is requested or checked; no individual card is selected, filtered or validated by the assistant. Changing expansions updates the deck-preparation instructions without requiring a card inventory or release-history lookup. |
+
 ### Edge cases
 
 - All objective rows locked: reroll is a no-op; locks never authorize duplicate or ineligible replacement results. Unattainable printed objectives are retained under R1, not treated as invalid replacement selections.
@@ -136,7 +143,7 @@ These conditions record an intentional product decision, not an official game ru
 - No eligible set large enough: do not output duplicates or fabricate components; proposed D6 describes the visible fallback.
 - Invalidated locked entries are affected state and need confirmation before clearing; unaffected locks survive.
 - Refresh/reopening has no recovery promise in v1. Live-session Back navigation is distinct from recovery.
-- R1 and R2 are explicit resolved product decisions; R3 remains a review issue, not a hidden default.
+- R1–R3 are explicit resolved product decisions, not hidden defaults. Individual card eligibility and promo release history are not application validation cases.
 
 ## Requirements *(mandatory)*
 
@@ -146,8 +153,8 @@ Existing identifiers are retained so earlier decisions remain traceable. Each re
 
 | ID | Required behavior | Acceptance |
 | --- | --- | --- |
-| FR-001 | Support the content boundary, seven boards and 2–5-player multiplayer scope above; exclude the optional longer Venus board and solo/later/fan content. Inventory is in the rules reference; R3 bounds remaining historical uncertainty. | AC-01,07–12,36–37; R3 |
-| FR-002 | Display every applicable SU-01–SU-12 setup instruction, including private components and physical card exceptions; omit inapplicable expansion instructions and optional longer-Venus-board instructions. | AC-16–24,36 |
+| FR-001 | Support the content boundary, seven boards and 2–5-player multiplayer scope above; exclude the optional longer Venus board and solo/later/fan content. Inventory is in the rules reference; the campaign cutoff bounds expansions/setup components, not individual cards. Exclude card inventories, promo-card identification and card-level release-date tracking under R3. | AC-01,07–12,36–38 |
+| FR-002 | Display every applicable SU-01–SU-12 setup instruction, including private components and physical card exceptions; omit inapplicable expansion instructions and optional longer-Venus-board instructions. Deck guidance uses selected expansions without identifying or validating individual cards. | AC-16–24,36,38 |
 | FR-003 | Automate only board, colony/objective sets and first-player number; randomize by default and permit eligible manual overrides. | AC-07–15,31–35 |
 | FR-004 | Show all instructions in order without completion checkboxes/manual progress. All-visible presentation is tentative pending visual review. | AC-16 |
 | FR-005 | Show a configuration summary consistent with the active choices and objective source versions, including first player and printed-objective limitation notices. | AC-25,35 |
@@ -158,7 +165,7 @@ Existing identifiers are retained so earlier decisions remain traceable. Each re
 | FR-010 | Exclude unchecked boards; empty/disabled pool uses checked/inactive Tharsis; no map-pack selectors. Never exclude a map for unattainable printed objectives. | AC-02,06,15,31–35 |
 | FR-011 | Prelude 2 enables/keeps Prelude on with a visible explanation; select-none turns both off together. Component filtering does not enable expansions. | AC-02,04,11 |
 | FR-012 | MA on uses five eligible replacement tiles of each type; off retains each complete printed set, including unattainable objectives. Identify every unattainable printed objective and the disabled expansion(s) causing its limitation in setup and summary; never replace/remove it or enable missing expansions. This is the R1 product decision, not an official rule. Apply verified Venus additions and printed-Tharsis Turmoil overlay; keep distinct versions separate. | AC-09–12,24,31–35 |
-| FR-013 | Automatically filter genuine component prerequisites without eligibility controls; guide physical filtering for card decks. R1 exempts fixed printed objectives and map availability from this filtering; MA replacement pools remain filtered. | AC-11,19–23,31–35 |
+| FR-013 | Automatically filter prerequisites for automated public-component pools without eligibility controls. Guide players to prepare physical decks using selected expansions and printed rules; do not identify, catalog, filter or validate individual cards. R1 exempts fixed printed objectives and map availability from this filtering; MA replacement pools remain filtered. | AC-11,19–23,31–35,38 |
 | FR-014 | Default supported content and available variants on; the excluded longer Venus board is not an option and is never enabled by defaults, select-all or Reset. Support base-game teaching through page-local select-none. | AC-01–05,36–37 |
 | FR-015 | Put select-all/none controls at the top of each configuration page; affect its toggle options only. Proposed D2 leaves N unchanged. | AC-02–05 |
 | FR-016 | Generate public results on first setup entry, retain on revisits, and regenerate only missing/cleared results after edits; Customize reveals alternatives/reroll. | AC-07,13–15,26–30 |
@@ -170,7 +177,7 @@ Existing identifiers are retained so earlier decisions remain traceable. Each re
 | FR-022 | **Tentative v1:** confirm before clearing state affected by any configuration edit, preserve unaffected state; cancellation changes nothing. Dependency map below defines affected state. | AC-26–29 |
 | FR-023 | Confirm Reset before clearing all results/locks and restoring all-on configuration. | AC-30 |
 | FR-024 | Randomize numerical first player in 1…N; no names/profiles required. | AC-07,15,27 |
-| FR-025 | Never digitally shuffle/draw standard in-play card decks; Turmoil is walkthrough-only. | AC-20–23 |
+| FR-025 | Never digitally shuffle/draw standard in-play card decks or identify, catalog, filter or validate individual cards; Turmoil is walkthrough-only. | AC-20–23,38 |
 | FR-026 | Include research drafting, default on; record it without changing initial setup dealing or adding v1 gameplay guidance. | AC-03,21,25 |
 | FR-027 | WGT setting default on with Venus; off means the official omission variant, inactive without Venus. | AC-01,03,05,25 |
 | FR-028 | WGT and Turmoil TR revision remain separate; changing one does not disable the other's expansion rule. | AC-25 |
@@ -186,7 +193,7 @@ Existing identifiers are retained so earlier decisions remain traceable. Each re
 | Turmoil | Physical event/delegate instructions, printed Terraformer overlay, delegate-dependent MA components; printed-objective limitation notices | Board and printed identities (subject to Terraformer overlay), unrelated random results |
 | MA | Printed/replacement objective source and selection state | Board, first player, colonies |
 | CE | Marked-card/production instructions and source-dependent thresholds (e.g. Generalist); selections only if their identity/eligibility actually changes | Board, first player, colonies, eligible objective identities |
-| Prelude / Prelude2 / Extended Start | Physical deck/deal/discard instructions and dependent card eligibility; dependency enforcement still applies | Unrelated public random results |
+| Prelude / Prelude2 / Extended Start | Physical deck/deal/discard instructions and printed-rule reminders; whole-expansion dependency enforcement still applies, without app evaluation of individual cards | Unrelated public random results |
 | Drafting / WGT | Recorded rule and relevant explanatory instructions | All otherwise-valid generated selections/locks |
 
 Clearing is dependency-based, not a global restart. No physical action is claimed to be undone: changed instructions describe the newly selected setup. This mapping implements the user's tentative v1 policy at the observable-behavior level, not a technical design.
@@ -206,9 +213,9 @@ Clearing is dependency-based, not a global restart. No physical action is claime
 - **SC-002:** Every generated/manual public selection meets the exact counts and membership conditions in AC-07–15; there are zero duplicates within each colony/objective set and zero prerequisite violations in replacement selection pools. Fixed printed sets instead meet AC-31–35: retain every objective and identify all disabled-expansion limitations without excluding maps.
 - **SC-003:** Reroll changes zero locked selections; unchanged setup-page revisits change zero generated selections/locks.
 - **SC-004:** Every accepted configuration edit clears only dependency-affected state; every cancelled edit/Reset changes zero prior values. Reset restores the specified defaults.
-- **SC-005:** Summary fields match the current configuration/results exactly; there are zero digital standard-card draws and zero private-card entry requirements.
+- **SC-005:** Summary fields match the current configuration/results exactly; there are zero digital standard-card draws and zero private-card entry requirements or individual-card identification, filtering or validation actions (AC-38).
 
-These are correctness/completeness outcomes, not implementation tests or claimed measured results. No unsupported setup-time reduction, satisfaction percentage or performance target is invented. Full completeness cannot be accepted until R3 is resolved and proposed defaults are accepted.
+These are correctness/completeness outcomes, not implementation tests or claimed measured results. No unsupported setup-time reduction, satisfaction percentage or performance target is invented. R1–R3 no longer block completeness. Proposed defaults and the complete specification still require explicit human acceptance.
 
 ## Assumptions, proposed defaults and remaining review issues
 
@@ -223,10 +230,11 @@ The constitution is existing **v1.0.0**, with Simplicity, Separation of Concerns
 | D1 | N defaults to 2 in a new/reset session, restricted to 2–5. | The user has not selected an initial player count. |
 | D2 | Select-all/none changes toggles only and preserves N. | “Everything on screen” cannot sensibly select all player-count values. |
 | D3 | Ordinary random draws are uniform over eligible choices, without hidden balancing; rerolls can repeat values and one-candidate rerolls are no-ops. | No fairness/balancing or guaranteed-change rule was approved. |
-| D4 | Show prefilter-before-shuffling instructions for dependency-marked cards; mention discard/redraw as the rules-permitted alternative, not a new selector. | P2 permits both; private decks remain physical. |
 | D5 | Colony manual customization uses the same count/uniqueness eligibility as its initial draw; use the existing drop-down/reroll approach without adding fine-grained eligibility controls. Lock-table treatment beyond objectives is not assumed. | Detailed colony row presentation was not chosen; no new control system is introduced. |
 | D6 | If a valid-size eligible set cannot be formed, show a clear explanation identifying the configuration conflict and permit returning to configuration; never fabricate duplicates, silently enable an expansion, or discard locks without confirmation. | Standard verified pools are large enough, but a defensive observable failure behavior is still a proposal. |
 | D7 | Summary includes first-player number alongside the other generated configuration values. | Natural completion of summary scope, made explicit for approval. |
+
+D4 is retired by the R3 decision: there is no app card-filtering or card-level research requirement. Physical preparation follows selected expansions and printed rules, without a proposed mandatory prefiltering method. The remaining proposed IDs are D1–D3 and D5–D7.
 
 These proposals are not blanket authorization to infer new behavior. Existing tentative decisions are the all-visible instruction layout (review for busyness) and selective invalidation (v1, revisit in v2). No rendered UI or implementation is being produced now.
 
@@ -236,8 +244,10 @@ These proposals are not blanket authorization to infer new behavior. Existing te
 
 **R2 — optional longer Venus board excluded:** explicitly resolved by the user as a deliberate v1 scope exception. The component is official but adds no meaningful functionality to the setup assistant and conflicts with the all-on-by-default configuration philosophy. Support the standard Venus board; do not offer, enable, randomize or guide use of the longer board. This is a scope decision, not an assumption, proposed default or official rules claim. See AC-36–37.
 
-### Material issues requiring human resolution
+**R3 — individual-card scope excluded:** explicitly resolved by the user. V1 excludes individual card inventories, promo-card identification and card-level release-date tracking. The assistant guides physical deck preparation using selected expansions but does not identify, catalog, filter or validate individual cards. The 2023 campaign remains the general expansion/setup-component boundary; no exhaustive promotional-card inventory, release-history research or card-level acceptance coverage is required. D4 is retired; see AC-38.
 
-- **R3:** The 2023 seasonal promo boundary needs card-level historical confirmation or a human interpretation of the campaign cutoff. Other core/campaign component families and all digital pools are enumerated. The remaining uncertainty does not justify silently including later releases.
+### Remaining review matters
 
-**Readiness:** coherent for human review, with concrete acceptance conditions for the settled behavior. **Not yet ready for unconditional approval or technical planning** until R3 and D1–D7 are accepted/resolved and the corresponding evidence/acceptance entries updated. Documentation is published for review in draft PR #4; full requirements approval remains outstanding.
+No unresolved material issues remain under R1–R3. The proposed defaults D1–D3 and D5–D7, tentative v1 behaviors and complete specification still await human review and approval.
+
+**Readiness:** coherent for human review, with concrete acceptance conditions for the settled behavior. **Not yet ready for unconditional approval or technical planning** until the remaining proposed defaults and complete specification are explicitly approved. Documentation is published for review in draft PR #4; full requirements approval remains outstanding.

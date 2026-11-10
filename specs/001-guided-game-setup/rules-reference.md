@@ -2,7 +2,7 @@
 
 **Reviewed:** 2026-11-10. **Status:** evidence for draft human review, not a claim of product approval.
 
-This inventory covers the setup-relevant physical components and every digital selection pool. Private card packs are inventoried by family/count rather than copied card text. Gameplay effects stay on the physical cards. Verified facts, derived ordering, and unresolved choices are distinguished below. No fan expansion or community colony is an official component in this inventory.
+This inventory covers the setup-relevant physical components and every digital selection pool. Card-deck families and aggregate package counts are background evidence only, not individual-card inventories or application validation requirements. Under resolved R3, individual card inventories, promo identification and card-level release-date tracking are outside v1. Gameplay effects stay on the physical cards. Verified facts, derived ordering, and unresolved choices are distinguished below. No fan expansion or community colony is an official component in this inventory.
 
 ## Source register
 
@@ -18,11 +18,7 @@ This inventory covers the setup-relevant physical components and every digital s
 | UC | [Utopia & Cimmeria publisher instructions](https://fryxgames.se/product/terraforming-mars-utopia-cimmeria/) | Map restrictions, conditional bonuses and printed sets |
 | AV | [Amazonis & Vastitas rule sheet](https://fryxgames.se/wp-content/uploads/2024/09/TM_AV_WRAP_ENG.pdf) | Additional components, conditional bonuses and printed sets |
 | MA | [Milestones & Awards publisher instructions](https://fryxgames.se/product/terraforming-mars-milestones-awards/) / [complete publisher sheet, Swedish](https://fryxgames.se/wp-content/uploads/2024/09/TM_MilestonesAndAwards_RULES_SEi.pdf) | Choose five of each before dealing; Venus additions; complete 70-tile index. English names cross-checked with publisher page; Tycoon is the sheet's Pamp. |
-| K | [More Terraforming Mars! campaign](https://www.kickstarter.com/projects/strongholdgames/more-terraforming-mars/description) / [publisher FAQ](https://fryxgames.se/faq/) | Campaign 5–22 September 2023; later-delivered expansion/map content and promo history |
-| Q1 | [2021 seasonal pack](https://fryxgames.se/product/seasonal-promo-pack-2021/) / [2022 pack](https://fryxgames.se/product/seasonal-promo-pack-2022/) | Five projects / five Preludes |
-| QT | [Turmoil campaign promos](https://fryxgames.se/product/tm-turmoil-kickstarter-promo-pack/) | 12 projects, 3 corporations, 5 cross-expansion events |
-| QB | [Big Box promos](https://fryxgames.se/product/tm-big-box-promo-pack/) | 18 projects, 2 corporations, 3 replacements and tile requirement |
-| Q2 | [Prelude 2 campaign promos](https://fryxgames.se/product/tm-prelude-2-promo-pack/) | 14 projects, 2 corporations, 4 Preludes |
+| K | [More Terraforming Mars! campaign](https://www.kickstarter.com/projects/strongholdgames/more-terraforming-mars/description) / [publisher FAQ](https://fryxgames.se/faq/) | Campaign 5–22 September 2023; general expansion/setup-component boundary, including later-delivered campaign components |
 
 Rulebook mirrors are copies of publisher-authored rules, not rules from the hosting game's implementation. Retail descriptions, community variants, and online-game behavior do not override these sources.
 
@@ -32,7 +28,7 @@ Rulebook mirrors are copies of publisher-authored rules, not rules from the host
 | --- | --- | --- |
 | Base including Corporate Era (B) | Tharsis; 5 player boards; 17 corporation cards including 5 Beginner Corporations; 208 projects; 8 references; 200 player and 200 resource markers; 3 global/generation markers; 9 oceans; 60 city/greenery tiles; 11 special tiles; first-player marker | Prepare physical supplies/decks. CE-marked cards included only with Corporate Era; the 10 ordinary non-CE corporations remain available without it. |
 | Prelude (P) | 35 Preludes, 7 projects, 5 corporations | Separate Prelude deck; physical dealing and resolution. |
-| Prelude 2 (P2) | 25 Preludes, 24 projects, 5 corporations | Requires Prelude; filter by dependency marks; no digital card deal. |
+| Prelude 2 (P2) | 25 Preludes, 24 projects, 5 corporations | Requires Prelude; guide physical deck preparation from printed rules without evaluating individual cards; no digital card deal. |
 | Venus Next (V) | Venus board/marker, 49 projects, 5 corporations, Hoverlord and Venuphile tiles | Use the standard Venus board, start Venus at 0 and add its fixed objective pair; the optional longer board is excluded by R2. |
 | Colonies (C) | 11 colony tiles, 49 projects, 5 corporations, reference/trade-fleet tiles, 8 fleets, 8 track markers | Digital colony selection; physical fleet/marker preparation. |
 | Turmoil (T) | Committee and Global Event boards; 6 policies; 16 projects; 5 corporations; 31 events; 2 references; 14 neutral and 35 player delegates; dominance marker; Terraformer replacement | Entirely physical card preparation; complete walkthrough. |
@@ -73,19 +69,11 @@ For 2/3/4/5 players select 5/5/6/7 distinct tiles. One fleet per player starts a
 
 MA's complete sheet establishes the 35/35 split; some abbreviated product transcriptions omit Tycoon. Preserve the source spelling where necessary. Geologist is replaced on maps without volcanic regions. Generalist's threshold changes with CE. Expansion-dependent entries are filtered by the user's rule, not by turning other expansions on. Entries that still have a valid non-expansion route (e.g. Constructor counts cities as well as colonies) are not automatically excluded merely for an optional interaction.
 
-### Promo inventory and cutoff reconciliation
+### Card-deck preparation boundary — resolved R3
 
-| Pack/family | Known in-scope setup content | Evidence/status |
-| --- | --- | --- |
-| Original promo pack | 4 projects, 3 corporations | K publisher FAQ; pre-campaign |
-| Turmoil campaign | 12 projects, 3 corporations, 5 Global Events | QT; apply component dependency filtering to cross-expansion events |
-| Big Box campaign | 18 projects, 2 corporations; replacement Deimos Down, Great Dam, Magnetic Field Generators | QB; use each replacement only with its matching special tile; remove corresponding original |
-| Seasonal 2021 | Outdoor Sports, Harvest, Bactoviral Research, Bio Printing Facility, Asteroid Rights | Q1; projects |
-| Seasonal 2022 | New Partner, Merger, Double Down, Corporate Archives, Head Start | Q1; Preludes; physical effect text may change the usual deal/selection |
-| More Terraforming Mars!/Prelude 2 campaign | Kuiper Cooperative, Tycho Magnetics; Strategic Base Planning, Giant Solar Collector, Established Methods, Anti-Desertification Techniques; 14 projects | Q2 verifies the two/four/fourteen counts, including later delivery |
-| Seasonal 2023 | Robot Pollinators, Supercapacitors, Directed Heat Usage, Icy Impactors, 16 Psyche | Five-card pack is documented by publisher FAQ for March 2024; card membership also confirmed by licensed publisher [Arclight](https://arclightgames.jp/product/932pkn/). Which individual releases were available by the September cutoff or offered in the campaign is not fully established. See R3. |
+The 2023 campaign cutoff remains a general scope boundary for supported expansions and setup components, including later-delivered campaign components. It does not require cataloging promotional cards or determining their individual release dates.
 
-The campaign page's accessible text identifies the campaign but does not expose a complete historical add-on manifest. Accordingly, this is a complete family inventory of identified official setup content, with the remaining cutoff uncertainty explicitly bounded to R3; it is **not** a falsely certified exhaustive historical print-run catalog. No new promo-specific configuration controls are proposed. Later expansions, Automa and subsequent seasonal releases are outside the agreed scope.
+Guide players to prepare physical decks using their selected expansions and the applicable printed rules, including Corporate Era inclusion/exclusion and printed dependency/replacement instructions. Players inspect and handle their cards; the assistant does not identify, catalog, filter or validate individual cards. No card-name lists, promo identification, historical add-on manifest reconstruction or card-level release research is required for v1. Card effects remain physical. The former promotional-card inventory and seasonal-cutoff research obligations have been removed rather than treated as unresolved evidence.
 
 ## Setup sequence and coverage
 
@@ -95,10 +83,10 @@ This is an ordered **physical setup sequence**, not an implementation plan. IDs 
 | --- | --- | --- |
 | SU-01 | Show chosen map and numerical first player; identify the physical board/first-player marker. | All games; user's first-player override. Map must be known before objective eligibility. |
 | SU-02 | Prepare board, supplies, player colors/boards and tracks: generation 1, oxygen 0%, temperature −30°C, initial TR 20. Use nine oceans normally, eleven on Amazonis; prepare its extra supplies and printed project tile. | B, AV. Apply corporation effects later, not now. |
-| SU-03 | Place Turmoil boards; each player puts one of seven delegates in Lobby and six in reserve; neutral chairman and remaining neutrals in reserve. Physically prepare the eligible event deck (including dependency-filtered promos), shuffle, reveal Coming and Distant, place neutral delegates/dominance as indicated; same-party second delegate goes into delegate area. Current event stays empty; Greens policy starts on top. | T explicitly inserts this after base supplies (base setup step 2), before opening cards. No digital event draws or policy randomization. |
+| SU-03 | Place Turmoil boards; each player puts one of seven delegates in Lobby and six in reserve; neutral chairman and remaining neutrals in reserve. Instruct players to prepare the physical event deck from selected expansions and printed rules, shuffle, reveal Coming and Distant, place neutral delegates/dominance as indicated; same-party second delegate goes into delegate area. Current event stays empty; Greens policy starts on top. | T explicitly inserts this after base supplies (base setup step 2), before opening cards. No digital event draws or policy randomization. |
 | SU-04 | Prepare the standard Venus board at 0 and the enabled expansion components. Select colony tiles; place fleets and active/inactive colony markers. | V, C; before effects can interact with these components. R2 excludes longer-Venus-board instructions as a deliberate product scope exception. Map-specific optional interactions are explained, not used to force expansions on. |
 | SU-05 | Establish milestones/awards from the selected source. When MA is on choose five distinct of each; otherwise use printed sets. Add Hoverlord and Venuphile with Venus. Apply Turmoil's TR 26 replacement only to the original Tharsis Terraformer, not MA's TR 29 tile. | MA explicitly requires selection before any player cards are dealt. Cross-source rule precedence is derived: MA replaces printed objectives, Venus expressly remains additive, T's tile addresses the printed Tharsis objective. Resolved R1 requires retaining unavailable printed entries and explaining their disabled-expansion limitations; this is a product decision, not an official rule. |
-| SU-06 | Physically form and shuffle eligible project/corporation decks, with space for facedown discards. Include/exclude CE-marked cards appropriately; combine enabled eligible expansion/promos, removing duplicate originals when replacements are used. Prepare a separate eligible Prelude deck when enabled. | B/P/P2/V/C/T/QB/QT/Q2. P2 permits filtering beforehand or discard-and-redraw; the draft proposes prefiltering guidance (D4). |
+| SU-06 | Instruct players to form and shuffle physical project/corporation decks using selected expansions, with space for facedown discards. Explain Corporate Era marked-card inclusion/exclusion and remind players to follow printed dependency/replacement rules themselves. Prepare a separate Prelude deck when enabled. Do not identify, catalog, filter or validate individual cards in the assistant. | B/P/P2/V/C/T. P2 permits players to prepare dependency-marked cards beforehand or discard-and-redraw under its printed rules. R3 requires expansion-based physical guidance, not an app card filter or prescribed prefiltering method; D4 is retired. |
 | SU-07 | Explain initial production: 1 in each resource without CE; 0 with CE, before corporation effects. Identify the ordinary-corporation and Beginner Corporation branches. | B. Beginner Corporation gives 42 M€ and ten free starting projects; do not apply the ordinary initial-project purchase rule to that branch. No new beginner selector is introduced. |
 | SU-08 | Guide physical dealing: ten projects per ordinary player; two corporations normally or three with Extended Start. With Prelude deal four/six Preludes respectively and keep two at no purchase cost. With no Prelude, no Prelude deal. Beginners follow their printed corporation instructions instead of ordinary corporation choice. | B/P/P2 plus explicit user override eliminating expansion-source quotas. Drafting does not add an initial-hand draft. |
 | SU-09 | Guide choosing, facedown discards, corporation reveal in player order, printed starting effects, then paying 3 M€ per retained project for ordinary corporations. | B. Card text governs card-specific exceptions and simultaneous starting effects; no app card execution or private input. |
@@ -110,12 +98,12 @@ The full list is visible on setup page 3; it is not a wizard or a checklist. Gen
 
 ## Interaction rules verified against sources
 
-- **Whole expansion dependency:** P2 requires P. It does not require enabling Venus, Colonies and Turmoil together; its marked cards have narrower prerequisites (P2).
+- **Whole expansion dependency:** P2 requires P. It does not require enabling Venus, Colonies and Turmoil together; its marked cards have narrower prerequisites (P2), which players handle under printed rules rather than app card validation (R3).
 - **Objective versions:** printed Builder needs 8 building tags; MA Builder needs 7. Printed Elysium Tycoon needs 15 cards; MA Tycoon needs 10. Printed Amazonis Merchant needs 3 of each resource; MA Merchant needs 2. Names alone cannot identify versions (B/HE/AV/MA).
 - **No-volcano maps:** Hellas and Utopia have none; exclude MA Geologist. These maps also relax relevant physical placement restrictions. Other map bonuses require their appropriate rules reminders (HE/UC).
 - **Optional map interactions:** ignore delegate bonuses without Turmoil on Amazonis/Vastitas; ignore Cimmeria's colony bonus without Colonies. Maps do not force those expansions (AV/UC).
 - **Gameplay distinction:** WGT depends on Venus and can be omitted for a longer game. Turmoil TR revision is separate and is not disabled by turning WGT off (V/T).
-- **Card exceptions:** eligible decks are physically prepared; printed corporation/Prelude effects may modify setup. A reminder to resolve those effects is in scope; enumerating/executing every card's effect in the app is not.
+- **Card exceptions:** players physically prepare decks from selected expansions and printed rules; printed corporation/Prelude effects may modify setup. A reminder to resolve those effects is in scope; enumerating/executing every card's effect in the app is not.
 
 ## Resolved product decision R1 — fixed printed objectives
 
@@ -129,7 +117,7 @@ Identify every such objective in setup and summary, mark it unattainable, and na
 | Terra Cimmeria: Planetologist requires Venus tags (UC) | Venus Next off: Planetologist unattainable; requires Venus Next. | AC-32 |
 | Amazonis Planitia: Lobbyist requires delegates (AV) | Turmoil off: Lobbyist unattainable; requires Turmoil. | AC-33 |
 
-The dependency facts come from UC/AV; preserving and labeling the objectives is the product decision. This exception does not apply to MA's replacement pools or physically prepared card decks: their prerequisite filtering remains unchanged. AC-35 covers the universal retention/notice policy and its summary behavior.
+The dependency facts come from UC/AV; preserving and labeling the objectives is the product decision. This exception does not change MA replacement-pool filtering. Card-deck preparation remains physical and guided at expansion/rules level under R3, with no app individual-card filtering. AC-35 covers the universal retention/notice policy and its summary behavior.
 
 ## Resolved scope exception R2 — optional longer Venus board
 
@@ -137,6 +125,6 @@ AV verifies that the optional longer Venus board is an official physical compone
 
 The standard Venus board remains supported with the existing Venus setup and WGT behavior. Do not offer the longer board as an expansion, board or variant choice, randomize it, enable it through defaults/select-all/Reset, show it as selected in the summary, or instruct its use. Selecting Amazonis does not select the longer Venus board. Keep its existence in the physical component inventory for traceability; no further longer-board usage-rule investigation is needed for v1. See AC-36–37.
 
-## Remaining evidence conflicts for human review
+## Resolved scope decision R3 — no individual-card catalog or validation
 
-**R3 — seasonal 2023 boundary:** the campaign and its later-delivered promo pack are included; the 2023 seasonal bundle itself was issued afterward. A strict September 22 cutoff and including an entire 2023-labeled seasonal pack are different. The exact individual release evidence/add-on manifest remains incomplete. This affects physical deck guidance, not the digital random pools. Keep these cards marked as cutoff-unresolved rather than silently including all of them.
+**Explicit human scope decision:** individual card inventories, promo-card identification and card-level release-date tracking are excluded from v1. The assistant guides physical deck preparation using selected expansions without identifying, cataloging, filtering or validating individual cards. The campaign cutoff is a general boundary for supported expansions/setup components, not a requirement to inventory every promotional card. No historical card-eligibility cases remain to research or accept for this scope. See AC-17/38 and the deck-preparation boundary above.

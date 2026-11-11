@@ -1,0 +1,57 @@
+# Clarification review — 2026-11-10
+
+Status: open; draft is not sufficiently complete for approval or planning. speckit-clarify prerequisites resolved the current feature to specs/001-guided-game-setup/spec.md. Constitution v1.0.0 reviewed. No extensions.yml, therefore no before/after clarification hooks. No product decisions made by this review. Questions will be asked sequentially, up to five in this clarification session; answers will be recorded in the specification as they arrive.
+
+## Findings
+
+1. Expansion compatibility (high): FR-001 permits configuration of content but no rule defines dependent toggles or invalid combinations. Prelude 2 explicitly requires Prelude; cards carry additional expansion prerequisites. Public milestone/award eligibility also depends on content and board features. The app has no stated response to an invalid selection. Evidence: https://fryxgames.se/wp-content/uploads/2024/09/TM_PRELUDE2_RULES_ENGi.pdf p2; https://fryxgames.se/product/terraforming-mars-milestones-awards/ (Geologist replacement and Venus additions).
+2. Setup completeness and ordering (high): FR-002 is a coverage obligation, not yet an enumerated, source-backed sequence. Missing consolidated dependency ordering for board selection, map-specific components, colonies, Turmoil events/delegates, milestones/awards before dealing, starting conditions, and Prelude resolution. Full historical component/variant inventory is incomplete. This is research to complete, not a product question to outsource to the user.
+3. Rules precedence (high): base p7 sends unused corporations to the box, while Prelude 2 p3 defines corporation/Prelude discard piles. The guide must reconcile enabled-rule precedence rather than repeat conflicting instructions. Rules offering alternative procedures (e.g. prefiltering dependent cards versus discarding/redrawing) must not be silently collapsed into one unapproved behavior.
+4. Optional variants (high): exact selectable catalog, availability conditions, and defaults remain unspecified. Corporate Era is called an expansion in the UI scope but is a base-game variant with different starting production. Extended Start changes physical deal quantities; ordinary research drafting does not itself authorize an initial-hand draft. House rules must not be inferred from community practice. Sources recorded in setup-discovery.md.
+5. Automation (high): public-only scope and exclusion of private-card automation are clear. Exact automated public decisions are not. Board-pool disabled/empty states, manual final selection, draw timing, rerolls, and quantity/uniqueness rules are open. Turmoil setup involves concealed as well as public information; public-only automation does not authorize exposing future hidden events. Manual selection must not silently bypass approved eligibility constraints. No fairness or balancing method is approved.
+6. State changes (high): progress and summary do not define navigation, changing upstream choices, invalidation of downstream choices, or physical rework guidance. Refresh/recovery expectations remain absent. The summary must be assessed against final configuration, but what remains valid after edits is undefined.
+7. Unsupported assumptions: initially checked boards are a documented interpretation of the user's “uncheck” instruction, not a separate explicit default-setting answer. Disabled expanded boards = Tharsis remains only a suggestion; do not treat it as approved. No population assumptions, persistence, random fairness, automatic enablement, compatibility enforcement, or named variant defaults are approved. Campaign cutoff is approved but exact historical promo inventory remains unverified.
+8. Acceptance precision: story 1 scenarios 1/4/5/6 depend on undefined “applicable” rules and a missing coverage inventory. Story 2 scenario 1 and SC-002 refer to “agreed” eligibility/quantities not specified in the draft. Story 3 assumes a completion-recording interaction that FR-004 does not define. Pool exclusion scenarios are independently checkable; full story 2 requires the configured pool and story 3 requires the walkthrough. These are useful journeys, but not independent standalone MVP slices as the template expects. The review should distinguish scenario testability from story-level independence rather than claim every story is a standalone MVP.
+9. Requirements-to-acceptance gaps: FR-001 campaign cutoff/solo exclusion, FR-006 traceability, and FR-010 selector consolidation lack complete concrete acceptance examples. The three success criteria describe correctness but cannot establish completeness until rule inventory and selection constraints exist. No usability target is approved; do not invent one solely to fill a template.
+10. Lower-priority omissions: target device/accessibility expectations, terminology for board versus map-pack, and what the summary includes about manually performed private preparation. No external-service/account requirement exists; absence must not be replaced by an assumed authentication design.
+
+## Initial internal coverage assessment
+Functional scope Partial; Domain/data Partial; Interaction/UX Partial; Non-functional quality Missing; External dependencies Partial (rules evidence incomplete; no service integration demanded); Edge cases Partial; Constraints/tradeoffs Clear for requirements-only phase; Terminology Partial; Completion signals Partial; Placeholders Partial.
+
+No checklist markers changed during initial review: unresolved items remain unresolved. No clarification answers accepted yet. No plans, implementation tasks, executable tests, commits, or PRs produced.
+
+
+## Answers integrated
+Question 1 resolved in part: Prelude 2 auto-enables Prelude specifically, with no general automatic-enablement principle. The user also resolved milestone/award version selection: treat M&A as a full expansion, use its versions when enabled and board-printed versions otherwise. Two accepted answer records were added to the specification; these do not approve the complete specification. Reverse-toggle behavior and official overlays still require resolution. Checklist markers remain unchanged because broad compatibility, scenario completeness, and approval items still do not pass.
+
+
+## Superseding human principle
+The user generalized dependency handling after the earlier Prelude 2-only decision: whole-expansion prerequisites auto-enable required expansions; components automatically filter against enabled expansions without individual eligibility controls. Avoid conflating unavailable optional interactions with genuine component prerequisites. All-content games and base-game teaching are the main use cases; the user's approximate percentages are not measured success targets or approval of initial defaults. Board checkboxes remain an explicitly requested exception to fine-grained configuration. Manual final component choices, fixed printed milestones that become unavailable, official overlays, and reverse dependency toggles still require clarification.
+
+
+## Presets and default randomization confirmed
+Default everything active; provide “Use all” and “Base game” selecting all/none respectively. Expansion/content semantics are recorded; mutually exclusive variant behavior still needs clarification. Randomize eligible public choices by default and allow individual manual final overrides. Automatic eligibility filtering remains in force. This resolves the earlier manual-versus-automatic choice question, not rerolls, draw timing, variant conflicts, or printed-milestone replacement policy.
+
+
+## Configuration pages — human resolution
+Separate expansions and variants onto two configuration pages, followed by guided setup. Both pages default all supported toggle options on, with select-all/none controls at the top affecting only that page. This supersedes the single-page flow and tentative cross-page preset interpretations. The exact variant catalog is not yet approved. All-on conflicts with overlapping corporation-deal variants; cross-page prerequisites also interact with page-local controls. These remain explicit blockers, not implied authorization to invent combination rules. Draft scenarios covering these exceptions remain conditional and cannot yet pass the unambiguous/testable checklist item. Checklist remains 9/18 with no marker changes.
+
+
+## Corporation-deal conflict resolved by explicit human override
+Use any two eligible corporations/four Preludes normally, any three eligible corporations/six Preludes with Extended Start, when the respective components are used. Omit expansion-source quotas and their variant selectors. Physical deals are guided, not automated; table-specific departures are not adjudicated. This closes the previously identified corporation-deal overlap and supersedes earlier warnings that it is unresolved. Corporate Era is not synonymous with corporation cards existing: base-game corporations/Beginner Corporations still need correct guidance. Extended Start availability without Prelude remains open. Other variant catalog items remain unapproved. Checklist remains 9/18; no broad completion item passes solely from resolving this overlap.
+
+
+## Corporate Era distinction acknowledged
+The user accepted the distinction between Corporate Era and ordinary corporation availability. FR-018 and observable guidance scenarios record marked-card inclusion and production changes; no beginner-corporation selector was adopted. Physical dealing remains guided only. This is not approval of the full specification. No checklist marker changes: broad coverage and behavior gaps remain.
+
+
+## Latest human decisions integrated
+Unavailable variants inactive with explanation and Back navigation. Prelude 2 keeps Prelude enabled. Customize/drop-down/reroll controls confirmed; milestones/awards are two-column tables without visible gridlines, dropdown then lock. Reroll affects unlocked entries. No recovery in v1. Empty board pool disables expanded boards, which always displays only Tharsis checked and all board controls inactive, using Tharsis. These supersede earlier unresolved notes. Still material: upstream edits/invalidation, final catalog/Extended Start prerequisite, exact automated public choices and manual selection lock semantics. Rules inventory/ordering/overlays remain author research. Checklist marker states remain 9/18; conditional acceptance text and evidence gaps prevent broad completeness items passing. No full specification approval received.
+
+
+## Expansion removal resolved by user
+Expansion removal uses a confirmation dialog and selectively clears related state, preserving unaffected expansions' state. Reset clears all state. Spec adds FR-022/023 and acceptance prose for confirmation/cancellation and selective retention. Cross-expansion dependencies must be specified from rules evidence; unrelated state is not globally reset. Reset destination/defaults and confirmation remain unanswered, as do effects of player-count/board/variant edits. Checklist remains 9/18; state mapping, complete rules sequence and approval are still incomplete.
+
+
+## Reset resolved
+User accepted returning to initial all-on defaults after confirmation. FR-023 and acceptance scenarios now specify clearing generated choices, locks and progress, restoring default options, and leaving state unchanged on cancellation. Initial player-count value remains open. Checklist remains 9/18 because broader rules coverage, selection semantics and full approval are incomplete.

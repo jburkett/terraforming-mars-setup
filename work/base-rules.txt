@@ -1,0 +1,729 @@
+                               The Terraforming Announcement:
+                ”Since its inception in 2174, the World Government has continually strived for
+               global unity and peace. Our mission is to be humanity’s shared tool for shaping a
+                                                    better future.
+               Earth is overpopulated and resources are dwindling. We now face the choice either
+              to recede, or to expand into space to find new homes for humanity. For this reason,
+                                  we need to turn Mars into a habitable planet.
+               The terraforming of Mars is an endeavor so great that it will take the united effort
+                  of mankind to accomplish. The World Government will therefore inaugurate
+                  a Terraforming Committee, and instate a universal tax for this purpose. Any
+                    corporation or enterprise contributing to the terraforming process will be
+                  generously rewarded by the Committee. We believe that these measures will,
+                           eventually, result in a habitable planet for our descendants.
+                                          Thank you for your attention!”
+
+                     Levi Uken, World Government communicator, January 16, 2315 AD.
+
+
+   BACKGROUND                                                        CONTENTS
+          Humanity has begun to spread throughout the               Background                        2
+solar system. On Mars, a few small colonies have been
+built. These offer protection from the environment, from
+                                                                    Game Overview                     3
+a planet which is terribly cold, dry, and with almost no            Global Parameters                 3
+atmosphere.                                                         Game Board                        4
+          To be able to increase immigration from Earth,
+                                                                    Tiles & Markers                   5
+Mars needs to be terraformed by altering its environment
+until humans can live there without expensive protective            Player Boards                     6
+gear, and without even minor accidents becoming                     Cards                             6
+lethal. Therefore the World Government has decided                  Setup                             7
+to support any organization that contributes to this vast
+undertaking.                                                        Generations                       8
+          The generous funding attracts gigantic                    Actions                           9
+corporations that compete to expand their businesses                Game End                          12
+and emerge as the most influential force behind the
+terraforming. In this era, great opportunities lie in the
+                                                                    Game Variants                     13
+taming of the Red Planet.                                           Symbols                           14
+                                                                    Credits                           16
+                               G A M E OV E RV I E W
+          In Terraforming Mars, you control a corporation,       their production parameters on the player boards, and gain
+and you buy and play cards describing different projects.        income from their TR.
+The projects often directly or indirectly contribute to the                The central game board has tracks for temperature,
+terraforming process, but can also consist of business           oxygen level, terraform rating, and generations. There is
+enterprises of different kinds. In order to win, you have to     a surface map where you add ocean tiles, greenery tiles,
+accumulate a good terraform rating (TR) and many victory         and city tiles as the game progresses. There is also a list of
+points (VPs). Your TR is increased each time you raise a         standard projects available to all players, as well as milestones
+global parameter (temperature, oxygen or ocean). Your TR         and awards that players can compete for.
+determines your basic income, as well as your basic score. As              The game ends when there is enough oxygen to
+the terraforming process proceeds, more projects become          breathe (14 %), oceans enough to allow Earth-like weather
+feasible. Additional VPs are awarded for anything enhancing      (9), and the temperature is well above freezing (+8 ˚C). It will
+mankind’s grip on the solar system. This can be anything,        then be possible, if not comfortable, to live on the surface of
+from founding cities to building infrastructure, or protecting   Mars!
+the environment.
+          Time is measured in generations, and each                      The winner is the player with most VPs
+generation starts with a Turn Order phase, followed by a         at the end of the game. VPs come from your
+Research phase, in which players access new cards. In the
+Action phase, players take turns doing 1 or 2 actions, going     TR, your tiles on the game board, won awards,
+around the table until everyone has passed. Then, in the         claimed milestones, and VPs on cards you have
+Production phase, all players produce resources according to     played.
+
+                     G L O B A L PA R A M E T E R S
+Temperature, oxygen, and ocean are called global
+parameters. Whenever you raise one of them, your                     A Terraformed Mars
+terraform rating also increases by that much, giving you a                      Each area or tile on the game board represents 1% of the
+higher income and score.                                             Martian surface, so 9 Ocean tiles represents 9% ocean coverage,
+          When a global parameter has reached its goal, it           which should be enough to enable stable hydrological cycles, air
+                                                                     moisture, and weather patterns. Water is also important, as it
+can’t be raised any further, and so does not increase your
+                                                                     moderates temperature swings. At very low temperatures, oceans
+TR. You may still play cards and actions that increase the           are actually glaciers for most of the year.
+parameter - just ignore that part of the effect.                                Although the temperature on Mars can already reach
+          When all three global parameters have reached              20 ˚C on ’hot’ summer days, this is not enough. To enable liquid
+their goal, the game ends after that generation (after the           oceans, the mean temperature has to be positive, at least at the
+production phase).                                                   equator.
+                                                                                The most important parameter for terraforming is
+                                                                     the oxygen level. Without a breathable atmosphere, Mars is not
+                                                                     liveable, not terraformed. Earth’s oxygen content is 21% of the
+                                                                     atmosphere, 0.21 atm. At higher altitudes, this decreases as the
+                                                                     atmosphere becomes thinner. At 3000 m the oxygen level is 0.14
+                                                                     atm and there are a few major cities at this altitude, mostly in the
+                                                                     Andes and in China. The most notable examples are the Bolivian
+                                                                     cities El Alto (4150 m) and La Paz (3640 m), each with nearly a
+                                                                     million inhabitants.
+                                                                                Earth’s atmosphere also contains 78% nitrogen, the
+                                                                     main component responsible for air pressure. Air pressure is
+                                                                     also important, if not as crucial as oxygen level. Another aspect
+                                                                     of terraforming is Mars’ very weak magnetic field. These aspects
+                                                                     are not represented by a global parameter, but usually result in a
+                                                                     higher TR for the player, as indicated on the specific cards.
+                                       GAME BOARD
+                                                                                                                              creasing
+                                                                                                                   fo rget! In
+                                                                                                           D on ’t             ter also
+                                                                                                             g lo b a l parame R!
+                                                                                                           a              s your T
+                                                                                                               increase
+
+
+
+
+1. Terraform rating (TR) track: All players start at 20. This     8. Standard Projects: May be used by any player regardless
+is your basic income (see pages 6 and 8) and VPs. You in-         of what cards you have. See page 10.
+crease it every time you terraform.                               9. Milestones / Awards: Can be a good source of extra VPs.
+2. Generation track: The generation marker measures time          See pages 10 and 11.
+(rounds) and starts at 1, moving up on the TR track.              10. Placement bonuses: When placing a tile on an area with
+3. Solo games start with a TR of 14, and end after generation     a placement bonus, you get the printed resources or cards.
+14.                                                               See page 5.
+4. Oxygen: This global parameter starts at 0%. This percen-       11. Ocean-reserved areas: Blue areas are reserved for ocean
+tage compares to Earth’s 21% oxygen.                              tiles; ocean tiles may only be placed here and no other tile
+5. Ocean tiles: This global parameter starts with 9 tiles in a    may be placed here.
+stack here, to be placed on the board during the game.            12. Special reserved areas: 3 areas are reserved for specific
+6. Temperature: This global parameter (mean temperature           cities. No other tiles may be placed there.
+at the equator) starts at -30 ˚C.
+7. Bonus steps: If you raise the parameter to this point, you
+also get the attached bonus.                                        The Map
+                                                                                 The game board has an accurate map of the Tharsis
+                                                                    region of Mars, including Valles Marineris and 3 of the 4 great
+  The Bonus Steps                                                   volcanos. Only the region around Olympus Mons is missing.
+             As the atmosphere thickens, greenhouse effects         The areas reserved for Ocean tiles are low in elevation so water
+  will raise the temperature, as indicated by the bonus at 8%       will naturally flow there. The plant bonuses around the equator
+  oxygen.                                                           simulate that the higher average temperature will make it easier
+             As the temperature rises, carbon dioxide will thaw     for life to thrive there. Mountain ridges have steel and titanium
+  out, adding a greenhouse warming effect as indicated by the       bonuses, while other interesting sites may have a card draw
+  heat production bonuses. Then, at 0 ˚C, ice-bound water in        bonus, like the Viking site where the first man-made lander
+  the soil will begin to melt, adding water to the surface.         touched down.
+                                                         TILES
+          The game board has a map where tiles may be                 tile on any available area. Place a player marker on it to
+placed. When placing a tile, you must first check to see if           mark your ownership. When placing a greenery tile, you
+there are any placement restrictions. There are areas reserved        increase the oxygen level, if possible, and also your TR. If
+for ocean and specific cities, where no other tiles may be            you can’t raise the oxygen level you don’t get the increase
+placed. Furthermore, each tile may have specific restrictions         in TR either. Greenery tiles are worth 1 VP at the end of the
+printed on the respective card or in the summaries below.             game, and also provide 1 VP to any adjacent city (see below).
+          When you place the tile, you receive the placement
+bonus printed on that area (if any). You also get a bonus for                      City tile: May not be placed next to another
+placing tiles next to ocean tiles (see below).                                     city (exception: Noctis city must always be
+                                                                                   placed on its reserved area). Add a player marker.
+           Ocean tile: Ocean tiles may only be placed on                           Each city tile is worth 1 VP for each adjacent
+           areas reserved for ocean (see map). Placing an                          greenery tile (regardless of owner) at the end of
+           ocean tile increases your TR 1 step. Ocean tiles are       the game. (Note: the card Capital places the unique Capital
+           not owned by any player. Each ocean tile on the            city tile, which counts and scores like a normal city tile, but
+           board provides a 2 M€ placement bonus for any              additionally gives you VPs for adjacent ocean tiles, as stated
+player later placing a tile, even another ocean, next to it.          on the card.)
+          Example: If you place a city tile adjacent to 2 different
+ocean tiles you get 4 M€ as placement bonus                                      Special tiles: Some cards allow you to place
+                                                                                   special tiles. Any function or placement
+            Greenery tile: If possible, greenery tiles must                        restriction is described on the card. Place the
+           be placed next to another tile that you own. If                         tile, and place a player marker on it.
+           you have no available area next to your tiles, or if
+           you have no tile at all, you may place the greenery
+
+
+                                                                                   MARKERS
+                                                                      Resource cubes: Resources are collected on the player board
+                                                                      or on specific cards. There are many types of resources (see
+           One small step for man, but make sure you
+                                                                      page 14), but they are all marked by these cubes:
+                        watch that step!
+                                                                      BRONZE = 1
+                                                                      SILVER = 5
+                                                                      GOLD = 10
+
+                                                                      Player markers: Each player uses his own color
+                                                                      to mark TR, ownership of tiles, production
+                                                                      (see page 6), and to indicate used blue card
+                                                                      actions (see page 11).
+
+                                                                      Temperature, oxygen, and generation
+                                                                      markers: Start at the beginning of the
+                                                                      respective track (see page 4).
+
+
+
+                                                                      First player marker: Shifts clockwise each
+                                                                      generation.
+                                 P L AY E R B O A R D S
+          The player board keeps track of your current resources
+and production. Resource cubes are placed in their respective
+boxes, and player markers are used on the production tracks.
+In the game, resource icons refer to resource cubes, while
+resource icons inside brown boxes refer to production of
+that resource (see the project card below).
+1. Production tracks: If you gain production of a resource,
+mark the new production level with your player marker.
+Production is not limited to 10. Example: If you play a card
+that increases your heat production 3 steps from 19 to 22 you
+mark this by having 2 player markers on ’10’ and 1 marker on ’2’
+on the production track above the heat box. Impressive!
+During the production phase you add resource cubes equal to
+your production.                                                   4. Titanium: Is only used to pay for cards with a space tag and
+2. MegaCredits (M€) : Are used to pay for cards and other          is worth 3 M€/cube, similar to steel.
+things. Note: Your M€ income is the sum of your M€ produc-         5. Plants: May be converted into greenery tiles by using the
+tion and your TR. M€ production is the only production that        depicted action (see pages 5 and 11).
+can be negative, but it may never be lowered below -5.             6. Energy: Is used by many cards. All leftover energy is con-
+3. Steel: Is only used to pay for cards with a building tag and    verted into heat at the beginning of the production phase.
+is worth 2 M€/cube. You may pay with both M€ and steel, but        7. Heat: May be spent to raise temperature 1 step by using the
+you get no refund for ’overpaying’ with steel.                     depicted action (see page 11).
+
+                                                    CARDS
+                                                    Each player starts the game with a corporation card. During the game,
+                                           players buy and play many project cards to get benefits of different kinds. The cards
+                                           are divided into active cards (blue frame, see example), automated cards (green) and
+                                           event cards (red), read more on page 10.
+
+                                           1. Tag: Places the card in certain categories, which can affect or be affected by other
+                                           cards, or by the player board (e.g. you can pay with steel when playing a building tag).
+                                           2. Starting conditions: This tells you how much money (M€) you start with, as well
+                                           as other starting resources and production. Some corporations also have a fixed first
+                                           action described here (see example card).
+                                           3. Effect / action: Boxes marked by a blue ribbon show an ongoing effect or action
+                                           that may be used during the game. Actions may be used only once per generation,
+                                           while effects are always active.
+                                           4. Flavor text: Gives you some background information and feeling for the card.
+                                           5. Cost: This is what you pay to play the card from your hand. (To get cards into your
+                                           hand, you must first buy them during the research phase, see page 8).
+                                           6. Requirement: Any requirement must be met in order to play the card. Some cards
+                                           require a global parameter to have reached a certain level, while others can only be
+                                           played while the parameter is still low (see example card). Some cards require that
+                                           you have certain tags or production. (Note: In order to play the card you must also be
+                                           able to perform the effects of the card, see page 9.) Note also that the requirement only
+                                           needs to be fulfilled when playing the card, not when you use it later.
+                                           7. Immediate effects: Most cards affect your (or your opponent’s) resources or
+                                           production. You may also get tiles to place, or other effects.
+                                           8. VPs: Some cards give you victory points at the end of the game.
+
+                                           If you are uncertain of how a card works, read the text in parenthesis.
+                                             SETUP
+       This describes the setup for the standard          resources and production (if any), and then pay 3 M€
+game for 2-5 players. See additional rules for other      for each project card they keep. Be aware that your
+game variants on page 13.                                 resources for the following few generations will be
+                                                          quite limited until you get your economy going.
+1)       Game board: Place the game board centrally       8)       Start the game: The first generation starts
+on the table. Place the 9 ocean tiles on their reserved   without a player order phase and without a research
+space. Place the temperature and oxygen markers on        phase (since you just performed those phases during
+their starting positions. Also place the generation       setup), so the first player just starts the action phase.
+marker on ’1’ on the TR track.
+2)       Resource cubes and remaining tiles are placed    Example: Kim, Stanley, and Robinson decide to play
+so that everyone can reach them.                          a standard game of Terraforming Mars. They each
+3)       Project deck: Make sure you have no              choose their color, take a player board and mark
+Corporate Era cards in the project deck or among          starting production by placing markers on ’1’ on the six
+the corporation cards. These are marked with a red        production tracks. Kim, the first player, deals 10 project
+and white icon in the lower left edge ( ). Shuffle the    cards and 2 corporation cards to each player. They
+project cards and place the project deck next to the      examine their cards, and when they have all decided
+board. Leave space for a discard pile beside it.          which cards and corporations they want, they start to
+4)       Players: The player who most recently won a      reveal them in player order.
+game of Terraforming Mars is given the first player       Kim reveals her corporation: PhoboLog, which gives
+marker. Players choose their colors and take the          her 10 titanium resources and 23 M€ that she collects
+corresponding player markers and a player board.          on her player board. Then she declares that she buys
+You start with 1 production of each resource on the       5 cards to her hand, paying 15 M€ for them. She’s got
+player board, so place player markers on the tracks       a few expensive space cards that will put her titanium
+(only in standard game.) Each player also places one      to good use. Then she discards the unused corporation
+marker at the starting position (20) of the TR track.     card back into the box, and the 5 unbought project
+5)       Corporation cards: Players new to                cards face down into the discard pile next to the deck.
+Terraforming Mars each get a Beginner Corporation         Stanley then reveals that he’s going to play ThorGate,
+card (colorless card back) and follow its instruction     starting with 48 M€ and 1 energy production, which he
+to get 42 MegaCredits and draw 10 project cards to        marks on his player board. Stanley decides to keep all
+form their starting hand. Then they can examine their     10 cards and pays 30 M€ for them.
+cards while experienced players continue this setup       Robinson decides to play Tharsis Republic (see example
+without them. Shuffle the 10 standard corporation         card on previous page). He adds 40 M€ to his player
+cards (excluding the 2 Corporate Era corporations)        board and pays 12 M€ for the 4 cards he decides to
+and deal 2 to each remaining player.                      keep, leaving 28 M€. As his first action, he will get to
+6)       Project cards: Deal 10 cards to each remaining   place a city tile. Not only that, but the city tile may give
+player. These are cards that players may buy for their    him a placement bonus as well, and his corporation
+starting hands (3 M€ each). Now the players examine       card says that he may increase his M€ production 1
+their options for their starting hand and corporation.    step each time a city tile is placed on Mars, and that
+7)       Starting conditions: Players choose which of     he also gets 3 M€ back when he places any city himself.
+the corporations they want to play, and which of the      And now the first generation starts with Kim taking the
+10 project cards they want to keep for their starting     first turn in the Action phase...
+hand. The cards not kept are discarded (put discarded
+corporations back in the box) - cards are always
+discarded face down! In player order, players then
+reveal their chosen corporation, get their starting
+                                      G E N E R AT I O N S
+          Because of the long time spans needed for the             After that, Robinson uses the standard project City and pays
+projects, this game is played in a series of generations. Each      25 M€ to place a city and increase his M€ production 1 step.
+generation the players go through 4 phases.                         Being Tharsis Republic, this gives him another M€ produc-
+                                                                    tion and 3 M€ back, besides the normal tile placement bonus.
+1) Player Order phase                                               Content with just one action, he tells Kim to start her turn.
+         The first player marker shifts 1 step clockwise and        Kim plays the space project Asteroid Mining at a cost of 30
+the generation marker is moved up 1 step. This phase is             M€, spending 8 titanium (it’s a space project). Because of
+skipped the first generation (see setup).                           PhoboLog’s effect, each titanium is worth 4 M€, which makes
+                                                                                               a total of 32 M€. She could have
+                                                                                               payed 7 titanium plus 2 M€, but she
+2) Research phase                                                                               pays 8 anyway because she’s low
+           Each player draws 4 cards and decides which of                                        on cash. Asteroid Mining allows
+them he wants to buy to his hand. Each card costs 3 M€ to                                        Kim to increase her titanium
+buy to the hand, and you may buy 0-4 cards. The rest of the                                       production 2 steps, so she adjusts
+4 drawn cards are discarded face down on the discard pile.                                         that parameter on her player
+There is no hand limit.                                                                             board, and then places the
+           This phase is also skipped the first generation (see                                     card before her. Kim decides
+setup).                                                                                              to play another space card as
+           Example: In the second generation, the players have                                        her second action, spending
+their first normal research phase. They put down their hand                                           more titanium in the process,
+cards and draw 4 cards each to buy from. Stanley decides to                                     before giving the turn to Stanley,
+buy 3 of his cards, so he pays 9 M€ and discards the remaining               who now has decided to go for Geothermal Power.
+card, adding the 3 new cards to his hand.                           That card has a power tag and costs 11 M€, but because
+                                                                    Stanley has the corporation ThorGate, with a discount effect
+                                                                    for power cards, he only needs to pay 8 M€ for it.
+3) Action phase (see page 9)                                        And so the turn continues around until everyone is out by
+         Players take 1 or 2 actions each turn, or pass. Play       doing no actions.
+proceeds clockwise around the table until all players have
+passed. The actions may be combined in any way the player
+chooses. The available actions are:
+A) Play a card from your hand (see page 9).                         4) Production phase
+B) Use a standard project (see page 10).                                       All players perform this phase simultaneously.
+C) Claim a milestone (see page 10).                                 First, all energy is converted into heat (move all resource
+D) Fund an award (page 11).                                         cubes from the energy box to the heat box). Secondly, all
+E) Use the action on a blue card (see page 11).                     players receive new resources:
+F) Convert 8 plants into a greenery tile (which gives an oxy-                  Players get M€ according to their terraform rating
+gen increase) as described on the player board (see page 11).       plus any M€ production (which may be negative!), then the
+G) Convert 8 heat into a temperature increase as described          players also get any other resources they have production of
+on the player board (see page 11).                                  according to the player board. Place all generated resources
+         You can choose to take 1 or 2 actions on your              in their corresponding boxes. (See page 6)
+turn. If you take no action at all (pass), you are out of                      Finally, remove player markers from used action
+the round and may not take any anymore actions this                 cards, to mark that they may be used again next generation
+generation. When everyone has passed, the action phase              (see page 11).
+ends.                                                                          Now you are ready to start the next generation.
+
+         Example: Stanley starts the second generation action                Example: Kim gains 21 M€ from her TR and M€
+phase by using the standard project ’Sell patents’ (see page 10):   production. She also produces 3 titanium resources (because
+he discards a card to gain 1 M€ - he realized that that card        she played Asteroid Mining earlier), and 1 each of the other
+was not really helpful for his situation. Plus, he wants to see     resources, adding them on her player board.
+what the others do before deciding his own course of action.
+                                                 ACTIONS
+          As shown on page 8, there are 7 different actions that   partly (maybe only Kim herself has plants, or maybe Stan-
+players may choose from on their turn. Players may do 1 or         ley or Robinson have less than 3 plants to remove). All plants
+2 actions on their turn, in any combination (for example 2 of      must be taken from the same player, though.
+the same action). By choosing 2 actions, a player can surprise              Cards A, B, D and E below each have a requirement
+the others, by doing more than they expected and beat them         listed next to the card’s cost. To play card A, you need to
+to some goal or bonus. Choosing only 1 action can be useful        have titanium production. To play card B, the oxygen level
+too - it can be used for waiting out your opponents or just to     needs to be 9% or lower, and you also need to have energy
+do a no-brainer while thinking about your more important           production since the card requires you to decrease your
+decisions.                                                         energy production. To play card D, the oxygen level must be
+                                                                   9% or higher. You also need to have plant production, since
+                                                                   the card requires you to decrease your plant production.
+A) Play a card from your hand                                      Card E requires 5% oxygen and energy production.
+                                                                            The cost required to play the card is stated in the
+When playing a card, there are 3 steps to consider:                upper left corner. Some blue cards already in play may
+       1) Check the requirements.                                  give you a discount (for example, E gives a discount when
+       2) Pay for the card and get any immediate effects.          playing a space card). You may also use steel and titanium to
+       3) Place the card appropriately.                            help pay for building and space cards respectively.
+1) Check the requirements.                                         2) Paying and performing immediate effects.
+          In order to play a card you must meet its require-                First you must pay the card’s cost.
+ments and be able to perform the effects stated on the card,                Then the lower panel of the card shows you any
+with the following exceptions: You may play a card that...         immediate effects. These effects (and other effects triggered
+          - raises global parameters that have already reached     by the card you just played) are performed in any order you
+their goal (for example when there are no more ocean tiles, or     choose.
+when the temperature is at +8 °C).                                          Any production (see brown boxes on cards A,
+          - adds resources that you can’t collect (for example     B, D & E) must be performed. Resources or production
+adding microbe resources without having any microbe                with a red frame means that you can affect any player you
+project to place them on).                                         choose (even yourself). Resources or production without
+          -removes resources for any player (red-bordered          red frames always affect yourself and must be performed.
+resource icons, see example on card C below) if you can’t or       So card A essentially steals a titanium production from an
+do not wish to.                                                    opponent, while in B, D and E you must decrease your own
+Even if these effects can’t be performed, you may still play the   energy or plant production in order to increase your M€
+card, performing all other effects as usual.                       production.
+                                                                            Cards may also feature tiles and tags with a red
+        Example: Kim can play Asteroid (card C) even if the        border. A ’red’ tile means any player’s tile, and a ’red’ tag
+temperature has reached its goal, but then she gets no TR. She     means any player’s tag.
+may also choose not to remove any plants at all, or just do it
+           Any resources (C) are gained immediatley. Again,
+a red border means you can choose the resources of any                          Many cards represent ideas for terra-
+one player, so playing card C is usually not very nice. Red-         forming. They may affect the global parameters or give
+bordered resources are optional, so card C does not remove           you a higher TR in other ways. They may represent
+your own plants, even if you are the only player that has            photosynthesising organisms releasing oxygen, or heat
+any plant resources. Non-standard resources (that are not            sources that gradually raise the temperature.
+collected on your player board) are instead collected on                        There are also other cards that are interlinked
+specific cards (D). By default, those resources are usually          with the terraforming process, either requiring some
+placed on the same card that generates them. Livestock (Card         terraforming to have been done, or specializing in early
+D), for example, gains 1 animal (resource cube) on it when           conditions.
+you use its action (actions can be used once per generation).                   Each card has a flavor text that may help you
+           Any tiles (B) placed by the card follow the rules for     get a feeling for what the card does ’in reality’.
+tiles (see page 5). A tile must be placed if possible, but being
+unable to do so does not prevent you from playing the card.
+           If a card has a (*), then it is an exception to the
+                                                                   B) Use a standard project
+normal rules, and you must read the explanation in
+                                                                             The 6 standard projects printed on the game board
+parenthesis to see details of how the card works.
+                                                                   are always available to the players. Each of them may be
+           If you ever become uncertain of a card’s function,
+                                                                   used several times during the same generation.
+read the explanation text.
+                                                                   1) Sell patents: You may discard a number of cards from
+           VP icons (see cards A, D, E) are ignored for now,
+                                                                   hand to gain the same number of M€.
+they will be counted in the final scoring (see page 12). Card
+                                                                   2) Power plant: For 11 M€ you get to increase your energy
+D may be worth several VPs if its action (top panel) has had
+                                                                   production 1 step.
+time to work a few times to add more animal resources to the
+                                                                   3) Asteroid: For 14 M€ you get to increase temperature 1
+card.
+                                                                   step (and your TR).
+                                                                   4) Aquifer: For 18 M€ you get to place an ocean tile (you
+3) Place the card (see illustration below).
+                                                                   also get 1 TR and collect any placement bonus for the tile,
+          Events (red cards, C) are collected in a personal pile
+                                                                   see page 5).
+face down after being played. Their tags only apply while
+                                                                   5) Greenery: For 23 M€ you get to place a greenery tile,
+being played (for example using the discount on card E when
+                                                                   which increases oxygen level (and your TR) 1 step, and
+playing a space event).
+                                                                   collect any placement bonus for the tile. Put a player marker
+          Automated cards (green, A, B) are placed face up in
+                                                                   on the tile. (See page 5)
+a stack on the table with only the top row visible. They have
+                                                                   6) City: For 25 M€ you get to place a city tile (collect any
+no further effect, but since they represent the current extent
+                                                                   placement bonus for the tile, and place a player marker on
+of your operations, their tags still apply.
+                                                                   it). You also get to increase your M€ production 1 step. (See
+          Active cards (blue, D, E) have ongoing effects that
+                                                                   page 5)
+may trigger at any time, or actions that you can use (just
+like the corporations). Since you need to keep track of these
+                                                                             Example: Robinson’s first action on his turn is to use
+cards, they are placed with the top panel visible.
+                                                                   the standard project City to gain his 3rd city tile, continuing
+                                                                   to get extra bonuses from his corporation Tharsis Republic.
+ EVENT PILE
+                                                                   C) Claim a milestone
+                                                                             If you meet the criteria of a milestone, you may
+                                                                   claim it by paying 8 M€ and placing your player marker on
+                                                                   it. A milestone may only be claimed by one player, and only
+                                                                   3 of the 5 milestones may be claimed in total, so there is a
+                                                                   race for these! Each claimed milestone is worth 5 VPs at the
+                                                                   end of the game.
+
+                                                                            These are the milestones and what you need to
+                                                                   claim them (besides paying 8 M€):
+                                                                   1) Terraformer: Having a terraform rating of at least 35.
+2) Mayor: Owning at least 3 city tiles.                           the production phase.
+3) Gardener: Owning at least 3 greenery tiles.
+4) Builder: Having at least 8 building tags in play.                       Example: Towards the end of the game, Stanley has
+5) Planner: Having at least 16 cards in your hand when you        Livestock (card D) in play. He can choose its action on his
+claim this milestone.                                             turn, adding a resource cube (an ’animal’) to that card, and
+          Example: Robinson’s second action (after building       placing a player marker on it.
+his 3rd city), is to claim the mayor, which he now qualifies
+for. He pays 8 M€ and places one of his markers on the Mayor                 Blue cards may also have effects that are always ac-
+milestone. This is worth 5 VPs! Only 2 more milestones may        tive, like Shuttles (Card E): When you play a space card, it
+be claimed now, and no one else may claim Mayor.                  costs 2 M€ less. These effects are not actions (no red arrow),
+                                                                  so you can always use them.
+D) Fund an award
+                                                                  F) Convert plants into greenery
+         There is no requirement that must be met to fund
+an award. The first player to fund an award pays 8 M€ and                   8 plant resources may be turned into a greenery
+places a player marker on it. The next player to fund an          tile, which increases oxygen level 1 step (and therefore also
+award pays 14 M€, the last pays 20 M€. Only three awards          your TR 1 step).
+may be funded. Each award can only be funded once.                          Note that the greenery tile must be placed next to
+         In the final scoring, each award is checked, and 5       another of your tiles (if possible) and may generate place-
+VPs are awarded to the player who wins that category - it         ment bonuses (see page 5).
+does not matter who funded the award! The second place
+gets 2 VPs (except in a 2-player game where second place                    Example: Robinson removes 8 plant resources from
+does not give any VPs). Ties are friendly: more than one          his plant box on the player board, increasing oxygen level 1
+player may get the first or second place bonus (see example).     step, and raising his terraform rating 1 step as well. Then he
+If more than one player gets 1st place bonus, no 2nd place is     takes a greenery tile and places it between 2 of his city tiles,
+awarded.                                                          and takes the placement bonus, which happens to be 2 plants,
+                                                                  as printed on the chosen area.
+These are the awards and what they are awarded for:                         Not only did this yield 1 TR plus placement bonus,
+1) Landlord: Owning the most tiles in play.                       but the greenery will be worth 1 VP in itself as well as 1 VP to
+2) Banker: Having the highest M€ production.                      each adjacent city in the end game scoring.
+3) Scientist: Having the most science tags in play.
+4) Thermalist: Having the most heat resource cubes.               G) Convert heat into temperature
+5) Miner: Having the most steel and titanium resource
+cubes.                                                                    8 heat resources may be spent to increase
+          Example: Stanley pays 8 M€ to fund the award for        temperature 1 step (and therefore also your TR 1 step).
+thermalist, since he thinks his GHG Factories will give him all
+the heat he needs to win that award.
+          When the game ends, though, Kim also produces
+heat and has 12 in her resource box, compared to Stanley’s
+12 and Robinson’s 5. Stanley and Kim both get 5 VPs for first
+place, while Robinson gets nothing.
+
+
+
+E) Use the action on a blue card
+         Many blue cards and corporations have actions,
+as indicated by a red arrow. Each such action card may be
+used once each generation. When you use an action on a
+blue card, you must first pay any cost stated to the left of
+the arrow. You get whatever the arrow points to, and place a
+player marker on the card to indicate that it has been used                         ”All we need is more power”
+this generation. The player markers will be removed during                        Bjorn Sigmund, ThorGate CEO
+                                            GAME END
+          When all three global parameters (ocean, tempe-
+rature, and oxygen) have reached their goals, the game ends
+at the end of that generation. After the production phase,
+players have one extra chance to convert plants into
+greenery tiles (in player order; this may also trigger other
+effects such as placement bonuses). Then the final scoring
+takes place. To avoid confusion, we recommend that one
+player is chosen to handle the scoring, and that all other
+players check that scoring is done correctly.
+
+
+Final scoring
+1) TR: Your TR at the end of the game is your basic score.
+Move your marker onward from this point as you add VPs                                                are you a winner?
+from the rest of the scoring.
+2) Awards: Gives the leading player in that category 5 VPs
+and the runner-up 2 VPs (except in a 2-player game). Ties
+are friendly: Players at the same level get the same VPs for
+1st or 2nd place. (See rules on page 11.) Add your points to
+the TR-track.
+3) Milestones: Each claimed Milestone is worth 5 VPs.                                Suggestions
+4) Game board: Players get VPs from the map on the game
+board. Each greenery tile is worth 1 VP and each city tile is     If you don’t understand the symbols - read the explanation
+worth 1 VP for each greenery adjacent to it (regardless of           in parenthesis on the card, or see page 14 & 15 in this
+who owns the greenery tiles). Count these in player order to                               rulebook.
+avoid confusion.
+5) Cards: First count all VPs on cards that collect resources.       Sometimes there are many effects to keep track of, so
+Then gather all of your remaining cards (including all your       please help each other. When several effects are triggered at
+played events!) and count your VPs. If you have Jovian            the same time, the active player chooses the order, even for
+cards, these may have to be counted separately.                                  other players’ triggered effects.
+
+The player with the highest total score is the winner! Any
+ties are won by having the most M€.
+
+          Example: Stanley has a final Terraform rating of 38,
+so that’s where he starts counting his remaining VPs. He got
+5 VPs from the award Thermalist, and he also claimed the
+Planner milestone for 5 VPs. From the game board Stanley
+has 3 greenery tiles around his lone city, so that’s 3 VPs from
+the greenery tiles and 5 VPs for the city, because it also lies
+next to 2 greenery tiles owned by Robinson. This brings the
+total up to 56 VPs before the cards are considered.
+          Stanley has 3 resources on his Livestock card, giving
+him 3 VPs. He also has a total of 6 extra VPs on his other face
+up cards (blue and green), and -1 VP on an event card (red),
+making his final score 64 VPs.
+                                G A M E VA R I A N T S
+     Corporate Era (extended game):                             to get as high a score as possible. If you have not completed
+                                                                terraforming by the end of generation 14, you lose.
+          To play the extended game, simply add all cards
+marked with a red and white icon ( )on the cards’
+lower left border at the start of setup, including 2 new
+                                                                Draft variant:
+corporations. Players start with no extra production of
+                                                                            If more interaction is desired, the Draft variant
+resources (see Setup - Players on page 7). Corporate Era can
+                                                                may be used. During the Research phase the players draft 4
+be combined with any of the other game variants.
+                                                                cards to buy from instead of just drawing 4 to buy from:
+          Corporate Era focuses on economy and
+                                                                            Each player first gets 4 cards and chooses one to
+technology. These are projects that do not contribute
+                                                                draft, putting it aside and passing the rest to the next player.
+directly to the terraforming, but make the corporations
+                                                                Then you have 3 cards; set aside 1 of them and pass the rest
+stronger, adding new strategic choices to the game.
+                                                                to the left. Then set aside 1 of the 2 you receive, pass the last
+          Playing Corporate Era makes the game longer and
+                                                                card, and finally receive your last card.
+more complex. We do not recommend it for players new to
+                                                                            Then examine the 4 cards you’ve set aside (drafted)
+Terraforming Mars.
+                                                                and choose which to buy (3 M€ each) and which to discard.
+                                                                            Drafting is not used during the first generation
+                                                                since the first Research phase is skipped (see setup). Cards
+Solo variant for Corporate Era:                                 are passed clockwise during even-numbered generations
+                                                                and counter-clockwise during odd-numbered generations.
+           All rules apply as usual for solo play, with these               This variant allows players to affect which cards
+exceptions:                                                     other players get access to, and increases your ability to
+1) Before you choose your cards, place 2 neutral city tiles     pursue a certain strategy, or predict which parameter will
+on the map with an adjacent greenery tile each (these tiles     rise first.
+are not yours, and do not increase the oxygen level): reveal                The Draft Variant adds some extra game time and
+and discard the 4 top cards of the deck and use their cost      is not recommended for players new to Terraforming Mars.
+numbers to determine the positions of the tiles. The first
+city is placed counting from top left to right and down, like
+reading. Skip any illegal placements (like areas reserved
+for ocean). For the second city you step backwards from
+bottom right in the same fashion. Then you place the two        About the author:
+greeneries by counting the cost numbers and stepping
+clockwise around each city, starting from top left, skipping              Jacob Fryxelius got his doctoral degree in
+illegal placements.                                             chemistry at Stockholm University in 2006. Discovering his
+Special case: If you choose to play Tharsis Republic this       passion for analyzing and explaining things, he then began
+game, you get M€ production for the 2 neutral cities even       to work as a science teacher for high schools and colleges,
+though they are placed before you reveal your corporation.      getting his teaching diploma in 2011.
+2) Start with a terraform rating of 14 instead of 20 (marked              Board games being a hobby since childhood, he
+’solo’ on the track) and without the extra production of        has developed several games over the years. In 2011, he
+resources decribed for the standard game.                       co-founded FryxGames with his
+3) Awards and Milestones are not used.                          brothers Enoch, Daniel, and
+4) You have a neutral opponent that you can steal from, or      Jonathan, and that same year
+reduce any kind of resources and production from.               his game Space Station was
+5) You always play 14 generations (marked ’solo’).              released.
+In order to win, you need to complete terraforming (i.e                   Between his teaching
+making the three global parameters reach their goal) before     job, FryxGames, children, and
+the end of generation 14. After generation 14, you may          a lovely wife, life is full indeed!
+convert plants into greenery tiles, following normal rules
+but without raising the oxygen, and finally you score VPs
+                                            SYMBOLS
+Victory points                                                    they are all collected on the player board. Certain cards can
+                 You win the game by having the most              also collect resources (usually animal and microbe cards, see
+             Victory points (VPs). VPs are scored for your        tags on next page). If a card adds a non-standard resource, it
+             Terraform rating, from tiles on the map, from        is generally placed on that same card.
+             Milestones and Awards, and from many of the
+             cards.                                                      The MegaCredit (M€) is the general currency used for
+                                                                         buying and playing cards and using standard projects,
+                                                                         milestones, and awards.
+Parameters                                                               Steel represents building material on Mars. Usually
+         Terraforming Mars is about making Mars earth-                   this means some kind of magnesium alloy. Steel is
+like enough to live freely on it. There are 4 parameters on              used to pay for building cards, being worth 2 M€ per
+the game board connected to this process: Terraform rating,              steel.
+temperature, oxygen level and ocean coverage.                            Titanium represents resources in space or for the
+                                                                         space industry. Titanium is used to pay for space
+             Terraform Rating (TR) is the measure of how                 cards, being worth 3 M€ per titanium.
+             much you have contributed to the terraforming               Plants use photosynthesis. As an action, 8 plant
+             process. Each time you raise the oxygen level, the          resources can be converted into a greenery tile that
+temperature, or place an ocean tile, your TR increases as well.          you place on the board. This increases the oxygen
+Each step of TR is worth 1 VP at the end of the game, and the            level (and your TR) 1 step. Each greenery is worth 1
+Terraforming Committee awards you income according to                    VP and generates 1 VP to each adjacent city tile (see
+your TR. You start at 20.                                                map rules on page 5).
+                                                                         Energy is used by many cities and industries. This
+        The mean temperature at the equator is raised 2                  usage may either be via an action on a blue card, or
+        ˚C at a time from -30˚C to +8˚C. This will create                via a decrease in energy production. Leftover energy
+        an equatorial zone where water stays liquid. This                is converted into heat.
+        symbol means that you raise the temperature 1 step,              Heat warms up the Martian atmosphere. As an action,
+and therefore you also increase your TR 1 step.                          8 heat resources may be spent to increase temperature
+                                                                         (and therefore your TR) 1 step.
+            The oxygen level is measured as a percentage of              Other resources (including animals and microbes) are
+            an atm of pressure, meaning that this percentage             collected on their respective cards, which also define
+            is comparable to Earth’s 21% oxygen. At 14% the              what they do.
+            atmosphere resembles that of Earth at a 3000 m
+elevation. This symbol means that you raise the oxygen level                Production of a resource is depicted by having the
+1 step, and therefore also increase your TR 1 step.                         resource symbol in a brown production box. In
+                                                                            this example the symbol means that you increase
+            Each ocean tile represents 1% ocean coverage.                   your plant production parameter on your player
+            With 9% of the surface covered by oceans, Mars        board 1 step. This in turn will give you a steady income
+            will have a hydrological cycle, creating rain and     of plant resources. Production is not limited to 10; if your
+            rivers. This symbol means that you place an ocean     production exceeds 10, just leave the marker on 10 and start
+tile, and therefore also increase your TR 1 step (and get any     a new marker to complement it.
+placement bonus, see page 5).                                     Only M€ production can be negative (only as far as -5,
+                                                                  though). But since TR is added to your production, your
+Resources                                                         total income will not be negative.
+         All resources are represented by resource cubes.
+These come in 3 sizes; 1 (bronze), 5 (silver) and 10 (gold) and            Cards represent huge endeavors that players may
+can be used as any kind of resource. Where you place them                  undertake. The cards have 0-3 different tags that
+determines what they are. The six standard resources are                   describe some thematic aspects of the card, and
+megacredits, steel, titanium, plants, energy and heat, and                 that can be utilised in conjunction with certain
+other cards. Cards cost 3 M€ to buy into your hand during                   This symbol means that you place a greenery tile
+the research phase, but have different costs to play from your              with an owner marker (this also increases oxygen
+hand into play. When you encounter this symbol, it means                    level and TR, as indicated by the oxygen symbol).
+that you may draw a card to your hand (without paying for                   The tile must be placed next to another tile that
+it).                                                              you own if possible. If you have no tiles or no area next to
+                                                                  them, you may place it on any available area. Greenery tiles
+Tags                                                              are worth 1 VP at the end of the game, and also generate a VP
+          Cards have 0-3 tags that thematically describe them     to any adjacent city (see city tile rules).
+and allow other cards to relate to them. There are no special
+rules for the different tags.                                              This symbol means that you place a city tile with
+                                                                           an owner marker. The tile may not be placed next
+   Building: This project involves construction on Mars.                   to another city tile. Each city tile is worth 1 VP
+   Steel may be used to pay for this card.                                 for each adjacent greenery tile (regardless of who
+                                                                  owns the greenery tile) at the end of the game.
+   Space: This project uses space technology. Titanium may
+   be used to pay for this card.                                              Symbol tiles in brown mean that you place
+   Power: This project is focused on energy production or                   the special tile described on the card, with an
+   handling.                                                                owner marker. Any special rules and placement
+                                                                            restrictions are specified on the card.
+   Science: This project enhances your scientific knowledge.
+   Some cards require science tags.
+   Jovian means ’having to do with Jupiter’. This project                Red border on icons
+   represents infrastructure in the outer solar system.                     When an icon has a red border, it means that it
+   Earth: This project is related to activities on Earth.         targets any player (you or an opponent).
+                                                                            A card that removes red-borded resources, may
+                                                                  remove those resources from any one player (this effect may
+   Plant: This project involves plant life or other               also be performed partly, or not at all).
+   photosynthesizing organisms.                                             A card effect that reduces production of a red-
+   Microbe: This project involves microbes for specific           bordered resource must be performed, so if your opponent
+   purposes.                                                      doesn’t have that production, then you must lower your own
+                                                                  production or not play the card at all.
+   Animal: This project involves animals. Generates VPs.
+                                                                            A card with a red-bordered tile icon targets any or
+                                                                  all players’ tiles.
+   City: This project places a city tile. This often requires               A card with a red-bordered tag icon targets all cards
+   energy production and produces M€.                             with that icon, whether they belong to you or another player.
+   Event: This project is a one-time event. All events are red
+   cards that are turned face down after being played.
+
+
+Tiles
+         The game board has a map where tiles may be
+placed. When placing a tile, you may receive a placement
+bonus printed on the area (plus 2 M€ for each adjacent
+ocean). There are 4 kinds of tiles:
+                                                                                                                           DANIEL FRYXELIUS
+
+
+
+
+           This symbol means that you place an ocean tile.
+           This increases your TR 1 step. There are 12 areas
+           on the game board that are reserved for ocean tiles;
+           Ocean tiles may only be placed on such areas and
+no other tiles may be placed there. Ocean tiles are not owned     ”With the new warp drive and our experience of terraforming
+by any player, but generate a 2 M€ placement bonus each for        Mars, it is time for the next chapter in history - it is time to
+any player subsequently placing tiles next to them.                                       aim for the stars.”
+                                                                     Helen Brack, Interplanetary Cinematics policy officer
+  Components list:                                                    Credits
+                                                          Game design: Jacob Fryxelius
+          1 Rules Booklet
+                                                         Graphic design: Isaac Fryxelius
+           1 Game Board
+                                                          Assistant design: FryxGames
+          5 Player Boards
+      17 Corporation Cards             FryxGames thanks: Our partners, friends and family (especially
+         208 Project Cards                Mom and Dad) for playtesting and feedback. We want to
+         8 Reference Cards             acknowledge Kim Stanley Robinson for great inspiration to this
+ 200 Player Markers (transparent      game in his Red Mars trilogy. And, of course, eternal gratitude to
+      plastic cubes, 5 colors)                   the Creator of Mars and of everything else.
+  200 Resource Markers (opaque
+                                                        We thank our beta-testers:
+ plastic cubes in gold, silver, and
+                                      Geof Gambill, Lloyd Keller, Thomas & Sandra Diehl, Gerda van
+    copper in different sizes)         Heel & Bart van Bilzen, Daisy & Christopher Swaffer, Dennis
+3 Game Board Markers (big white                Suijkerbuijk, Jorrit Sminia, Martin Ekelund.
+           plastic cubes)
+           9 Ocean Tiles              All images are credited by name, and any image that has been modified by us is marked
+      60 Greenery/City Tiles                                          by a ’+’ after the name.
+
+          11 Special Tiles                                  Printed by LudoFact, Germany.
+       1 First Player Marker
+                                                              © 2016 FryxGames
+                                                    www.fryxgames.se/games/terraformingmars/
+                                                            © 2016 Stronghold Games LLC
+                                                             www.StrongholdGames.com
+

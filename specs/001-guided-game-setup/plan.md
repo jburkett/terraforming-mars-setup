@@ -1,6 +1,6 @@
 # Implementation Plan: Guided Game Setup
 
-**Git branch:** `plan/001-guided-game-setup` | **Spec Kit feature:** `001-guided-game-setup` | **Date:** 2026-11-11
+**Git branch:** `feature/001-guided-game-setup` | **Spec Kit feature:** `001-guided-game-setup` | **Date:** 2026-11-11
 
 **Input:** [approved spec](spec.md), [rules evidence](rules-reference.md), constitution v1.0.0.
 
@@ -16,7 +16,7 @@ Fetched origin and fast-forwarded the clean `work` checkout from `2a6f57d` to `a
 
 This installed Spec Kit resolves explicit feature state independently of Git branch names. Neither setup-plan nor prerequisite checking requires a feature branch. Planning used `SPECIFY_FEATURE=001-guided-game-setup` and `SPECIFY_FEATURE_DIRECTORY=specs/001-guided-game-setup`; setup persisted the latter in ignored `.specify/feature.json`. Its JSON `BRANCH` value is the feature identifier, not the actual Git branch.
 
-At the user's subsequent request, created `plan/001-guided-game-setup` from the verified current main commit to commit the planning artifacts and submit a draft PR against `main`. The same feature pointer/number is retained. No create-new-feature command or requirements regeneration was needed; the merged requirements branch was not resurrected.
+At the user's subsequent request, created the working branch from the verified current main commit to commit the planning artifacts and submit draft PR #5 against `main`. The branch was initially named `plan/001-guided-game-setup`; the requested name is now `feature/001-guided-game-setup`. The local branch has been renamed; the user is handling the GitHub rename. The same feature pointer/number is retained. No create-new-feature command or requirements regeneration was needed; the merged requirements branch was not resurrected.
 
 The approved packet's earlier statements that planning was unauthorized are historical scope records. The user subsequently authorized planning and submission of these artifacts for draft review; those approved documents remain unchanged. Task generation and implementation remain outside the authorized scope.
 

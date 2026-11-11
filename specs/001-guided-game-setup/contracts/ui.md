@@ -2,6 +2,12 @@
 
 **Status:** Proposed design for [Guided Game Setup](../spec.md). The exposed interface is the browser UI. No network API, persistence/export format or public programming API is proposed.
 
+## Presentation and state boundary
+
+Use Vue 3, TypeScript, Vite and the Composition API for one client-side SPA. Built-in Vue reactivity maintains a shared in-memory session above the three views, so view changes retain configuration/results/locks without a router or Pinia. Domain logic remains plain TypeScript without Vue imports. Components issue explicit actions; reactive display computations do not generate selections or mutate committed state. Introducing Pinia or Vue Router requires a concrete requirement.
+
+Static game definitions come from JSON catalogs under `src/content/`, validated against TypeScript-defined schemas and cross-catalog invariants during the build. Catalogs are read-only inputs, separate from mutable session state; eligibility/selection/transitions execute in TypeScript. This boundary adds no product control, network API or persistence. The revised plan remains subject to human approval; no components, catalogs or validators are generated here.
+
 ## Expansions and player count
 
 View 1 shows N=2 (2–5 allowed), seven content options, and Use expanded boards with all seven candidates checked. Top select-all/none affects that page's toggles only, preserving N and variants. No map-pack expansion selectors.

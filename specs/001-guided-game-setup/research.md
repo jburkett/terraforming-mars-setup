@@ -2,23 +2,23 @@
 
 **Date:** 2026-11-11. **Status:** Proposed architectural decisions for human review, not approval.
 
-Evidence: [spec.md](spec.md), [rules-reference.md](rules-reference.md), constitution v1.0.0, installed Spec Kit helpers and a read-only research-agent assessment. This is design synthesis of approved evidence, not new primary-source verification or application measurement.
+Evidence: [spec.md](spec.md), [rules-reference.md](rules-reference.md), constitution v1.0.0 and the user's requested Vue/JSON/in-memory architectural direction. This revision supersedes the earlier framework-free proposal. It is design synthesis, not new primary-source verification or application measurement; the revised plan remains subject to human approval.
 
 ## R-01 — Stack and tooling
 
-**Decision:** Propose strict TypeScript 5.x, native semantic HTML/CSS and Vite, without a runtime UI framework. Propose Vitest, Playwright, ESLint and Prettier for distinct verification needs. Node 24 LTS is the proposed development runtime; pin compatible exact maintained versions and the lockfile during later authorized setup.
+**Decision:** Use Vue 3, the Composition API, strict TypeScript 5.x and Vite for a client-side SPA with semantic HTML/CSS. Use Vue's built-in reactivity, avoiding Pinia and Vue Router unless a concrete requirement justifies them. Propose Vitest, Playwright, ESLint, Prettier and Vue-aware TypeScript checking for distinct verification needs. Node 24 LTS remains the proposed development runtime; pin compatible exact maintained versions and the lockfile during later authorized setup.
 
-**Rationale:** Three views and small finite pools need no server, database, router or state library. Strong typing and automated verification follow the constitution. No package installation is needed to review this design.
+**Rationale:** This follows the user's requested frontend direction. Composition API components and an application-lifetime reactive session serve three views without additional routing/state libraries. Strong typing and automated verification follow the constitution. No package installation is needed to review this design.
 
-**Alternatives considered:** React offers component conventions but is not necessary at this size; a server adds unsupported infrastructure; raw JavaScript omits static typing. Revisit a framework only for a concrete maintenance need and human approval. Exact package patches are later setup details, not product clarifications.
+**Alternatives considered:** The earlier framework-free approach and React are superseded by the requested Vue direction. Pinia and Vue Router add concepts without a current requirement for stores, URLs or route navigation. A server adds unsupported infrastructure; raw JavaScript omits static typing. Exact package patches remain later setup details.
 
 ## R-02 — State and projections
 
-**Decision:** One in-memory session holds configuration, generated public results, objective locks and transient UI state. Derive instructions, alternatives, limitations and summary through domain functions independent of the DOM.
+**Decision:** An application-level Composition API composable owns one reactive in-memory session containing configuration, generated results, locks and transient UI/view state. Keep it alive across all three views, separate from read-only JSON catalogs. Domain functions accept/return plain TypeScript data without Vue imports; the composable adapts and commits their results. Derive instructions, alternatives, limitations and summary without mutation or random draws in computed values/watchers/rendering.
 
-**Rationale:** Supports live Back navigation without introducing recovery; derived summary cannot drift from results.
+**Rationale:** Built-in reactivity supports live Back navigation without persistence or a separate state library. Keeping ownership above the views prevents remounts from resetting the session. Pure domain boundaries permit framework-independent reasoning; derived summaries cannot drift from results.
 
-**Alternatives considered:** Persistence introduces excluded recovery behavior; duplicated projections risk stale content; a state library is disproportionate. No physical card or step-completion state is needed.
+**Alternatives considered:** Persistence introduces excluded recovery behavior; view-local session ownership loses state on remount; mutable catalogs mix definitions with play state; duplicated projections risk stale content. No database, physical card state or step-completion state is needed.
 
 ## R-03 — Atomic edits
 
@@ -44,17 +44,19 @@ Evidence: [spec.md](spec.md), [rules-reference.md](rules-reference.md), constitu
 
 **Alternatives considered:** Random sort is biased; draws with replacement allow duplicates; forced changed rerolls violate approved repeat behavior; remote randomness is unnecessary. Never fabricate components, enable expansions or silently lose locks to resolve failure.
 
-## R-06 — Sourced instructions
+## R-06 — JSON catalogs, schemas and sourced instructions
 
-**Decision:** Typed static definitions carry SU IDs, applicability, quantities, ordering and source references. Product overrides are labeled separately from official rules. Preserve SU-06 preparation before SU-09 discards; SU-10 remains a reminder.
+**Decision:** Store boards, expansions, colonies, milestones, awards and setup instructions in JSON files under `src/content/`. Define catalog schemas with TypeScript types. A TypeScript build-time validator checks actual JSON shapes/types, unique identities, references, recognized rule/context identifiers and required inventory counts before Vite emits assets. Validation failure reports the file/record and stops the build. JSON contains data, text, citations and identifiers only; TypeScript implements eligibility, applicability/quantity interpretation, threshold rules, selection algorithms and state transitions. No expressions, scripts, dynamic evaluation or executable rules are embedded in JSON.
 
-**Rationale:** SC-001 requires complete applicable instruction coverage and traceability. Physical deck preparation uses expansion/rules guidance without digital card handling.
+Instruction records retain SU IDs, ordering, source references and descriptive variants/parameters. Product overrides are labeled separately from official rules. Preserve SU-06 preparation before SU-09 discards; SU-10 remains a reminder.
 
-**Alternatives considered:** Runtime scraping adds availability/provenance problems; rules copied into UI handlers can conflict; card inventories/effect execution reopen R3 exclusions. Existing evidence is a starting source, not proof of unimplemented catalog correctness.
+**Rationale:** Separates editable game facts from behavior and mutable state. TypeScript types define the expected data contract, while build validation establishes that actual catalogs satisfy it; casts and import inference alone cannot check cross-file references or completeness. SC-001 still requires human-auditable source coverage. Physical deck preparation remains expansion/rules guidance without digital card handling.
+
+**Alternatives considered:** TypeScript object literals for game catalogs are superseded by the requested JSON storage. Type assertions alone provide no content validation; runtime-only validation discovers errors after distribution. Executable JSON creates a second rule language; runtime scraping adds availability/provenance problems. Card inventories/effect execution reopen R3 exclusions. Structural validation cannot prove rules accuracy; source review is still required. No validator or JSON data is implemented in this planning revision.
 
 ## R-07 — Verification and approval
 
-**Decision:** Later tests derive from AC-01–39 and SC-001–005. Validate catalogs against evidence; use deterministic domain checks and observable browser journeys, with failing tests before implementation. Run formatting/lint/types/relevant tests before merge.
+**Decision:** Later tests derive from AC-01–39 and SC-001–005. Validate JSON catalogs against TypeScript-defined schemas during every build and review their meaning against evidence. Use deterministic domain checks and observable Vue SPA journeys, with failing tests before corresponding behavior implementation. Run formatting/lint/Vue type checking/relevant tests and the catalog-gated build before merge. No tests or validation code are generated now.
 
 **Rationale:** Meets constitution III–V without treating document approval as application validation. Human visual review must still assess all-visible-list busyness and confirmation clarity.
 

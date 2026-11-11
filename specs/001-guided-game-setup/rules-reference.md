@@ -1,6 +1,6 @@
 # Official rules and component inventory
 
-**Reviewed:** 2026-11-10. **Status:** evidence for draft human review, not a claim of product approval.
+**Rules evidence reviewed:** 2026-11-10. **Requirements approval recorded:** 2026-11-11. **Status:** supporting evidence for the user-approved requirements; official rules and deliberate product decisions remain distinguished.
 
 This inventory covers the setup-relevant physical components and every digital selection pool. Card-deck families and aggregate package counts are background evidence only, not individual-card inventories or application validation requirements. Under resolved R3, individual card inventories, promo identification and card-level release-date tracking are outside v1. Gameplay effects stay on the physical cards. Verified facts, derived ordering, and unresolved choices are distinguished below. No fan expansion or community colony is an official component in this inventory.
 
@@ -133,4 +133,4 @@ The standard Venus board remains supported with its setup instructions; WGT conf
 
 The user approved the currently documented defaults D1–D7: D1–D3 and D5–D7 are active approved product decisions; D4 stays retired under R3. These are product choices rather than official game rules. In particular, uniform repeat-permitting draws and the insufficient-pool fallback are approved, while card identification/filtering remains outside scope.
 
-F1 is closed by the explicit human decision to exclude WGT from v1 because it is not material to setup. No WGT configuration-state restoration, selection or gameplay guidance is required; AC-39 covers the exclusion. R1–R3 remain resolved. SU-06/09/10 now makes the discard-pile preparation dependency explicit. No full-specification approval or later-phase authorization is inferred.
+F1 is closed by the explicit human decision to exclude WGT from v1 because it is not material to setup. No WGT configuration-state restoration, selection or gameplay guidance is required; AC-39 covers the exclusion. R1–R3 remain resolved. SU-06/09/10 now makes the discard-pile preparation dependency explicit. The user explicitly approved the complete specification and SC-001–SC-005 on 2026-11-11. No later-phase authorization is inferred.

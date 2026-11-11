@@ -2,7 +2,7 @@
 
 **Feature branch:** `001-guided-game-setup`  
 **Created / consolidated:** 2026-11-10  
-**Status:** **Draft for human review — not approved.** R1–R3 are resolved by explicit product decisions; defaults D1–D3 and D5–D7 are approved, and D4 remains retired under R3. WGT is excluded from v1 by explicit user decision. The complete specification is not approved. Documentation commits and draft PR #4 are authorized; planning, application code and executable tests are not.
+**Status:** **Approved by the user on 2026-11-11**, including the complete specification and SC-001–SC-005. Requirements-quality checklist: **18/18**. R1–R3 are resolved; defaults D1–D3 and D5–D7 are approved, and D4 remains retired under R3. WGT is excluded from v1. Documentation commits and marking PR #4 ready for review are authorized; planning, task generation, application testing and implementation have not been authorized.
 
 ## Purpose and scope
 
@@ -38,7 +38,7 @@ The setup-rule and component inventory is [rules-reference.md](rules-reference.m
 - Q: What does Reset do? → A: Confirm, clear all state, restore initial all-on defaults; cancellation changes nothing.
 - Q: How are instructions presented? → A: **Tentative:** all applicable instructions visible in order, without checkboxes; assess busyness when rendered. No progress recovery in v1.
 
-These recorded decisions are binding inputs to this draft, not approval of the complete specification. The published ordinary first-player procedure and expansion-specific corporation quotas are intentionally overridden. Extended Start availability without Prelude/Prelude 2 is also an explicit human decision.
+These recorded decisions form part of the complete specification explicitly approved by the user on 2026-11-11. The published ordinary first-player procedure and expansion-specific corporation quotas are intentionally overridden. Extended Start availability without Prelude/Prelude 2 is also an explicit human decision.
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -221,7 +221,7 @@ Clearing is dependency-based, not a global restart. No physical action is claime
 - **SC-004:** Every accepted configuration edit clears only dependency-affected state; every cancelled edit/Reset changes zero prior values. Reset restores the specified defaults.
 - **SC-005:** Summary fields match the current configuration/results exactly; there are zero digital standard-card draws and zero private-card entry requirements or individual-card identification, filtering or validation actions (AC-38).
 
-These are correctness/completeness outcomes, not implementation tests or claimed measured results. No unsupported setup-time reduction, satisfaction percentage or performance target is invented. R1–R3 are resolved and the current defaults are approved. F1 is closed by the WGT scope exclusion; SC-001–SC-005 and the complete specification still await explicit human approval.
+These are correctness/completeness outcomes, not implementation tests or claimed measured results. No unsupported setup-time reduction, satisfaction percentage or performance target is invented. R1–R3 are resolved and the current defaults are approved. F1 is closed by the WGT scope exclusion; the user explicitly approved SC-001–SC-005 and the complete specification on 2026-11-11. This records requirements acceptance, not measured application results.
 
 ## Approved defaults and remaining review issues
 
@@ -242,7 +242,7 @@ The constitution is existing **v1.0.0**, with Simplicity, Separation of Concerns
 
 D4 is retired by the R3 decision: there is no app card-filtering or card-level research requirement. Physical preparation follows selected expansions and printed rules, without a proposed mandatory prefiltering method. The user approved D1–D7 as documented in the current specification: active decisions D1–D3 and D5–D7 are approved; D4 remains retired. This approval does not reinstate card filtering or override R3.
 
-Approval of these defaults is not approval of the complete specification or authorization to infer additional behavior. Existing tentative decisions are the all-visible instruction layout (review for busyness) and selective invalidation (v1, revisit in v2). No rendered UI or implementation is being produced now.
+The defaults approval was followed by explicit approval of the complete specification on 2026-11-11. Neither authorizes additional behavior beyond these requirements. Existing tentative decisions are the all-visible instruction layout (review for busyness) and selective invalidation (v1, revisit in v2). No rendered UI or implementation is being produced now.
 
 ### Resolved product decisions
 
@@ -260,4 +260,4 @@ R1–R3 are resolved and the active defaults are approved. Final document review
 
 Editorial corrections made without a new product decision: AC-26 no longer assumes colony locks beyond D5; SU-06 prepares Prelude 2 discard piles before SU-09 uses them. Tentative v1 layout/selective-clearing choices remain explicit and are not promoted to permanent commitments. Story priorities are advisory review labels. No rendered-layout validation is claimed.
 
-**Readiness:** ready for explicit human approval review. No unresolved material requirement contradictions or acceptance gaps were identified after the WGT exclusion and editorial corrections. This is a document-review conclusion, not approval or a claim of exhaustive correctness. Explicit approval of the complete specification, including SC-001–SC-005 and tentative v1 behaviors, remains necessary. No planning or later phase is authorized. Documentation is published for review in draft PR #4; full requirements approval remains outstanding.
+**Readiness:** **requirements approved on 2026-11-11; checklist 18/18.** The user explicitly approved the complete specification, including SC-001–SC-005 and the documented tentative v1 behaviors. No material requirements blockers remain identified. This approval is not application validation or authorization to begin planning or any later phase. The user authorized marking PR #4 ready for review once the checklist reached 18/18. Merging and later-phase work remain unauthorized.

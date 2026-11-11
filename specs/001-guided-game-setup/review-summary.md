@@ -1,6 +1,6 @@
 # Human review summary — Guided Game Setup
 
-**Status:** consolidated draft; human approval pending. 2026-11-10.
+**Status:** complete requirements explicitly approved by the user on 2026-11-11, including SC-001–SC-005. PR #4 is authorized to be marked ready for review at 18/18; no later phase is authorized.
 
 ## Requirements in brief
 
@@ -15,7 +15,7 @@
 
 - [Specification](spec.md): 26 active functional requirements, two retired requirement identifiers and 39 concrete acceptance conditions, success outcomes and dependency mapping.
 - [Official rules / component inventory](rules-reference.md): source register, physical component families, all digital candidates, printed objective sets and SU-01–SU-12 sequence.
-- [Quality checklist](checklists/requirements.md): 16/18 passing, with an explanation for each incomplete item.
+- [Quality checklist](checklists/requirements.md): 18/18 passing; no incomplete checklist items.
 
 ## Resolved R1 — intentional product decision
 
@@ -29,18 +29,18 @@ The standard Venus board remains supported. The official optional longer Venus b
 
 V1 excludes individual card inventories, promo-card identification and card-level release-date tracking. Guide players through physical deck preparation using selected expansions and printed rules; do not identify, catalog, filter or validate individual cards. The 2023 campaign remains the general scope boundary for expansions/setup components, not a promotional-card inventory obligation. Card-level research and historical acceptance obligations are removed. AC-38 makes the boundary observable; D4's proposed prefiltering method is retired.
 
-R1–R3 remain resolved. The active defaults are now approved; final review finding F1 is closed by the explicit WGT scope exclusion. Full requirements approval remains outstanding.
+R1–R3 remain resolved. The active defaults are now approved; final review finding F1 is closed by the explicit WGT scope exclusion. The complete requirements and SC-001–SC-005 are explicitly approved as of 2026-11-11.
 
 ## Approved defaults
 
 The user approved D1–D7 as currently documented. Active decisions D1–D3 and D5–D7 specify: initial/reset player count2; bulk buttons preserve count; uniform unbalanced eligible draws with repeats permitted; colony overrides preserve count/uniqueness without assuming new lock-table controls; a visible failure explanation rather than fabricated results if a pool is too small; summary includes first player.
 
-D4 remains retired under R3; this approval does not reinstate a card-filtering method. Approval applies to the defaults, not the full specification, measurable outcomes or any implementation. The rules packet distinguishes official rules from approved product decisions.
+D4 remains retired under R3; this approval does not reinstate a card-filtering method. The subsequent full-specification approval on 2026-11-11 also accepts SC-001–SC-005; implementation remains unauthorized. The rules packet distinguishes official rules from approved product decisions.
 
 ## Readiness
 
-**Ready for explicit human approval review, not automatically approved.** F1 concerned WGT state after Venus re-enablement; the user resolved it by excluding WGT from v1 as immaterial to setup. AC-39 covers removal of WGT controls, stored choices, summary values and guidance. FR-027/028 are retired. No material requirement contradiction or acceptance gap remains identified in this document review.
+**Approved by explicit human decision on 2026-11-11.** F1 concerned WGT state after Venus re-enablement; the user resolved it by excluding WGT from v1 as immaterial to setup. AC-39 covers removal of WGT controls, stored choices, summary values and guidance. FR-027/028 are retired. No material requirement contradiction or acceptance gap remains identified in this document review.
 
 Corrected two editorial conflicts: AC-26 no longer presupposes colony locks beyond approved D5, and Prelude 2 discard piles are prepared before use. The tentative all-visible layout and selective clearing remain v1 choices subject to later usability review; they do not require implementation to decide requirements approval. Story priorities remain advisory. No card-level or optional-longer-board research is reopened.
 
-Checklist: **16/18**. Agreement on SC-001–SC-005 and explicit full-spec approval remain incomplete. Defaults approval is recorded without treating it as approval of all requirements. Low-risk review limits are the tentative v1 presentation/selective-clearing choices and advisory story priorities; rendered usability has not been evaluated. Documentation remains in draft PR #4. No planning, task generation, testing or implementation is authorized.
+Checklist: **18/18**. The user explicitly accepted the complete specification, including SC-001–SC-005; the final two approval items are complete. Low-risk review limits are the tentative v1 presentation/selective-clearing choices and advisory story priorities; rendered usability has not been evaluated. The user authorized marking PR #4 ready for review at 18/18. Merging is not authorized. No planning, task generation, testing or implementation is authorized.

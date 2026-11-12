@@ -3,7 +3,7 @@ import type { Configuration, PublicSelections } from '../../src/domain/types'
 // Callable empty baselines establish missing behavior without import/tool failures.
 import { applicableInstructions } from '../../src/domain/instruction-context'
 export { applicableInstructions }
-export const projectInstructions: typeof applicableInstructions = () => []
+export { projectInstructions } from '../../src/domain/instructions'
 
 import type {
   BoardDefinition,

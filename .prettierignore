@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
+.vite/
+package-lock.json
+
+# Preserve approved records and historical evidence during project setup.
+.agents/
+.specify/
+.devcontainer/
+specs/
+work/
+README.md

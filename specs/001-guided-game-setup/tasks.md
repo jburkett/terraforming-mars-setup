@@ -4,7 +4,9 @@
 
 **Input:** [spec.md](spec.md), [plan.md](plan.md), [research.md](research.md), [data-model.md](data-model.md), [contracts/ui.md](contracts/ui.md), [quickstart.md](quickstart.md), [rules-reference.md](rules-reference.md), constitution v1.0.0.
 
-**Status:** Task-generation artifact for review, not implementation authorization. Requirements were approved on 2026-11-11; the revised technical plan was approved on 2026-11-12. This task list was generated from latest fetched `origin/main` at `f9cf968` (PR #6 merged). No task has been executed; no application code, JSON catalogs, validator or executable tests were generated in this run. Earlier documents' statements that task generation was outside their scope describe those earlier phases; the current user request authorizes this task artifact and its draft PR only.
+**Status:** T001–T004 completed on 2026-11-12 under the user's explicit project-setup authorization. T005–T064 remain unstarted. This change establishes development tooling only: no game/domain behavior, catalog data, validator, application entry point or permanent test suite was implemented. Type checking, linting, formatting and temporary runner fixtures were verified; see the project-setup PR for execution evidence and browser-download limits. Requirements and technical architecture remain unchanged.
+
+**Generation baseline:** This task list was generated from `origin/main` at `f9cf968` using the approved specification and technical plan; project setup starts from `f25ebec`, which includes the merged task artifact. Earlier phase scope statements are historical and do not authorize later tasks.
 
 **Tests:** Required by constitution III and the approved plan, overriding the template's optional-test wording. For every behavior, write the relevant tests first, run them and establish failure for the missing behavior before the corresponding implementation; then establish success. A syntax/tooling failure alone does not prove the required behavior is missing. Task descriptions below describe future test work, not generated tests or claimed results.
 
@@ -12,7 +14,7 @@
 
 ## Format and execution rules
 
-Every task uses `- [ ] Tnnn [P?] [USn?] Description with exact file paths`. IDs are sequential and checkboxes remain unchecked. `[P]` means the task can run alongside other marked tasks in its stated group once prerequisites are complete; it never bypasses a dependency or test-first gate. Story labels occur only in story phases. Tasks that touch the same file must be sequenced.
+Every task uses `- [ ] Tnnn [P?] [USn?] Description with exact file paths`. IDs are sequential; checked boxes denote verified completed work and unchecked boxes denote remaining work. `[P]` means the task can run alongside other marked tasks in its stated group once prerequisites are complete; it never bypasses a dependency or test-first gate. Story labels occur only in story phases. Tasks that touch the same file must be sequenced.
 
 Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code free of Vue imports and expose plain-data inputs/outputs. Keep mutable configuration/results separate from read-only catalogs. No Pinia or Vue Router without a concrete requirement and review of the resulting architectural change. No backend, database, persistence, WGT setting/guidance, longer Venus option, digital cards, individual-card inventory/filtering, gameplay execution, progress tracking, accounts, exports or sharing.
 
@@ -20,10 +22,10 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 **Purpose:** Establish the approved development and verification tools. This phase alone produces no user-story behavior. T002 and T003 may proceed together after T001; complete both before T004.
 
-- [ ] T001 Initialize the Vue 3/Composition API, TypeScript 5.x and Vite project and lock compatible maintained dependency versions in `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json` and `index.html`; use the planned Node 24 LTS runtime, include Vue-aware type checking and no Pinia/router/backend dependencies.
-- [ ] T002 [P] Configure Vue/TypeScript linting and formatting in `eslint.config.js`, `.prettierrc.json` and `.prettierignore`; enforce readable strongly typed code and avoid generated build/coverage artifacts in checks.
-- [ ] T003 [P] Configure Vitest and Playwright in `vitest.config.ts` and `playwright.config.ts`, with deterministic domain tests, an automatically started local Vite server and Chromium/Firefox/WebKit browser projects; create no product behavior as runner setup.
-- [ ] T004 Add the planned `dev`, `format:check`, `lint`, `typecheck`, `test` and `test:e2e` scripts in `package.json` and generated-artifact exclusions in `.gitignore`; type checking must cover Vue single-file components and plain TypeScript modules.
+- [x] T001 Initialize the Vue 3/Composition API, TypeScript 5.x and Vite project and lock compatible maintained dependency versions in `package.json`, `package-lock.json`, `vite.config.ts`, `tsconfig.json` and `index.html`; use the planned Node 24 LTS runtime, include Vue-aware type checking and no Pinia/router/backend dependencies.
+- [x] T002 [P] Configure Vue/TypeScript linting and formatting in `eslint.config.js`, `.prettierrc.json` and `.prettierignore`; enforce readable strongly typed code and avoid generated build/coverage artifacts in checks.
+- [x] T003 [P] Configure Vitest and Playwright in `vitest.config.ts` and `playwright.config.ts`, with deterministic domain tests, an automatically started local Vite server and Chromium/Firefox/WebKit browser projects; create no product behavior as runner setup.
+- [x] T004 Add the planned `dev`, `format:check`, `lint`, `typecheck`, `test` and `test:e2e` scripts in `package.json` and generated-artifact exclusions in `.gitignore`; type checking must cover Vue single-file components and plain TypeScript modules.
 
 **Checkpoint:** Tooling can execute a focused behavioral test before that behavior is implemented. Catalog/build integration is completed in Phase 2, not silently skipped.
 
@@ -218,4 +220,4 @@ SC-001 maps to T009/T013/T041/T043–T045/T047/T059/T064; SC-002 to T016–T019/
 3. Add US2 selections, US3 physical guidance/summary and US4 selective edits in the recommended integration order, maintaining test-first failure/success evidence per behavior. Do not expose partially implemented destructive edits as completed functionality.
 4. Run cross-cutting verification and human rendered review before proposing the finished feature for merge. Do not infer deployment/merge permission from task completion or from earlier documentation approvals.
 
-**Generation checks:** 64 sequential tasks; US1 7, US2 12, US3 9, US4 9; setup 4, foundations 17, cross-cutting 6. All tasks use unchecked checklist IDs, story labels where required and concrete file paths. No `.specify/extensions.yml` exists, so no before/after task-generation hooks are registered. This artifact records intended future work, not application test results.
+**Generation checks (initial task generation):** 64 sequential tasks; US1 7, US2 12, US3 9, US4 9; setup 4, foundations 17, cross-cutting 6. All tasks use unchecked checklist IDs, story labels where required and concrete file paths. No `.specify/extensions.yml` exists, so no before/after task-generation hooks are registered. This artifact records intended future work, not application test results.

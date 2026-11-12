@@ -4,11 +4,11 @@
 
 **Input:** [spec.md](spec.md), [plan.md](plan.md), [research.md](research.md), [data-model.md](data-model.md), [contracts/ui.md](contracts/ui.md), [quickstart.md](quickstart.md), [rules-reference.md](rules-reference.md), constitution v1.0.0.
 
-**Status:** T001–T028 and infrastructure tasks T065–T072 are complete under the user’s separate setup, foundations, deployment and US1 authorizations. T029–T064 remain unstarted. US1 provides configuration, shared in-memory view ownership and navigation to a setup placeholder; no public results, physical setup instructions, summary or Reset workflow are generated. See [US1 verification](checklists/configuration-validation.md) for task-level red/green evidence and [foundation verification](checklists/foundations-validation.md)/[deployment verification](checklists/deployment-validation.md) for earlier phase records. Existing product requirements and architecture remain unchanged.
+**Status:** T001–T040 and infrastructure tasks T065–T072 are implemented under the user's separate authorizations. US2 adds generation, customization, objective locks, direct board-loss confirmation and conflict recovery to the shared in-memory session. T041–T064 remain unstarted: physical setup instructions, summary and general configuration-edit/Reset behavior are outside this increment. See [US2 verification](checklists/public-selections-validation.md), [US1 verification](checklists/configuration-validation.md), [foundation verification](checklists/foundations-validation.md) and [deployment verification](checklists/deployment-validation.md) for incremental evidence. Existing product requirements and architecture remain unchanged.
 
 **US1 commit history:** T022 and T023 are preserved as intentional red-test commits. Each implementation task T024–T028 has a separate commit with passing relevant checks. The final tree resolves the intentional failures.
 
-**US2 progress:** T029–T040 is now authorized; task-level evidence and intentional red states are recorded in [US2 verification](checklists/public-selections-validation.md). Other phase status statements below record earlier work.
+**US2 progress:** T029–T040 is authorized; task-level evidence and intentional red states are recorded in [US2 verification](checklists/public-selections-validation.md). Other phase status statements below record earlier work.
 
 **Generation baseline:** This task list was generated from `origin/main` at `f9cf968` using the approved specification and technical plan; project setup starts from `f25ebec`, which includes the merged task artifact. Earlier phase scope statements are historical and do not authorize later tasks.
 
@@ -121,7 +121,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 - [x] T037 [US2] Build `src/ui/ObjectiveTable.vue` with drop-down then lock columns and no gridlines, stable rows, symmetric live option exclusions, manual auto-lock and unlocked-only reroll; do not expose MA controls for printed sets or fixed Venus entries.
 - [x] T038 [US2] Build `src/ui/PublicSelections.vue` with board, first-player and colony Customize controls, eligible alternatives and bottom reroll controls; preserve count/uniqueness and keep colony interaction within D5 without a new fine-grained eligibility or lock system.
 - [x] T039 [US2] Integrate generation/customization/board-confirmation actions and result presentation in `src/composables/useGameSession.ts`, `src/ui/SetupView.vue` and `src/ui/PublicSelections.vue`, satisfying T031 with no physical-card state; use a labeled confirmation presentation for the direct board-loss preview and retain its cancellation semantics.
-- [ ] T040 [US2] Add selection-conflict display and configuration-return action in `src/ui/SelectionConflict.vue` and connect it through `src/ui/SetupView.vue`, exposing D6's configuration conflict without partial sets, fabricated values, forced enabling or silent lock loss; satisfy deterministic domain and browser conflict cases.
+- [x] T040 [US2] Add selection-conflict display and configuration-return action in `src/ui/SelectionConflict.vue` and connect it through `src/ui/SetupView.vue`, exposing D6's configuration conflict without partial sets, fabricated values, forced enabling or silent lock loss; satisfy deterministic domain and browser conflict cases.
 
 **Checkpoint:** US2 works against explicit configurations and live unchanged navigation. Board-dependent selection is reconciled before commit; other post-generation configuration-edit behavior remains an explicit US4 dependency for integrated delivery.
 
@@ -249,4 +249,4 @@ SC-001 maps to T009/T013/T041/T043–T045/T047/T059/T064; SC-002 to T016–T019/
 
 **Generation checks (initial task generation):** 64 sequential tasks; US1 7, US2 12, US3 9, US4 9; setup 4, foundations 17, cross-cutting 6. All tasks use unchecked checklist IDs, story labels where required and concrete file paths. No `.specify/extensions.yml` exists, so no before/after task-generation hooks are registered. This artifact records intended future work, not application test results.
 
-**Current infrastructure addition:** 72 tasks total: the original 64 plus T065–T072. Execute the new infrastructure phase before US1 despite its higher numeric IDs. T029–T064 remain unstarted. The blank infrastructure entry point has now been extended by T028 for US1 configuration navigation only.
+**Current infrastructure addition:** 72 tasks total: the original 64 plus T065–T072. Execute the new infrastructure phase before US1 despite its higher numeric IDs. T041–T064 remain unstarted. The infrastructure entry point now supports US1 configuration and US2 public selections.

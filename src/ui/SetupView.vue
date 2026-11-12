@@ -3,6 +3,7 @@ import { nextTick, ref, watch } from 'vue'
 import type { GameSession } from '../composables/useGameSession'
 import PublicSelections from './PublicSelections.vue'
 import ObjectiveTable from './ObjectiveTable.vue'
+import SelectionConflict from './SelectionConflict.vue'
 const props = defineProps<{ session: GameSession }>()
 const dialog = ref<HTMLDialogElement | null>(null)
 watch(
@@ -18,6 +19,11 @@ watch(
 <template>
   <section aria-labelledby="setup-heading">
     <h2 id="setup-heading">Game setup</h2>
+    <SelectionConflict
+      v-if="session.conflict.value"
+      :conflict="session.conflict.value"
+      @return="session.returnToConfiguration"
+    />
     <template v-if="session.selections.value.board">
       <PublicSelections
         :configuration="session.configuration.value"

@@ -38,3 +38,46 @@ test('T037: unlocked-only reroll leaves a manually locked row in place', async (
     'ma:milestone:terraformer',
   )
 })
+
+test('T038: first-player and colony controls enforce eligible alternatives without colony locks', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/public-selections.html')
+  await page
+    .getByRole('button', { name: 'Customize first player', exact: true })
+    .click()
+  await page
+    .getByLabel('First-player choice', { exact: true })
+    .selectOption('2')
+  await expect(page.locator('[data-first-player]')).toHaveText('2')
+  await page
+    .getByRole('button', { name: 'Customize colonies', exact: true })
+    .click()
+  await page.getByLabel('Colony 1', { exact: true }).selectOption('titan')
+  for (let row = 2; row <= 5; row++)
+    await expect(
+      page
+        .getByLabel(`Colony ${row}`, { exact: true })
+        .locator('option[value="titan"]'),
+    ).toHaveCount(0)
+  await expect(page.getByRole('checkbox', { name: /lock/i })).toHaveCount(0)
+  await page
+    .getByRole('button', { name: 'Reroll colonies', exact: true })
+    .click()
+  await expect(page.locator('[data-first-player]')).toHaveText('2')
+})
+test('T038: board choices stay within the checked candidate pool', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/public-selections.html')
+  await page
+    .getByRole('button', { name: 'Customize board', exact: true })
+    .click()
+  await expect(
+    page.getByLabel('Board choice', { exact: true }).locator('option'),
+  ).toHaveCount(1)
+  await page.getByRole('button', { name: 'Reroll board', exact: true }).click()
+  await expect(page.getByLabel('Board choice', { exact: true })).toHaveValue(
+    'tharsis',
+  )
+})

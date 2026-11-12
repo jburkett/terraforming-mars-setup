@@ -183,3 +183,41 @@ export function customizeSelections(
     }
   }
 }
+
+export function boardAlternatives(
+  config: Configuration,
+  data: Catalogs = catalogs,
+) {
+  return data.boards.filter((board) =>
+    config.boardCandidates.some((id) => id === board.id),
+  )
+}
+export function firstPlayerAlternatives(
+  config: Configuration,
+): readonly FirstPlayer[] {
+  return Array.from(
+    { length: config.playerCount },
+    (_, i) => (i + 1) as FirstPlayer,
+  )
+}
+export function colonyAlternatives(
+  config: Configuration,
+  selections: PublicSelections,
+  row: number,
+  data: Catalogs = catalogs,
+) {
+  if (
+    !config.enabledContent.includes('colonies') ||
+    !selections.colonies ||
+    !Number.isInteger(row) ||
+    row < 0 ||
+    row >= selections.colonies.length
+  )
+    return []
+  return data.colonies.filter(
+    (colony) =>
+      !selections.colonies!.some(
+        (id, index) => index !== row && id === colony.id,
+      ),
+  )
+}

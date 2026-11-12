@@ -40,3 +40,18 @@ export const commitEdit: (
 ) => GameState | null = (preview) => preview.previous
 export const cancelEdit: (preview: EditPreview) => GameState = (preview) =>
   preview.previous
+export const previewReset: (
+  configuration: Configuration,
+  selections: PublicSelections,
+) => EditPreview = (configuration, selections) => ({
+  configuration,
+  selections,
+  losses: [],
+  previous: { configuration, selections },
+})
+export const commitReset: (
+  preview: EditPreview,
+  confirmed?: boolean,
+) => GameState | null = (preview) => preview.previous
+export const cancelReset: (preview: EditPreview) => GameState = (preview) =>
+  preview.previous

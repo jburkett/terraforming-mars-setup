@@ -7,3 +7,5 @@ Use the approved state dependency map and tentative v1 selective-loss policy. A 
 ## Per-task evidence
 
 - **T050 — intentional red:** 15 edit assertions fail and 6 preservation-only cases pass against callable no-change baselines. Failures demonstrate missing dependency clearing, lock-loss previews, source transitions and normalized atomic commits, not broken imports/tooling. Lint, type checking and formatting pass. Affected-state cases resolve in T053 and commit/cancel cases in T054.
+
+- **T051 — intentional red:** All 4 Reset cases fail against callable no-reset baselines. Cases require consent even before generation, preserve exact canceled state, clear all results/locks, restore approved defaults and defer fresh generation until setup entry. Lint, types and formatting pass. Implementation resolves in T055.

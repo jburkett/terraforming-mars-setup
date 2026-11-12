@@ -62,7 +62,7 @@ export interface Session {
     'board' | 'firstPlayer' | 'colonies' | 'milestones' | 'awards' | null
 }
 export interface SelectionConflict {
-  readonly pool: 'board' | 'colonies' | 'milestones' | 'awards'
+  readonly pool: 'board' | 'firstPlayer' | 'colonies' | 'milestones' | 'awards'
   readonly requested: number
   readonly available: number
   readonly message: string

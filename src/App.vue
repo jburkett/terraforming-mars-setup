@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useGameSession } from './composables/useGameSession'
 import ExpansionsView from './ui/ExpansionsView.vue'
 import VariantsView from './ui/VariantsView.vue'
+import SetupView from './ui/SetupView.vue'
 
 const session = useGameSession()
 const view = computed(() => session.view.value)
@@ -33,10 +34,7 @@ const steps = [
     <main class="configuration-card">
       <ExpansionsView v-if="view === 'expansions'" :session="session" />
       <VariantsView v-else-if="view === 'variants'" :session="session" />
-      <section v-else aria-labelledby="setup-heading">
-        <h2 id="setup-heading">Game setup</h2>
-        <button type="button" @click="session.goBack">Back</button>
-      </section>
+      <SetupView v-else :session="session" />
     </main>
   </div>
 </template>

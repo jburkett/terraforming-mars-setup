@@ -26,8 +26,15 @@ Bash helpers, workflow metadata, and an unfilled constitution template live in
 ## Game configuration and GitHub Pages
 
 US1 configures player count, expansions, eligible boards and variants. Choices
-remain in memory across Back/Continue navigation. The setup destination is a
-placeholder; public selections and physical setup guidance are not implemented. Use the Node 24 LTS version in `.nvmrc`:
+remain in memory across Back/Continue navigation. US2 generates public board,
+first-player, colony and objective selections on first setup entry. Customize
+reveals eligible choices and rerolls; manual replacement objectives lock in place.
+Board changes confirm affected objective losses before committing.
+
+Configuration is read-only after successful generation in this increment; public
+choices remain customizable and unchanged revisits preserve results. Physical
+setup guidance, summary and the general configuration-edit/Reset workflow belong
+to later stories. No session persistence is provided. Use Node 24 LTS from `.nvmrc`:
 
 ```sh
 npm ci

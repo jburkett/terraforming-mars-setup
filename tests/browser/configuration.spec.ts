@@ -137,9 +137,7 @@ test('AC-05: variants remain available without expansions; Back and setup retain
   await expect(
     page.getByRole('heading', { name: 'Game setup', exact: true }),
   ).toBeVisible()
-  await expect(
-    page.getByRole('button', { name: /reroll|customize|reset/i }),
-  ).toHaveCount(0)
+  await expect(page.getByRole('button', { name: /reset/i })).toHaveCount(0)
   await page.getByRole('button', { name: 'Back', exact: true }).click()
   await expect(
     page.getByLabel('Extended Start', { exact: true }),

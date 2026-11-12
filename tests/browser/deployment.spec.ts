@@ -35,3 +35,31 @@ test('Vue mounts game configuration without runtime errors', async ({
   await expect(page.getByLabel('Use expanded boards')).toBeChecked()
   expect(errors).toEqual([])
 })
+
+test('production public selections generate, customize and survive navigation', async ({
+  page,
+}) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await page.goto('./')
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await expect(page.getByText('Selected board', { exact: true })).toBeVisible()
+  await expect(
+    page.getByRole('list', { name: 'Selected colonies' }).getByRole('listitem'),
+  ).toHaveCount(5)
+  await page
+    .getByRole('button', { name: 'Customize first player', exact: true })
+    .click()
+  await page
+    .getByLabel('First-player choice', { exact: true })
+    .selectOption('2')
+  await expect(page.locator('[data-first-player]')).toHaveText('2')
+  const values = await page.locator('[data-selection-value]').allTextContents()
+  await page.getByRole('button', { name: 'Back', exact: true }).click()
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  expect(
+    await page.locator('[data-selection-value]').allTextContents(),
+  ).toEqual(values)
+  expect(errors).toEqual([])
+})

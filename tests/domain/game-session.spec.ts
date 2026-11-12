@@ -130,3 +130,49 @@ it('US2: customization updates shared results and canceled board previews draw n
   expect(session.selections.value.board).toBe('hellas')
   expect(session.selections.value.firstPlayer).toBe(2)
 })
+
+it('US3: instructions and summary are read-only projections of the shared committed session without draws', () => {
+  const source = vi.fn(() => 0)
+  const session = useGameSession({ source })
+
+  expect(session.instructions.value).toEqual([])
+  session.enterSetup()
+  const calls = source.mock.calls.length
+  const colonies = session.selections.value.colonies
+  const before = JSON.stringify(catalogs)
+  expect(isReadonly(session.instructions)).toBe(true)
+  expect(isReadonly(session.summary)).toBe(true)
+  expect(session.instructions.value.length).toBeGreaterThan(12)
+  for (let i = 0; i < 5; i++) {
+    expect(session.summary.value.board?.id).toBe('tharsis')
+    expect(session.summary.value.firstPlayer).toBe(1)
+  }
+  session.customize({ type: 'set-first-player', value: 2 })
+  expect(session.summary.value.firstPlayer).toBe(2)
+  expect(
+    session.instructions.value.find((i) => i.su === 'SU-01')?.text,
+  ).toContain('First player: 2')
+  session.requestBoard({ kind: 'manual', boardId: 'amazonis-planitia' })
+  if (session.pendingBoard.value) session.confirmBoardChange()
+  expect(session.summary.value.board?.id).toBe('amazonis-planitia')
+  expect(
+    session.instructions.value.find((i) => i.id === 'su-02-3')?.quantities
+      .oceans,
+  ).toBe(11)
+  expect(session.selections.value.colonies).toBe(colonies)
+  session.goBack()
+  session.continueToNextView()
+  expect(session.summary.value.firstPlayer).toBe(2)
+  expect(source).toHaveBeenCalledTimes(calls)
+  expect(JSON.stringify(catalogs)).toBe(before)
+})
+it('US3: failed public generation exposes no physical instruction list or fabricated summary board', () => {
+  const session = useGameSession({
+    source: () => 0,
+    data: { ...catalogs, colonies: catalogs.colonies.slice(0, 1) },
+  })
+  session.enterSetup()
+
+  expect(session.instructions.value).toEqual([])
+  expect(session.summary.value.board).toBeNull()
+})

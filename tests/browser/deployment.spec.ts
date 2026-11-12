@@ -63,3 +63,46 @@ test('production public selections generate, customize and survive navigation', 
   ).toEqual(values)
   expect(errors).toEqual([])
 })
+
+test('production setup includes sourced physical guidance and a live summary', async ({
+  page,
+}) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await page.goto('./')
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  const instructions = page.getByRole('region', {
+    name: 'Physical setup instructions',
+    exact: true,
+  })
+  const summary = page.getByRole('region', {
+    name: 'Configuration summary',
+    exact: true,
+  })
+  await expect(
+    instructions.getByRole('list', { name: 'Setup instructions', exact: true }),
+  ).toBeVisible()
+  await expect(instructions).toContainText('Coming and Distant')
+  await expect(instructions).toContainText(
+    'separate facedown corporation and Prelude discard piles',
+  )
+  await expect(
+    instructions.locator('[data-instruction-source]').first(),
+  ).toBeVisible()
+  await page
+    .getByRole('button', { name: 'Customize first player', exact: true })
+    .click()
+  await page
+    .getByLabel('First-player choice', { exact: true })
+    .selectOption('2')
+  await expect(
+    summary.locator('[data-summary-field="firstPlayer"]'),
+  ).toHaveText('2')
+  await expect(instructions.locator('[data-su="SU-01"]')).toContainText(
+    'First player: 2',
+  )
+  await expect(summary.locator('[data-summary-objective-id]')).toHaveCount(12)
+  await expect(instructions.getByRole('checkbox')).toHaveCount(0)
+  expect(errors).toEqual([])
+})

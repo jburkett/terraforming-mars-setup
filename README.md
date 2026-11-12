@@ -32,9 +32,11 @@ reveals eligible choices and rerolls; manual replacement objectives lock in plac
 Board changes confirm affected objective losses before committing.
 
 Configuration is read-only after successful generation in this increment; public
-choices remain customizable and unchanged revisits preserve results. Physical
-setup guidance, summary and the general configuration-edit/Reset workflow belong
-to later stories. No session persistence is provided. Use Node 24 LTS from `.nvmrc`:
+choices remain customizable and unchanged revisits preserve results. US3 adds
+all applicable physical setup instructions in order, with rules and product
+decision citations, and a live configuration/results summary. General
+configuration editing and Reset remain in US4. No session persistence is
+provided. Use Node 24 LTS from `.nvmrc`:
 
 ```sh
 npm ci

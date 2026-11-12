@@ -24,6 +24,8 @@ import type {
   BoardChangeTarget,
 } from '../domain/board-change'
 import { objectiveSets, objectiveAlternatives } from '../domain/objectives'
+import { projectInstructions } from '../domain/instructions'
+import { projectSummary } from '../domain/summary'
 
 /** Create once in the application shell; child views share this owner via props. */
 export function useGameSession(
@@ -150,6 +152,12 @@ export function useGameSession(
         ),
       ),
     })),
+    instructions: computed(() =>
+      projectInstructions(configurationState.value, selectionState.value, data),
+    ),
+    summary: computed(() =>
+      projectSummary(configurationState.value, selectionState.value, data),
+    ),
     configuration: computed(() => configurationState.value),
     view: computed(() => viewState.value),
     notices: computed(() => dependencyNotices(configurationState.value)),

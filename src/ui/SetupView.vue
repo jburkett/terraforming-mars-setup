@@ -4,6 +4,8 @@ import type { GameSession } from '../composables/useGameSession'
 import PublicSelections from './PublicSelections.vue'
 import ObjectiveTable from './ObjectiveTable.vue'
 import SelectionConflict from './SelectionConflict.vue'
+import InstructionList from './InstructionList.vue'
+import ConfigurationSummary from './ConfigurationSummary.vue'
 const props = defineProps<{ session: GameSession }>()
 const dialog = ref<HTMLDialogElement | null>(null)
 watch(
@@ -49,6 +51,11 @@ watch(
         :alternatives="session.objectiveOptions.value[kind]"
         :replacement="session.configuration.value.enabledContent.includes('ma')"
         @action="session.customize"
+      />
+      <InstructionList :instructions="session.instructions.value" />
+      <ConfigurationSummary
+        :summary="session.summary.value"
+        :data="session.data"
       />
     </template>
     <dialog

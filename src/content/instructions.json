@@ -79,7 +79,7 @@
     "su": "SU-03",
     "order": 1,
     "context": "turmoil",
-    "text": "Place the Committee and Global Event boards. Each player places one of seven delegates in the Lobby and six in reserve; place a neutral chairman and remaining neutrals in reserve. Prepare and physically shuffle the event deck using selected expansions and printed rules. Reveal Coming and Distant events; place their neutral delegates and dominance as indicated, with a same-party second delegate in the delegate area. No Current event is present in generation 1; put Greens policy on top. Do not digitally draw events or randomize the ruling party.",
+    "text": "Place the Committee and Global Event boards. Each player places one of seven delegates in the Lobby and six in reserve; place a neutral chairman and remaining neutrals in reserve. Prepare and physically shuffle the event deck using selected expansions and printed rules. Reveal Coming and Distant events; place their neutral delegates and dominance as indicated, with a same-party second delegate in the delegate area. No Current event is present in generation 1; put Greens policy on top.",
     "quantities": {
       "lobbyDelegatesPerPlayer": 1,
       "reserveDelegatesPerPlayer": 6
@@ -271,7 +271,7 @@
     "su": "SU-06",
     "order": 1,
     "context": "always",
-    "text": "Prepare and physically shuffle project and corporation decks using selected expansions and applicable printed dependency/replacement rules. Make space for facedown discards. Players inspect and handle cards; the assistant does not identify, catalog, filter or validate individual cards.",
+    "text": "Prepare and physically shuffle project and corporation decks using selected expansions and applicable printed dependency/replacement rules. Make space for facedown discards. Players inspect and handle the physical cards.",
     "quantities": {},
     "sources": [
       {
@@ -336,7 +336,7 @@
     "su": "SU-06",
     "order": 5,
     "context": "prelude2",
-    "text": "Before any discards, prepare separate facedown corporation and Prelude discard piles. Follow printed dependency/replacement rules; Prelude 2 permits physical preparation beforehand or discard-and-redraw under its rules, without a prescribed app prefiltering method.",
+    "text": "Before any discards, prepare separate facedown corporation and Prelude discard piles. Follow printed dependency/replacement rules; Prelude 2 permits physical preparation beforehand or discard-and-redraw under its rules.",
     "quantities": {},
     "sources": [
       {
@@ -390,7 +390,7 @@
     "su": "SU-07",
     "order": 3,
     "context": "always",
-    "text": "Explain the ordinary-corporation and Beginner Corporation branches. Beginner Corporation supplies 42 M€ and ten free starting projects; do not apply the ordinary purchase rule to that branch. No beginner configuration selector or automated deal is needed.",
+    "text": "Explain the ordinary-corporation and Beginner Corporation branches. Beginner Corporation supplies 42 M€ and ten free starting projects; do not apply the ordinary purchase rule to that branch.",
     "quantities": {
       "beginnerCredits": 42,
       "beginnerFreeProjects": 10
@@ -515,7 +515,7 @@
     "su": "SU-09",
     "order": 1,
     "context": "always",
-    "text": "Choose and discard physically facedown. Reveal corporations and apply printed starting effects in player order, then ordinary corporations pay 3 M€ for each retained project. Beginners follow their ten-free-project branch. Follow printed card-specific exceptions; no private-card input or digital effects are used.",
+    "text": "Choose and discard physically facedown. Reveal corporations and apply printed starting effects in player order, then ordinary corporations pay 3 M€ for each retained project. Beginners follow their ten-free-project branch. Follow printed card-specific exceptions.",
     "quantities": {
       "projectCost": 3
     },

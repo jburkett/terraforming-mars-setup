@@ -156,7 +156,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Required tests first
 
-- [ ] T050 [P] [US4] Write and establish failing edit cases in `tests/domain/edits.spec.ts` covering every row of the spec state dependency map and AC-26–29/AC-34: MA on plus Colonies on with locked MA Pioneer and an unrelated lock, N=4→5, printed vs MA board changes, CE threshold-only changes, Venus/Turmoil/MA source changes, all-prerequisite handling and instruction-only changes; previews/cancellation consume no randomness and preserve prior committed state.
+- [x] T050 [P] [US4] Write and establish failing edit cases in `tests/domain/edits.spec.ts` covering every row of the spec state dependency map and AC-26–29/AC-34: MA on plus Colonies on with locked MA Pioneer and an unrelated lock, N=4→5, printed vs MA board changes, CE threshold-only changes, Venus/Turmoil/MA source changes, all-prerequisite handling and instruction-only changes; previews/cancellation consume no randomness and preserve prior committed state.
 - [ ] T051 [P] [US4] Write and establish failing Reset cases in `tests/domain/reset.spec.ts` for AC-30, D1 and scope/default invariants: cancellation changes nothing; confirmation clears all results/locks and restores N=2, all seven boards/content/two variants; next setup entry generates fresh results without WGT or longer Venus state.
 - [ ] T052 [P] [US4] Write and establish failing browser journeys in `tests/browser/edits.spec.ts` for confirmation before loss, cancel/confirm, MA Pioneer vs unrelated lock, printed Utopia notice changes with MA off, N and board edits, instruction-only edits and Reset; scenarios set MA/Colonies explicitly and never assume colony locks.
 

@@ -67,11 +67,11 @@ async function matchingSummary(page: Page) {
     .getByRole('list', { name: 'Selected colonies', exact: true })
     .getByRole('listitem')
     .allTextContents()
-  expect(
-    await summary(page)
-      .locator('[data-summary-field="colonies"] li')
-      .allTextContents(),
-  ).toEqual(colonies)
+  // Use the retrying locator assertion rather than the main-world bulk-text
+  // query that reproducibly crashes Firefox in this rendered summary.
+  await expect(
+    summary(page).locator('[data-summary-field="colonies"] li'),
+  ).toHaveText(colonies)
   const actual = await Promise.all(
     (await summary(page).locator('[data-summary-objective-id]').all()).map(
       (row) => row.getAttribute('data-summary-objective-id'),

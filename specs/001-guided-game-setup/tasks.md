@@ -135,7 +135,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 - [x] T041 [P] [US3] Write and establish failing instruction projection cases in `tests/domain/instructions.spec.ts` for AC-16–24/AC-36/AC-38: applicability and ordering, base/CE/Beginner branches, Amazonis supplies, colony positions, Turmoil physical setup, normal/Extended Start deals and P2 preparation/discard/refund sequence; assert every output has a source or recorded override.
 - [x] T042 [P] [US3] Write and establish failing summary cases in `tests/domain/summary.spec.ts` for AC-25/AC-35/AC-39: N, first-player number, board/content/two variants, colony/objective identities/versions and every printed limitation agree with committed state, with no WGT value or independently mutable saved summary.
-- [ ] T043 [P] [US3] Write and establish failing browser journeys in `tests/browser/instructions.spec.ts` for all-visible ordered sourced instructions and matching summary, all-on/base-only/map-specific variants, standard Venus and physical decks; assert no progress checkboxes, private-card entry, digital card/event choice, longer Venus or gameplay guidance (AC-16–25, AC-35–39).
+- [x] T043 [P] [US3] Write and establish failing browser journeys in `tests/browser/instructions.spec.ts` for all-visible ordered sourced instructions and matching summary, all-on/base-only/map-specific variants, standard Venus and physical decks; assert no progress checkboxes, private-card entry, digital card/event choice, longer Venus or gameplay guidance (AC-16–25, AC-35–39).
 
 ### Implementation after the relevant failure evidence
 

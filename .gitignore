@@ -147,3 +147,9 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Playwright output and local browser downloads
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/

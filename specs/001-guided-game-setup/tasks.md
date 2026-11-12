@@ -139,7 +139,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Implementation after the relevant failure evidence
 
-- [ ] T044 [US3] Implement instruction context/applicability/quantity interpretation in `src/domain/instruction-context.ts` using configuration, selected board/colonies and descriptive JSON variants; keep executable rules in TypeScript, omit off-expansion instructions and avoid card inventories or generic JSON evaluation.
+- [x] T044 [US3] Implement instruction context/applicability/quantity interpretation in `src/domain/instruction-context.ts` using configuration, selected board/colonies and descriptive JSON variants; keep executable rules in TypeScript, omit off-expansion instructions and avoid card inventories or generic JSON evaluation.
 - [ ] T045 [US3] Implement ordered instruction projection in `src/domain/instructions.ts`, carrying SU/source/override references: ordinary nine oceans vs Amazonis eleven, CE production 1/0, Beginner 42 M€ and ten free projects, colony activation/fleets, physical Turmoil sequence, 2/4 vs 3/6 deals, no initial draft/quotas, P2 discard piles prepared before use and 15 M€ unplayable Prelude handling; preserve all SU prerequisites and R2/R3 exclusions.
 - [ ] T046 [US3] Implement summary projection in `src/domain/summary.ts` from committed configuration/results/effective objectives only, reusing R1 notices/source versions and including first player and both supported variants without WGT or persistence (AC-25, AC-35, D7).
 - [ ] T047 [US3] Build `src/ui/InstructionList.vue` as one visible ordered applicable list with source/override traceability and physical-action text, without mandatory hidden steps, completion state or card entry (AC-16–24, AC-36, AC-38).

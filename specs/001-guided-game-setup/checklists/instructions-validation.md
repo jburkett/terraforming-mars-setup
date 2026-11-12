@@ -11,3 +11,5 @@ Use the approved SU-01–SU-12 sequence and existing build-validated JSON descri
 - **T042 — intentional red:** All 8 summary cases fail against the callable empty projection, covering committed fields, source identities/thresholds, all three printed limitations, live reprojection and WGT exclusion. Lint, type checking and formatting pass. Implementation is assigned to T046.
 
 - **T043 — intentional red:** All 6 new browser journeys fail on absent instruction/summary presentation while Vite and system Chromium operate normally. Cases cover all-content, base-only, Amazonis/standard Venus, both additional R1 limitation maps and ordinary Prelude dealing. Lint, strict type checking and formatting pass. Integration resolves these cases in T049.
+
+- **T044 — green context:** All 11 context/quantity cases pass. Explicit TypeScript switches interpret descriptive catalog contexts, using the selected map, enabled content and Extended Start. Fleet/delegate totals use player count; catalogs remain unchanged. Lint, types and formatting pass. The 13 ordered-projection and 8 summary assertions remain intentionally pending T045/T046.

@@ -1,8 +1,8 @@
 # Planning Research: Guided Game Setup
 
-**Date:** 2026-11-11. **Status:** Proposed architectural decisions for human review, not approval.
+**Date:** 2026-11-11. **Status:** Supporting architectural decisions approved with the revised technical plan on 2026-11-12; see [plan.md](plan.md) for the approval record.
 
-Evidence: [spec.md](spec.md), [rules-reference.md](rules-reference.md), constitution v1.0.0 and the user's requested Vue/JSON/in-memory architectural direction. This revision supersedes the earlier framework-free proposal. It is design synthesis, not new primary-source verification or application measurement; the revised plan remains subject to human approval.
+Evidence: [spec.md](spec.md), [rules-reference.md](rules-reference.md), constitution v1.0.0 and the user's requested Vue/JSON/in-memory architectural direction. This revision supersedes the earlier framework-free proposal. It is design synthesis, not new primary-source verification or application measurement; the revised plan received human approval on 2026-11-12.
 
 ## R-01 — Stack and tooling
 
@@ -62,4 +62,4 @@ Instruction records retain SU IDs, ordering, source references and descriptive v
 
 **Alternatives considered:** Internal-shape tests constrain refactoring without proving behavior; statistical random tests are flaky and cannot establish algorithm correctness. No performance target is invented.
 
-Technical questions have proposed resolutions; none requires regenerating requirements. Human architectural approval remains a later implementation gate.
+Technical questions have documented resolutions; none requires regenerating requirements. Human architectural approval is recorded in [plan.md](plan.md); later-phase authorization remains separate.

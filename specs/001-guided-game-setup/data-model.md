@@ -1,6 +1,6 @@
 # Data Model: Guided Game Setup
 
-**Status:** Proposed design, not an implemented schema. [spec.md](spec.md) remains authoritative. The revised technical plan remains subject to human approval. Mutable state lives only in browser memory, separate from static JSON catalogs.
+**Status:** Design approved with the revised technical plan on 2026-11-12; see [plan.md](plan.md). This is not an implemented schema. [spec.md](spec.md) remains authoritative. Mutable state lives only in browser memory, separate from static JSON catalogs.
 
 ## Configuration
 

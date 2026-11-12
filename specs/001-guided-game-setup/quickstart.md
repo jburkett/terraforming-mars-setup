@@ -4,7 +4,7 @@
 
 ## Prerequisites and proposed commands
 
-Before implementation obtain human approval of the revised technical plan in [plan.md](plan.md) and phase authorization. The design uses Vue 3, TypeScript, Vite and the Composition API, built-in reactivity and in-memory session state, with Vue-independent domain logic. No Pinia or Vue Router is planned without a concrete requirement. Static JSON catalogs under `src/content/` have TypeScript-defined schemas and required build-time validation. Constitution III requires failing requirements-derived behavioral tests before corresponding code. Node 24 LTS and npm are proposed; later pin compatible tool versions and commit the lockfile. No backend, database, persistence or API key is proposed.
+Human approval of the revised technical plan is recorded in [plan.md](plan.md), dated 2026-11-12. Before implementation obtain separate phase authorization. The design uses Vue 3, TypeScript, Vite and the Composition API, built-in reactivity and in-memory session state, with Vue-independent domain logic. No Pinia or Vue Router is planned without a concrete requirement. Static JSON catalogs under `src/content/` have TypeScript-defined schemas and required build-time validation. Constitution III requires failing requirements-derived behavioral tests before corresponding code. Node 24 LTS and npm are proposed; later pin compatible tool versions and commit the lockfile. No backend, database, persistence or API key is proposed.
 
 From repository root, once the later manifest, lockfile and scripts exist:
 
@@ -59,4 +59,4 @@ Future catalog validation must check JSON shapes against TypeScript-defined sche
 
 Later browser validation must confirm that Vue view changes/remounts retain the same application-owned in-memory session, do not mutate catalogs and consume no randomness on unchanged navigation. Reload/reopening has no recovery. Record actual commands/results only after later execution; this revision generates no tests, application code, JSON catalogs or validator.
 
-Human rendered review must assess the tentative all-visible list for busyness and selective-clearing explanations. This document claims no application results, usability validation or architectural approval.
+Human rendered review must assess the tentative all-visible list for busyness and selective-clearing explanations. This document claims no application results or usability validation; architectural approval is recorded in [plan.md](plan.md).

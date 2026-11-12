@@ -4,7 +4,7 @@
 
 **Input:** [approved spec](spec.md), [rules evidence](rules-reference.md), constitution v1.0.0.
 
-**Status:** Proposed architecture and design for human review. Planning only; no tasks, code or executable tests generated. Architectural approval and implementation authorization remain outstanding.
+**Status:** Technical plan and supporting design artifacts approved by the user on 2026-11-12: “The plan looks good to me.” Advancing PR #6 from draft to ready for review is authorized. No tasks, code or executable tests were generated; later-phase work requires separate authorization.
 
 ## Summary
 
@@ -14,7 +14,7 @@ Provide three browser views for configuring a physical 2–5-player game, custom
 
 The existing feature is `001-guided-game-setup`, with approved requirements in [spec.md](spec.md) and an 18/18 requirements checklist. Spec Kit selects `specs/001-guided-game-setup` through ignored local `.specify/feature.json`.
 
-This revision incorporates the user's requested architectural direction. The revised technical plan as a whole remains subject to explicit human approval; task generation, tests and implementation are outside this revision's scope.
+This revision incorporates the user's requested architectural direction, with explicit approval of the revised plan recorded above. Task generation, tests and implementation are outside this revision's scope.
 
 ## Technical Context
 
@@ -48,10 +48,10 @@ Evaluated before research and rechecked after design against constitution v1.0.0
 | II. Separation | Domain independent of presentation/infrastructure. | Pass: framework-independent TypeScript transitions/projections, static JSON data and separate Vue presentation/state integration. |
 | III. TDD | Approved ACs govern later behavioral tests. | Pass for planning: validation guide only. Later tests must demonstrate missing behavior before corresponding code. |
 | IV. Quality | Strong typing and automated checks required later. | Pass for planning: strict TypeScript/Vue checks, build-time catalog validation, formatting, lint and relevant behavioral checks proposed; no application execution claims. |
-| V. Human Authority | Requirements approved; planning newly authorized. | Pass: architecture explicitly proposed, no requirements changes. Explicit architectural approval remains required before implementation. |
+| V. Human Authority | Requirements approved; planning authorized. | Pass: revised technical plan explicitly approved on 2026-11-12, with no requirements changes. Later-phase authorization remains separate. |
 | VI. Idiomatic practice | Proportionate language/browser conventions. | Pass: Vue Composition API, built-in reactivity and semantic controls, with plain TypeScript domain modules. |
 
-No constitutional exception or amendment is proposed. The implementation gate remains closed pending architectural approval and separate authorization.
+No constitutional exception or amendment is proposed. Architectural approval is recorded; the implementation gate remains closed pending separate authorization and the required behavioral-test workflow.
 
 ## Phase 0: Research
 
@@ -109,4 +109,4 @@ No violations identified. Vue 3 and the Composition API provide the requested co
 
 ## Completion and limits
 
-Phase 0/1 design artifacts drafted for review. No `.specify/extensions.yml` exists, so no before/after planning hooks are registered. No task list, source, executable tests or requirements changes were produced. Application correctness and rendered usability remain untested. The approved tentative all-visible layout and selective clearing remain tentative v1 decisions.
+Phase 0/1 design artifacts approved by the user on 2026-11-12. No `.specify/extensions.yml` exists, so no before/after planning hooks are registered. No task list, source, executable tests or requirements changes were produced. Application correctness and rendered usability remain untested. The approved tentative all-visible layout and selective clearing remain tentative v1 decisions.

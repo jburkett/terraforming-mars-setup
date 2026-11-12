@@ -29,3 +29,55 @@ test('T047: instructions render one visible ordered sourced list without interac
   await expect(region.locator('input,select,button,details')).toHaveCount(0)
   await expect(region).toContainText('15 M€')
 })
+
+test('T048: printed summary includes committed values and the complete Pioneer limitation without edit controls', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/configuration-summary.html')
+  const region = page.getByRole('region', {
+    name: 'Configuration summary',
+    exact: true,
+  })
+  await expect(region).toBeVisible()
+  await expect(region.locator('[data-summary-field="playerCount"]')).toHaveText(
+    '3',
+  )
+  await expect(region.locator('[data-summary-field="firstPlayer"]')).toHaveText(
+    '2',
+  )
+  await expect(region.locator('[data-summary-field="board"]')).toHaveText(
+    'Utopia Planitia',
+  )
+  await expect(region.locator('[data-summary-field="content"]')).toHaveText(
+    'Base game only',
+  )
+  await expect(
+    region.locator('[data-summary-field="extendedStart"]'),
+  ).toHaveText('Off')
+  await expect(
+    region.locator('[data-summary-field="researchDrafting"]'),
+  ).toHaveText('On')
+  await expect(region.locator('[data-summary-objective-id]')).toHaveCount(10)
+  await expect(region).toContainText(
+    'Pioneer is unattainable: requires Colonies.',
+  )
+  await expect(region).toContainText('Printed · Utopia Planitia')
+  await expect(region.locator('input,select,button,details')).toHaveCount(0)
+})
+test('T048: MA and fixed Venus source versions appear with selected colonies and effective thresholds', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/configuration-summary.html?mode=ma')
+  const region = page.getByRole('region', {
+    name: 'Configuration summary',
+    exact: true,
+  })
+  await expect(region).toContainText('Terraformer: 29 TR.')
+  await expect(region).toContainText('Milestones & Awards · replacement')
+  await expect(region).toContainText('Venus Next · fixed')
+  await expect(region.locator('[data-summary-objective-id]')).toHaveCount(12)
+  await expect(region.locator('[data-summary-field="colonies"]')).toContainText(
+    'Enceladus',
+  )
+  await expect(region).not.toContainText(/WGT|World Government|longer Venus/)
+})

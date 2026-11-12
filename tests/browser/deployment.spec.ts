@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-test('production Pages URL and its compiled module return HTTP 200', async ({
+test('production Pages URL and compiled JavaScript/CSS return HTTP 200', async ({
   request,
 }) => {
   const response = await request.get('./')
@@ -16,6 +16,20 @@ test('production Pages URL and its compiled module return HTTP 200', async ({
     const asset = await request.get(module)
     expect(asset.status()).toBe(200)
     expect(asset.headers()['content-type']).toMatch(/javascript/)
+  }
+  const styles = [...html.matchAll(/<link\b[^>]*>/g)]
+    .map((match) => match[0])
+    .filter((tag) => /\brel="stylesheet"/.test(tag))
+    .flatMap((tag) => {
+      const href = tag.match(/\bhref="([^"]+)"/)?.[1]
+      return href ? [href] : []
+    })
+  expect(styles.length).toBeGreaterThan(0)
+  for (const style of styles) {
+    expect(style).toMatch(/^\/terraforming-mars-setup\/assets\/.+\.css$/)
+    const asset = await request.get(style)
+    expect(asset.status()).toBe(200)
+    expect(asset.headers()['content-type']).toContain('text/css')
   }
 })
 

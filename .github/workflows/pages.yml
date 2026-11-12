@@ -32,16 +32,32 @@ jobs:
         run: npm run lint
       - name: Check types
         run: npm run typecheck
-      - name: Run domain and infrastructure tests
+      - name: Validate catalog inventory and references
+        run: npm run validate:catalogs
+      - name: Run complete domain and configuration-matrix tests
         run: npm run test -- --run
       - name: Install browser-test engines
         run: npx playwright install --with-deps chromium firefox webkit
-      - name: Run configuration browser journeys
-        run: npm run test:e2e
+      - name: Run MVP browser regressions across all engines
+        run: npm run test:e2e -- --project=chromium --project=firefox --project=webkit
+        env:
+          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/browsers
       - name: Validate catalogs and build
         run: npm run build
-      - name: Check production HTTP and Vue entry
+      - name: Check production HTTP and complete setup journeys
         run: npm run test:smoke
+        env:
+          PLAYWRIGHT_HTML_OUTPUT_DIR: playwright-report/production
+      - name: Retain validation reports and failure traces
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: mvp-validation-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 7
+          if-no-files-found: ignore
       - name: Upload verified Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3

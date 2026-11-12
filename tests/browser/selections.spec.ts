@@ -145,7 +145,9 @@ test('AC-31: printed Utopia retains Pioneer with a Colonies limitation and no MA
   await enterSetup(page)
   await expect(page.locator('[data-objective-kind="milestone"]')).toHaveCount(5)
   await expect(
-    page.getByText(/Pioneer is unattainable.*Colonies/),
+    page
+      .getByRole('region', { name: 'Milestones', exact: true })
+      .getByText(/Pioneer is unattainable.*Colonies/),
   ).toBeVisible()
   await expect(
     page.getByRole('button', { name: 'Customize milestones', exact: true }),

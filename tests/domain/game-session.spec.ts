@@ -109,3 +109,24 @@ it('US2 interim boundary: configuration is read-only after generation without di
   expect(session.configuration.value).toBe(config)
   expect(session.selections.value).toBe(previous)
 })
+
+it('US2: customization updates shared results and canceled board previews draw nothing', () => {
+  const source = vi.fn(() => 0)
+  const session = useGameSession({ source })
+  session.dispatch({ type: 'select-content', enabled: false })
+  session.dispatch({ type: 'set-expanded-boards', enabled: true })
+  session.enterSetup()
+  session.customize({ type: 'set-first-player', value: 2 })
+  expect(session.selections.value.firstPlayer).toBe(2)
+  const before = session.selections.value
+  const calls = source.mock.calls.length
+  session.requestBoard({ kind: 'manual', boardId: 'hellas' })
+  expect(session.pendingBoard.value).toBeTruthy()
+  session.cancelBoardChange()
+  expect(session.selections.value).toBe(before)
+  expect(source).toHaveBeenCalledTimes(calls)
+  session.requestBoard({ kind: 'manual', boardId: 'hellas' })
+  session.confirmBoardChange()
+  expect(session.selections.value.board).toBe('hellas')
+  expect(session.selections.value.firstPlayer).toBe(2)
+})

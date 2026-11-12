@@ -49,15 +49,21 @@ function setExpandedBoards(event: Event): void {
   <section aria-labelledby="content-heading">
     <h2 id="content-heading">Choose game content</h2>
     <p>Choose the players, expansions and boards for your table.</p>
+    <p v-if="!session.configurationEditable.value">
+      Configuration is fixed for these selections. Return to setup to customize
+      public choices.
+    </p>
     <div class="bulk-actions" aria-label="Content selection">
       <button
         type="button"
+        :disabled="!session.configurationEditable.value"
         @click="session.dispatch({ type: 'select-content', enabled: true })"
       >
         Select all
       </button>
       <button
         type="button"
+        :disabled="!session.configurationEditable.value"
         @click="session.dispatch({ type: 'select-content', enabled: false })"
       >
         Select none
@@ -68,6 +74,7 @@ function setExpandedBoards(event: Event): void {
       Player count
       <select
         id="player-count"
+        :disabled="!session.configurationEditable.value"
         :value="config.playerCount"
         @change="setPlayerCount"
       >
@@ -77,7 +84,7 @@ function setExpandedBoards(event: Event): void {
       </select>
     </label>
 
-    <fieldset>
+    <fieldset :disabled="!session.configurationEditable.value">
       <legend>Expansions</legend>
       <div class="option-grid">
         <label
@@ -111,12 +118,15 @@ function setExpandedBoards(event: Event): void {
     <label class="option expanded-toggle">
       <input
         type="checkbox"
+        :disabled="!session.configurationEditable.value"
         :checked="config.expandedBoards"
         @change="setExpandedBoards"
       />
       <span>Use expanded boards</span>
     </label>
-    <fieldset :disabled="!config.expandedBoards">
+    <fieldset
+      :disabled="!config.expandedBoards || !session.configurationEditable.value"
+    >
       <legend>Board candidates</legend>
       <div class="option-grid">
         <label v-for="board in catalogs.boards" :key="board.id" class="option">

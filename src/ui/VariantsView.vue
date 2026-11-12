@@ -23,21 +23,27 @@ function setVariant(id: keyof Variants, event: Event): void {
   <section aria-labelledby="variants-heading">
     <h2 id="variants-heading">Choose variants</h2>
     <p>These variants are available with any content selection.</p>
+    <p v-if="!session.configurationEditable.value">
+      Configuration is fixed for these selections. Return to setup to customize
+      public choices.
+    </p>
     <div class="bulk-actions" aria-label="Variant selection">
       <button
         type="button"
+        :disabled="!session.configurationEditable.value"
         @click="session.dispatch({ type: 'select-variants', enabled: true })"
       >
         Select all
       </button>
       <button
         type="button"
+        :disabled="!session.configurationEditable.value"
         @click="session.dispatch({ type: 'select-variants', enabled: false })"
       >
         Select none
       </button>
     </div>
-    <fieldset>
+    <fieldset :disabled="!session.configurationEditable.value">
       <legend>Variants</legend>
       <label v-for="option in options" :key="option.id" class="option">
         <input

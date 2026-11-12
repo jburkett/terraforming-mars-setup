@@ -15,6 +15,15 @@ import type { Catalogs } from '../content/types'
 import { browserRandomUint32 } from '../random'
 import type { Uint32Source } from '../domain/random'
 import { generateMissingSelections } from '../domain/selections'
+import type { SelectionResult } from '../domain/selections'
+import { customizeSelections } from '../domain/customization'
+import type { CustomizationAction } from '../domain/customization'
+import { previewBoardChange, commitBoardChange } from '../domain/board-change'
+import type {
+  BoardChangePreview,
+  BoardChangeTarget,
+} from '../domain/board-change'
+import { objectiveSets, objectiveAlternatives } from '../domain/objectives'
 
 /** Create once in the application shell; child views share this owner via props. */
 export function useGameSession(
@@ -34,6 +43,49 @@ export function useGameSession(
     awards: null,
   })
 
+  const pendingBoardState = shallowRef<BoardChangePreview | null>(null)
+  function apply(result: SelectionResult): void {
+    if (result.ok) {
+      selectionState.value = result.selections
+      conflictState.value = null
+    } else conflictState.value = result.conflict
+  }
+  function customize(action: CustomizationAction): void {
+    if (!selectionState.value.board || pendingBoardState.value) return
+    apply(
+      customizeSelections(
+        configurationState.value,
+        selectionState.value,
+        action,
+        source,
+        data,
+      ),
+    )
+  }
+  function requestBoard(target: BoardChangeTarget): void {
+    if (pendingBoardState.value) return
+    const result = previewBoardChange(
+      configurationState.value,
+      selectionState.value,
+      target,
+      data,
+    )
+    if (!result.ok) {
+      conflictState.value = result.conflict
+      return
+    }
+    if (result.preview.needsConfirmation)
+      pendingBoardState.value = result.preview
+    else apply(commitBoardChange(result.preview, source))
+  }
+  function cancelBoardChange(): void {
+    pendingBoardState.value = null
+  }
+  function confirmBoardChange(): void {
+    if (!pendingBoardState.value) return
+    apply(commitBoardChange(pendingBoardState.value, source, true))
+    pendingBoardState.value = null
+  }
   function dispatch(action: ConfigurationAction): void {
     // US4 owns post-generation configuration invalidation and loss confirmation.
     if (selectionState.value.board !== null) return
@@ -69,6 +121,35 @@ export function useGameSession(
   }
 
   return {
+    data,
+    customize,
+    requestBoard,
+    cancelBoardChange,
+    confirmBoardChange,
+    pendingBoard: computed(() => pendingBoardState.value),
+    objectives: computed(() =>
+      objectiveSets(configurationState.value, selectionState.value, data),
+    ),
+    objectiveOptions: computed(() => ({
+      milestone: Array.from({ length: 5 }, (_, row) =>
+        objectiveAlternatives(
+          'milestone',
+          row,
+          configurationState.value,
+          selectionState.value,
+          data,
+        ),
+      ),
+      award: Array.from({ length: 5 }, (_, row) =>
+        objectiveAlternatives(
+          'award',
+          row,
+          configurationState.value,
+          selectionState.value,
+          data,
+        ),
+      ),
+    })),
     configuration: computed(() => configurationState.value),
     view: computed(() => viewState.value),
     notices: computed(() => dependencyNotices(configurationState.value)),

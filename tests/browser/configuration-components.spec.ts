@@ -31,3 +31,42 @@ test('T026: dependency rejection is reflected immediately in the native checkbox
   await page.getByLabel('Prelude', { exact: true }).click()
   await expect(page.getByLabel('Prelude', { exact: true })).toBeChecked()
 })
+
+test('T027: variants are enabled without expansions and bulk controls affect only variants', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/variants.html')
+  await expect(
+    page.getByRole('heading', { name: 'Choose variants' }),
+  ).toBeVisible()
+  for (const name of ['Extended Start', 'Research drafting']) {
+    await expect(page.getByLabel(name, { exact: true })).toBeChecked()
+    await expect(page.getByLabel(name, { exact: true })).toBeEnabled()
+  }
+  await page.getByRole('button', { name: 'Select none', exact: true }).click()
+  for (const name of ['Extended Start', 'Research drafting'])
+    await expect(page.getByLabel(name, { exact: true })).not.toBeChecked()
+  await page.getByRole('button', { name: 'Select all', exact: true }).click()
+  for (const name of ['Extended Start', 'Research drafting'])
+    await expect(page.getByLabel(name, { exact: true })).toBeChecked()
+  await expect(page.getByLabel('Fixture content', { exact: true })).toHaveText(
+    'none',
+  )
+})
+test('T027: Back and Continue call the shared owner navigation actions', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/variants.html')
+  await expect(page.getByLabel('Fixture view', { exact: true })).toHaveText(
+    'variants',
+  )
+  await page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await expect(page.getByLabel('Fixture view', { exact: true })).toHaveText(
+    'setup',
+  )
+  await page.getByRole('button', { name: 'Back', exact: true }).click()
+  await page.getByRole('button', { name: 'Back', exact: true }).click()
+  await expect(page.getByLabel('Fixture view', { exact: true })).toHaveText(
+    'expansions',
+  )
+})

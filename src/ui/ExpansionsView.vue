@@ -8,15 +8,22 @@ const props = defineProps<{ session: GameSession }>()
 const config = computed(() => props.session.configuration.value)
 const notices = computed(() => props.session.notices.value)
 
+function selectContent(enabled: boolean, event: Event): void {
+  if (event.currentTarget instanceof HTMLElement) event.currentTarget.focus()
+  props.session.dispatch({ type: 'select-content', enabled })
+}
 function setPlayerCount(event: Event): void {
-  if (event.target instanceof HTMLSelectElement)
-    props.session.dispatch({
-      type: 'set-player-count',
-      value: Number(event.target.value),
-    })
+  if (!(event.target instanceof HTMLSelectElement)) return
+  event.target.focus()
+  props.session.dispatch({
+    type: 'set-player-count',
+    value: Number(event.target.value),
+  })
+  event.target.value = String(config.value.playerCount)
 }
 function setContent(id: ExpansionId, event: Event): void {
   if (!(event.target instanceof HTMLInputElement)) return
+  event.target.focus()
   props.session.dispatch({
     type: 'set-content',
     id,
@@ -27,6 +34,7 @@ function setContent(id: ExpansionId, event: Event): void {
 }
 function setBoard(id: BoardId, event: Event): void {
   if (!(event.target instanceof HTMLInputElement)) return
+  event.target.focus()
   props.session.dispatch({
     type: 'set-board',
     id,
@@ -37,11 +45,13 @@ function setBoard(id: BoardId, event: Event): void {
   )
 }
 function setExpandedBoards(event: Event): void {
-  if (event.target instanceof HTMLInputElement)
-    props.session.dispatch({
-      type: 'set-expanded-boards',
-      enabled: event.target.checked,
-    })
+  if (!(event.target instanceof HTMLInputElement)) return
+  event.target.focus()
+  props.session.dispatch({
+    type: 'set-expanded-boards',
+    enabled: event.target.checked,
+  })
+  event.target.checked = config.value.expandedBoards
 }
 </script>
 
@@ -49,23 +59,11 @@ function setExpandedBoards(event: Event): void {
   <section aria-labelledby="content-heading">
     <h2 id="content-heading">Choose game content</h2>
     <p>Choose the players, expansions and boards for your table.</p>
-    <p v-if="!session.configurationEditable.value">
-      Configuration is fixed for these selections. Return to setup to customize
-      public choices.
-    </p>
     <div class="bulk-actions" aria-label="Content selection">
-      <button
-        type="button"
-        :disabled="!session.configurationEditable.value"
-        @click="session.dispatch({ type: 'select-content', enabled: true })"
-      >
+      <button type="button" @click="selectContent(true, $event)">
         Select all
       </button>
-      <button
-        type="button"
-        :disabled="!session.configurationEditable.value"
-        @click="session.dispatch({ type: 'select-content', enabled: false })"
-      >
+      <button type="button" @click="selectContent(false, $event)">
         Select none
       </button>
     </div>
@@ -74,7 +72,6 @@ function setExpandedBoards(event: Event): void {
       Player count
       <select
         id="player-count"
-        :disabled="!session.configurationEditable.value"
         :value="config.playerCount"
         @change="setPlayerCount"
       >
@@ -84,7 +81,7 @@ function setExpandedBoards(event: Event): void {
       </select>
     </label>
 
-    <fieldset :disabled="!session.configurationEditable.value">
+    <fieldset>
       <legend>Expansions</legend>
       <div class="option-grid">
         <label
@@ -118,15 +115,12 @@ function setExpandedBoards(event: Event): void {
     <label class="option expanded-toggle">
       <input
         type="checkbox"
-        :disabled="!session.configurationEditable.value"
         :checked="config.expandedBoards"
         @change="setExpandedBoards"
       />
       <span>Use expanded boards</span>
     </label>
-    <fieldset
-      :disabled="!config.expandedBoards || !session.configurationEditable.value"
-    >
+    <fieldset :disabled="!config.expandedBoards">
       <legend>Board candidates</legend>
       <div class="option-grid">
         <label v-for="board in catalogs.boards" :key="board.id" class="option">

@@ -31,12 +31,15 @@ first-player, colony and objective selections on first setup entry. Customize
 reveals eligible choices and rerolls; manual replacement objectives lock in place.
 Board changes confirm affected objective losses before committing.
 
-Configuration is read-only after successful generation in this increment; public
-choices remain customizable and unchanged revisits preserve results. US3 adds
-all applicable physical setup instructions in order, with rules and product
-decision citations, and a live configuration/results summary. General
-configuration editing and Reset remain in US4. No session persistence is
-provided. Use Node 24 LTS from `.nvmrc`:
+US3 shows all applicable physical setup instructions in order, with rules and
+product decision citations, and a live configuration/results summary. US4 lets
+you edit configuration after generation: review affected choices and locks before
+confirming their loss, or cancel without changing state. Unrelated choices remain;
+only missing results regenerate on setup entry. Reset requires confirmation and
+restores the approved defaults before fresh generation. State remains in memory
+only, with no persistence or recovery after refresh.
+
+Use Node 24 LTS from `.nvmrc`:
 
 ```sh
 npm ci

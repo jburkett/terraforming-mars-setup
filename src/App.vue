@@ -4,8 +4,13 @@ import { useGameSession } from './composables/useGameSession'
 import ExpansionsView from './ui/ExpansionsView.vue'
 import VariantsView from './ui/VariantsView.vue'
 import SetupView from './ui/SetupView.vue'
+import ConfirmationDialog from './ui/ConfirmationDialog.vue'
 
 const session = useGameSession()
+function reset(event: Event): void {
+  if (event.currentTarget instanceof HTMLElement) event.currentTarget.focus()
+  session.requestReset()
+}
 const view = computed(() => session.view.value)
 const steps = [
   { id: 'expansions', name: 'Content' },
@@ -20,6 +25,9 @@ const steps = [
       <p class="eyebrow">Terraforming Mars</p>
       <h1>Prepare your game</h1>
       <p class="intro">Your table. Your game.</p>
+      <div class="session-actions">
+        <button type="button" @click="reset">Reset</button>
+      </div>
     </header>
     <ol class="steps" aria-label="Setup steps">
       <li
@@ -36,6 +44,11 @@ const steps = [
       <VariantsView v-else-if="view === 'variants'" :session="session" />
       <SetupView v-else :session="session" />
     </main>
+    <ConfirmationDialog
+      :confirmation="session.confirmation.value"
+      @confirm="session.confirmPending"
+      @cancel="session.cancelPending"
+    />
   </div>
 </template>
 
@@ -110,6 +123,11 @@ p {
   max-width: 60rem;
   padding: 2.5rem 1.25rem;
   margin: auto;
+}
+.session-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
 }
 .eyebrow {
   text-transform: uppercase;

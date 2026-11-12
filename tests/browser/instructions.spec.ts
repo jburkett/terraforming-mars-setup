@@ -88,7 +88,7 @@ test('AC-16–25/38: all-on physical setup is visible, sourced, ordered and agre
   await expect(page.getByRole('textbox')).toHaveCount(0)
   await expect(
     page.getByRole('button', {
-      name: /draw.*(card|event)|next turn|solar phase|reset/i,
+      name: /draw.*(card|event)|next turn|solar phase/i,
     }),
   ).toHaveCount(0)
   await expect(instructions(page)).not.toContainText(

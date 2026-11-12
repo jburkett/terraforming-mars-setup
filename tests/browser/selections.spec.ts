@@ -29,7 +29,9 @@ test('AC-07–09: first entry generates public results and unchanged revisits pr
   await expect(page.getByLabel('Extended Start', { exact: true })).toBeEnabled()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   expect(await values(page)).toEqual(before)
-  await expect(page.getByRole('button', { name: /reset/i })).toHaveCount(0)
+  await expect(
+    page.getByRole('button', { name: 'Reset', exact: true }),
+  ).toBeVisible()
 })
 test('AC-15: manual first-player and colony choices stay bounded and unique', async ({
   page,

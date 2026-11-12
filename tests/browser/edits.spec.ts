@@ -83,7 +83,8 @@ test('AC-26: cancel keeps MA Pioneer/other locks; confirm clears only affected C
     .textContent()
   await content(page)
   await expect(page.getByLabel('Colonies', { exact: true })).toBeEnabled()
-  await page.getByLabel('Colonies', { exact: true }).uncheck()
+  // Request the edit; the committed checkbox stays checked until consent.
+  await page.getByLabel('Colonies', { exact: true }).click()
   await expect(dialog(page)).toContainText(/Pioneer.*locked/)
   await expect(dialog(page)).not.toContainText('Builder')
   await expect(page.getByLabel('Colonies', { exact: true })).toBeChecked()
@@ -103,7 +104,7 @@ test('AC-26: cancel keeps MA Pioneer/other locks; confirm clears only affected C
     page.getByLabel(`Lock milestone ${builder}`, { exact: true }),
   ).toBeChecked()
   await content(page)
-  await page.getByLabel('Colonies', { exact: true }).uncheck()
+  await page.getByLabel('Colonies', { exact: true }).click()
   await page.getByRole('button', { name: 'Apply changes', exact: true }).click()
   await expect(page.getByLabel('Colonies', { exact: true })).not.toBeChecked()
   await enter(page)
@@ -142,7 +143,7 @@ test('AC-34: printed Utopia Pioneer survives Colonies removal and limitation dis
   const before = await ids(page, 'milestone')
   await content(page)
   await expect(page.getByLabel('Colonies', { exact: true })).toBeEnabled()
-  await page.getByLabel('Colonies', { exact: true }).uncheck()
+  await page.getByLabel('Colonies', { exact: true }).click()
   await expect(dialog(page)).not.toContainText('Pioneer')
   await page.getByRole('button', { name: 'Apply changes', exact: true }).click()
   await enter(page)
@@ -210,7 +211,7 @@ test('AC-28: excluding the chosen board previews affected locks and retains unre
   await expect(page.getByLabel('Use expanded boards')).toBeEnabled()
   await page.getByLabel('Use expanded boards').check()
   await expect(dialog(page)).toHaveCount(0)
-  await page.getByLabel('Original board (Tharsis)', { exact: true }).uncheck()
+  await page.getByLabel('Original board (Tharsis)', { exact: true }).click()
   await expect(dialog(page)).toContainText(/Geologist.*locked/)
   await page
     .getByRole('button', { name: 'Keep configuration', exact: true })
@@ -218,7 +219,7 @@ test('AC-28: excluding the chosen board previews affected locks and retains unre
   await expect(
     page.getByLabel('Original board (Tharsis)', { exact: true }),
   ).toBeChecked()
-  await page.getByLabel('Original board (Tharsis)', { exact: true }).uncheck()
+  await page.getByLabel('Original board (Tharsis)', { exact: true }).click()
   await page.getByRole('button', { name: 'Apply changes', exact: true }).click()
   await chooseOnlyBoard(page, 'Hellas')
   await enter(page)
@@ -333,4 +334,36 @@ test('AC-30: Reset cancels exactly or restores defaults and generates new unlock
     await expect(
       page.getByLabel(`Lock milestone ${row}`, { exact: true }),
     ).not.toBeChecked()
+})
+
+test('D6 after editing: insufficient newly enabled content hides incomplete setup and retains existing choices for correction', async ({
+  page,
+}) => {
+  await page.goto('./tests/fixtures/selection-conflict.html')
+  await page
+    .getByRole('button', { name: 'Return to configuration', exact: true })
+    .click()
+  await page.getByRole('button', { name: 'Select none', exact: true }).click()
+  await enter(page)
+  const before = await fields(page)
+  await content(page)
+  await page.getByLabel('Colonies', { exact: true }).check()
+  await enter(page)
+  await expect(page.getByRole('alert')).toContainText(
+    'Not enough eligible colonies',
+  )
+  await expect(page.getByText('Selected board', { exact: true })).toHaveCount(0)
+  await expect(
+    page.getByRole('region', {
+      name: 'Physical setup instructions',
+      exact: true,
+    }),
+  ).toHaveCount(0)
+  await expect(summary(page)).toHaveCount(0)
+  await page
+    .getByRole('button', { name: 'Return to configuration', exact: true })
+    .click()
+  await page.getByLabel('Colonies', { exact: true }).click()
+  await enter(page)
+  expect(await fields(page)).toEqual(before)
 })

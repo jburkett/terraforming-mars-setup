@@ -106,3 +106,70 @@ test('production setup includes sourced physical guidance and a live summary', a
   await expect(instructions.getByRole('checkbox')).toHaveCount(0)
   expect(errors).toEqual([])
 })
+
+test('production configuration changes confirm selectively and Reset restores a fresh setup', async ({
+  page,
+}) => {
+  const errors: string[] = []
+  page.on('pageerror', (error) => errors.push(error.message))
+  await page.goto('./')
+  const next = () =>
+    page.getByRole('button', { name: 'Continue', exact: true }).click()
+  await next()
+  await next()
+  const summary = page.getByRole('region', {
+    name: 'Configuration summary',
+    exact: true,
+  })
+  const board = await summary
+    .locator('[data-summary-field="board"]')
+    .textContent()
+  const objectives = await Promise.all(
+    (await summary.locator('[data-summary-objective-id]').all()).map((row) =>
+      row.getAttribute('data-summary-objective-id'),
+    ),
+  )
+  await page.getByRole('button', { name: 'Back', exact: true }).click()
+  await page.getByRole('button', { name: 'Back', exact: true }).click()
+  await page.getByLabel('Player count').selectOption('4')
+  await expect(
+    page.getByRole('dialog', { name: 'Change configuration?', exact: true }),
+  ).toBeVisible()
+  await expect(page.getByLabel('Player count')).toHaveValue('2')
+  await page
+    .getByRole('button', { name: 'Keep configuration', exact: true })
+    .click()
+  await expect(page.getByLabel('Player count')).toHaveValue('2')
+  await page.getByLabel('Player count').selectOption('4')
+  await page.getByRole('button', { name: 'Apply changes', exact: true }).click()
+  await next()
+  await next()
+  await expect(
+    summary.locator('[data-summary-field="playerCount"]'),
+  ).toHaveText('4')
+  await expect(summary.locator('[data-summary-field="board"]')).toHaveText(
+    board ?? '',
+  )
+  expect(
+    await Promise.all(
+      (await summary.locator('[data-summary-objective-id]').all()).map((row) =>
+        row.getAttribute('data-summary-objective-id'),
+      ),
+    ),
+  ).toEqual(objectives)
+  await expect(
+    page.getByRole('list', { name: 'Selected colonies' }).getByRole('listitem'),
+  ).toHaveCount(6)
+  await page.getByRole('button', { name: 'Reset', exact: true }).click()
+  await page.getByRole('button', { name: 'Reset setup', exact: true }).click()
+  await expect(page.getByLabel('Player count')).toHaveValue('2')
+  await next()
+  await next()
+  await expect(
+    page.getByRole('list', { name: 'Selected colonies' }).getByRole('listitem'),
+  ).toHaveCount(5)
+  await expect(
+    summary.locator('[data-summary-field="playerCount"]'),
+  ).toHaveText('2')
+  expect(errors).toEqual([])
+})

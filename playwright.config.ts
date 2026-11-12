@@ -1,5 +1,6 @@
 import { defineConfig, devices } from '@playwright/test'
 
+const chromiumPath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH
 const baseURL = 'http://127.0.0.1:4173/terraforming-mars-setup/'
 
 export default defineConfig({
@@ -17,7 +18,15 @@ export default defineConfig({
     trace: 'retain-on-failure',
   },
   projects: [
-    { name: 'chromium', use: { ...devices['Desktop Chrome'] } },
+    {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        ...(chromiumPath
+          ? { launchOptions: { executablePath: chromiumPath } }
+          : {}),
+      },
+    },
     { name: 'firefox', use: { ...devices['Desktop Firefox'] } },
     { name: 'webkit', use: { ...devices['Desktop Safari'] } },
   ],

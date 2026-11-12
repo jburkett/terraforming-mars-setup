@@ -30,6 +30,8 @@ function workspace() {
     'package.json',
     'index.html',
     'vite.config.ts',
+    'src/main.ts',
+    'src/App.vue',
     'scripts/build.ts',
     'scripts/validate-catalogs.ts',
     'src/content/types.ts',

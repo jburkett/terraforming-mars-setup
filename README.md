@@ -23,6 +23,25 @@ with a dollar prefix, such as `$speckit-constitution`. Shared templates,
 Bash helpers, workflow metadata, and an unfilled constitution template live in
 `.specify/`.
 
-Initialization only has been performed: no project principles, feature
-specifications, implementation plans, tasks, or application code have been authored.
-No API keys or application dependencies are required for this scaffolding.
+## Minimal application and GitHub Pages
+
+The current application is a blank Vue shell. Configuration and setup-assistant
+views are not implemented yet. Use the Node 24 LTS version in `.nvmrc`:
+
+```sh
+npm ci
+npm run dev
+```
+
+Open the printed URL at `/terraforming-mars-setup/`. Production builds validate
+all game catalogs before emitting static assets:
+
+```sh
+npm run build
+npm run preview
+```
+
+See [GitHub Pages deployment](docs/github-pages.md) for the required one-time
+repository settings, verification/smoke commands and the merge-to-main workflow.
+Pull requests verify only; successful pushes to `main` deploy through the
+`github-pages` environment once those settings are applied.

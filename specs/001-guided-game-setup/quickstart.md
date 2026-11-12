@@ -1,20 +1,33 @@
-# Future Validation Guide
+# Guided Game Setup — run and validation
 
-**Status:** Planning only. There is no application, package manifest or executable test suite yet. These proposed commands apply only after later authorized implementation supplies them; none was run here.
+**Implementation:** US1–US4 are available. This guide describes existing scripts
+and behavior. Run-specific results, acceptance mappings, review findings and
+limitations are in [implementation-validation.md](checklists/implementation-validation.md).
+The approved specification and rules reference remain authoritative.
 
-## Prerequisites and proposed commands
+## Runtime and installation
 
-Human approval of the revised technical plan is recorded in [plan.md](plan.md), dated 2026-11-12. Before implementation obtain separate phase authorization. The design uses Vue 3, TypeScript, Vite and the Composition API, built-in reactivity and in-memory session state, with Vue-independent domain logic. No Pinia or Vue Router is planned without a concrete requirement. Static JSON catalogs under `src/content/` have TypeScript-defined schemas and required build-time validation. Constitution III requires failing requirements-derived behavioral tests before corresponding code. Node 24 LTS and npm are proposed; later pin compatible tool versions and commit the lockfile. No backend, database, persistence or API key is proposed.
+Use Node **24.22.1** from `.nvmrc` and npm 11. The project records npm 11.9.0 in
+`packageManager`; CI uses npm supplied with the pinned Node installation and
+installs the committed `package-lock.json` with `npm ci`.
 
-From repository root, once the later manifest, lockfile and scripts exist:
+From repository root:
 
 ```sh
 npm ci
-npx playwright install
-npm run dev -- --host 127.0.0.1
+npx playwright install chromium firefox webkit
+npm run dev
 ```
 
-Open the dev server's printed URL. Proposed verification commands:
+On Linux, use `npx playwright install --with-deps chromium firefox webkit` when
+browser system packages are needed. CI executes that command. No backend,
+database, API key or account is required.
+
+Open the printed Vite URL at `/terraforming-mars-setup/`. The root `/` is not the
+project application URL. The Vue Composition API session remains in memory
+across all three views; a refresh or reopening starts defaults without recovery.
+
+## Complete verification
 
 ```sh
 npm run format:check
@@ -22,13 +35,51 @@ npm run lint
 npm run typecheck
 npm run validate:catalogs
 npm run test -- --run
-npm run test:e2e
+npm run test:e2e -- --project=chromium --project=firefox --project=webkit
 npm run build
+npm run test:smoke
 ```
 
-The proposed `typecheck` includes TypeScript and Vue single-file components. `validate:catalogs` checks actual JSON shapes/types, unique IDs, references, recognized context identifiers and required inventory coverage. `build` must invoke this validation before Vite emits assets; failure stops the build with file/record diagnostics. Standalone validation is useful for diagnosis but does not replace the build gate. These are planned interfaces, not generated scripts or validation code.
+`typecheck` covers TypeScript and Vue single-file components. Catalog validation
+checks actual JSON shapes, IDs, references, recognized contexts and required
+inventory coverage. `build` repeats the catalog gate before emitting assets;
+invalid catalogs must prevent a successful build. Domain/build-gate tests
+exercise invalid inputs rather than relying only on the standalone validator.
 
-Future browser tests should start a local server and cover Chromium, Firefox and WebKit; install runner system prerequisites if required. These are proposed script contracts, not installed commands or reported results.
+Browser and smoke commands start their own servers on port 4173. Run them
+sequentially and stop a manual preview/dev server on that port first. Regular
+journeys use Vite dev; smoke uses the compiled production preview and requires a
+successful build. Smoke verifies HTTP 200/content types for HTML/JavaScript/CSS,
+Vue mounting, public customization, instructions/summary and confirmed edits/Reset.
+
+CI explicitly selects Chromium, Firefox and WebKit, including the matrix,
+lifetime/scope and accessibility regressions. Its HTML reports are kept in
+`playwright-report/browsers` and `playwright-report/production`, with failure
+traces in `test-results`; the workflow uploads these as seven-day
+`mvp-validation-<run>-<attempt>` artifacts. CI opens no report browser and uses
+zero test retries.
+
+For a compatible system Chromium fallback in the prepared Linux environment:
+
+```sh
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e -- --project=chromium
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:smoke
+```
+
+This verifies a local Chromium subset. The acceptance record distinguishes that
+result from the full three-engine CI run.
+
+For manual production inspection:
+
+```sh
+npm run build
+npm run preview -- --host 127.0.0.1 --port 4173 --strictPort
+```
+
+Open `http://127.0.0.1:4173/terraforming-mars-setup/`. Use labeled controls and
+Back/Continue to visit all views. Keyboard navigation focuses the current view
+heading. Loss dialogs initially focus cancellation, support Escape and return
+focus to a usable control; no selection or lock is lost before consent.
 
 ## Validation scenarios
 
@@ -49,14 +100,34 @@ Scenarios are independent: start a fresh session and explicitly select each row'
 | Physical guidance | Compare all applicable SU rows for all-on, base-only and map/expansion cases: CE, ordinary/Beginner branch, Amazonis eleven oceans, colony positions, Turmoil physical events/delegates, deals and P2 discard/refund sequence. All visible, ordered, sourced. | AC-16–24, SC-001 |
 | Summary/scope | Summary agrees with state/limitations. After reset/select-all and Venus off/on, no WGT choice/state/summary value, longer Venus option, private-card inventory/entry/draw/filtering, or gameplay guidance. Standard Venus remains; drafting does not alter opening deal. | AC-25,36–39, SC-005 |
 | Reset | Cancel preserves everything; confirm restores N=2/all supported options/boards/variants and clears prior results/locks. Next setup entry draws anew. | AC-30, SC-004 |
-| Defensive pool conflict | Future domain-test fixture supplies undersized eligible pool: visible explanatory conflict and return option, no duplicates, partial committed set, silent lock loss or forced expansion. No new UI eligibility controls. | D6, edge cases |
+| Defensive pool conflict | The domain/browser fixture supplies undersized eligible pool: visible explanatory conflict and return option, no duplicates, partial committed set, silent lock loss or forced expansion. No new UI eligibility controls. | D6, edge cases |
 
 ## Coverage and evidence limits
 
-Later domain validation should cover supported player counts, maps and content/variant combinations for applicability, pool/count validity and source rules. Exercise transition and retained-lock boundaries without claiming every random history is enumerated. Inject deterministic randomness; verify unbiased selection logic and no draws on unchanged navigation rather than flaky frequency thresholds.
+The deterministic domain matrix enumerates 10,752 valid combinations of player
+count, selected map, supported content and both variants. Prelude 2 implies
+Prelude, so there are 96 valid content sets. Additional cases cover independent
+one-step edits, all nonempty board pools, retained locks and Reset. This does not
+enumerate every random history or establish randomness through frequency tests;
+bounded rejection/sampling behavior has separate deterministic tests.
 
-Future catalog validation must check JSON shapes against TypeScript-defined schemas, duplicate IDs, dangling references, recognized contexts, seven complete printed map sets, 11 colonies, the 35/35 MA subsets and SU instruction coverage. An invalid catalog must prevent a successful build; structural validation alone does not prove rules accuracy. Human review checks sources and meaning. Eligibility rules, algorithms and transitions remain TypeScript rather than executable JSON. No individual-card validation is introduced.
+Browser instrumentation verifies unchanged-navigation draws, frozen catalog
+snapshots and empty storage without adding production hooks. Test-only catalog
+and conflict fixtures live under `tests/fixtures/` and are not imported by the
+production entry. No private card inventory, deck filtering or effect execution
+is introduced. Players handle cards and printed exceptions physically.
 
-Later browser validation must confirm that Vue view changes/remounts retain the same application-owned in-memory session, do not mutate catalogs and consume no randomness on unchanged navigation. Reload/reopening has no recovery. Record actual commands/results only after later execution; this revision generates no tests, application code, JSON catalogs or validator.
+Compare implemented content with SU-01–SU-12 and the source register in
+[rules-reference.md](rules-reference.md), including CE/Beginner branches,
+Amazonis supplies, colony activation, physical Turmoil, deals and P2 discard/refund
+ordering. Each instruction displays its SU ID and rules/product-decision
+references. Structural catalog validation supports, but does not replace, this
+semantic content review.
 
-Human rendered review must assess the tentative all-visible list for busyness and selective-clearing explanations. This document claims no application results or usability validation; architectural approval is recorded in [plan.md](plan.md).
+The approved all-visible instruction layout is long at mobile width. Automated
+keyboard/layout checks and assistant-rendered inspection are recorded separately
+from human usability approval; visual redesign and enhancements are deferred to
+the post-MVP epic. There is no formal assistive-technology or WCAG certification
+claim. Human review/merge and any protected Pages deployment remain separate
+from test completion. See [Pages deployment](../../docs/github-pages.md) for
+one-time hosting settings; local preview success does not prove live hosting.

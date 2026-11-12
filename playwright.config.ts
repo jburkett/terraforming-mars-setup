@@ -12,7 +12,7 @@ export default defineConfig({
   forbidOnly: Boolean(process.env.CI),
   retries: 0,
   ...(process.env.CI ? { workers: 1 } : {}),
-  reporter: 'list',
+  reporter: process.env.CI ? [['line'], ['html', { open: 'never' }]] : 'list',
   use: {
     baseURL,
     trace: 'retain-on-failure',

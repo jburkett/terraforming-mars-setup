@@ -1,0 +1,5 @@
+/* View headings receive focus only after navigation, without adding a Tab stop. */
+main h2[tabindex='-1']:focus-visible {
+  outline: 3px solid #315f50;
+  outline-offset: 0.35rem;
+}

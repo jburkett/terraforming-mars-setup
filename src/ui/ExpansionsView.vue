@@ -57,7 +57,7 @@ function setExpandedBoards(event: Event): void {
 
 <template>
   <section aria-labelledby="content-heading">
-    <h2 id="content-heading">Choose game content</h2>
+    <h2 id="content-heading" tabindex="-1">Choose game content</h2>
     <p>Choose the players, expansions and boards for your table.</p>
     <div class="bulk-actions" aria-label="Content selection">
       <button type="button" @click="selectContent(true, $event)">
@@ -138,7 +138,12 @@ function setExpandedBoards(event: Event): void {
       </div>
     </fieldset>
     <div class="navigation">
-      <button class="primary" type="button" @click="session.continueToNextView">
+      <button
+        data-dialog-focus-fallback
+        class="primary"
+        type="button"
+        @click="session.continueToNextView"
+      >
         Continue
       </button>
     </div>

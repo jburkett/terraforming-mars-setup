@@ -19,7 +19,15 @@ watch(
       }
     } else {
       dialog.value?.close()
-      if (origin?.isConnected) origin.focus()
+      if (origin) {
+        const target =
+          origin.isConnected && !origin.matches(':disabled')
+            ? origin
+            : globalThis.document.querySelector<HTMLElement>(
+                '[data-dialog-focus-fallback]',
+              )
+        target?.focus()
+      }
       origin = null
     }
   },

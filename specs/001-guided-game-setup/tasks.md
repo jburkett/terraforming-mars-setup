@@ -6,6 +6,8 @@
 
 **Status:** T001–T021 were completed in the setup/foundations work. The user-authorized deployment infrastructure story T065–T072 is completed on 2026-11-12 from latest fetched `origin/main` at `4b6856d`. See [foundation verification](checklists/foundations-validation.md) and [deployment verification](checklists/deployment-validation.md) for test-first evidence and limits. T022–T064 remain unstarted. The application is a blank Vue shell; there are no configuration controls, session/actions or other US1 functionality. Product requirements and domain behavior are unchanged.
 
+**US1 incremental progress:** T022 is complete as an intentional red-test task; US1 implementation is in progress under the user’s T022–T028 authorization. T029–T064 remain unstarted. See [US1 verification](checklists/configuration-validation.md) for per-task evidence.
+
 **Generation baseline:** This task list was generated from `origin/main` at `f9cf968` using the approved specification and technical plan; project setup starts from `f25ebec`, which includes the merged task artifact. Earlier phase scope statements are historical and do not authorize later tasks.
 
 **Tests:** Required by constitution III and the approved plan, overriding the template's optional-test wording. For every behavior, write the relevant tests first, run them and establish failure for the missing behavior before the corresponding implementation; then establish success. A syntax/tooling failure alone does not prove the required behavior is missing. Task descriptions below describe future test work, not generated tests or claimed results.
@@ -82,7 +84,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Required tests first
 
-- [ ] T022 [P] [US1] Write and establish failing configuration behavior cases in `tests/domain/configuration.spec.ts` for AC-01–06, D1/D2, P2→Prelude normalization including atomic bulk-none, all-seven board defaults/fallback, variant independence and exclusion of WGT/longer Venus.
+- [x] T022 [P] [US1] Write and establish failing configuration behavior cases in `tests/domain/configuration.spec.ts` for AC-01–06, D1/D2, P2→Prelude normalization including atomic bulk-none, all-seven board defaults/fallback, variant independence and exclusion of WGT/longer Venus.
 - [ ] T023 [P] [US1] Write and establish failing labeled-control/navigation journeys in `tests/browser/configuration.spec.ts` for top-of-page bulk controls, N preservation, visible P2 dependency reason, unchecked/disabled boards, variants→expansions Back retention and Continue to setup (AC-01–06, AC-37, AC-39).
 
 ### Implementation after the relevant failure evidence

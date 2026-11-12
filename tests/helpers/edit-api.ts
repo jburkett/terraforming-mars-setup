@@ -13,16 +13,7 @@ export interface EditPreview extends PendingEdit {
   readonly previous: GameState
 }
 // Callable baselines demonstrate missing behavior without broken imports/tooling.
-export const calculateInvalidation: (
-  before: Configuration,
-  after: Configuration,
-  selections: PublicSelections,
-  data?: Catalogs,
-) => Pick<PendingEdit, 'selections' | 'losses'> = (
-  _before,
-  _after,
-  selections,
-) => ({ selections, losses: [] })
+export { calculateInvalidation } from '../../src/domain/invalidation'
 export const previewEdit: (
   configuration: Configuration,
   selections: PublicSelections,

@@ -31,6 +31,9 @@ it('AC-30: previews Reset without changing state or drawing; explicit confirmati
   const random = vi.spyOn(Math, 'random'),
     before = JSON.stringify({ configuration, selections })
   const preview = previewReset(configuration, selections)
+  expect(
+    preview.losses.find((loss) => loss.field === 'milestones')?.lockedIds,
+  ).toContain('ma:milestone:pioneer')
   expect(preview.configuration.playerCount).toBe(2)
   expect(preview.selections.board).toBeNull()
   expect(commitReset(preview)).toBeNull()

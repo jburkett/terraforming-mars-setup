@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, nextTick, watch } from 'vue'
 import { useGameSession } from './composables/useGameSession'
 import ExpansionsView from './ui/ExpansionsView.vue'
 import VariantsView from './ui/VariantsView.vue'
@@ -12,6 +12,10 @@ function reset(event: Event): void {
   session.requestReset()
 }
 const view = computed(() => session.view.value)
+watch(view, async () => {
+  await nextTick()
+  globalThis.document.querySelector<HTMLElement>('main h2')?.focus()
+})
 const steps = [
   { id: 'expansions', name: 'Content' },
   { id: 'variants', name: 'Variants' },

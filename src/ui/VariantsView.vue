@@ -27,7 +27,7 @@ function setVariant(id: keyof Variants, event: Event): void {
 
 <template>
   <section aria-labelledby="variants-heading">
-    <h2 id="variants-heading">Choose variants</h2>
+    <h2 id="variants-heading" tabindex="-1">Choose variants</h2>
     <p>These variants are available with any content selection.</p>
     <div class="bulk-actions" aria-label="Variant selection">
       <button type="button" @click="selectVariants(true, $event)">
@@ -50,7 +50,12 @@ function setVariant(id: keyof Variants, event: Event): void {
     </fieldset>
     <div class="navigation">
       <button type="button" @click="session.goBack">Back</button>
-      <button class="primary" type="button" @click="session.continueToNextView">
+      <button
+        data-dialog-focus-fallback
+        class="primary"
+        type="button"
+        @click="session.continueToNextView"
+      >
         Continue
       </button>
     </div>

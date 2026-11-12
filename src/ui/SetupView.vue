@@ -10,7 +10,7 @@ defineProps<{ session: GameSession }>()
 
 <template>
   <section aria-labelledby="setup-heading">
-    <h2 id="setup-heading">Game setup</h2>
+    <h2 id="setup-heading" tabindex="-1">Game setup</h2>
     <SelectionConflict
       v-if="session.conflict.value"
       :conflict="session.conflict.value"
@@ -48,6 +48,8 @@ defineProps<{ session: GameSession }>()
         :data="session.data"
       />
     </template>
-    <button type="button" @click="session.goBack">Back</button>
+    <button data-dialog-focus-fallback type="button" @click="session.goBack">
+      Back
+    </button>
   </section>
 </template>

@@ -1,4 +1,4 @@
-import { isProxy, isReadonly } from 'vue'
+import { isProxy, isReadonly, watch } from 'vue'
 import { expect, it, vi } from 'vitest'
 import { catalogs } from '../../src/content/catalogs'
 
@@ -98,16 +98,121 @@ it('US2: a failed generation commits nothing and permits correcting configuratio
   expect(session.conflict.value).toBeNull()
   expect(session.selections.value.board).toBe('tharsis')
 })
-it('US2 interim boundary: configuration is read-only after generation without discarding results', () => {
-  const session = useGameSession({ source: () => 0 })
-  session.continueToNextView()
-  session.continueToNextView()
-  expect(session.configurationEditable?.value).toBe(false)
-  const previous = session.selections.value
-  const config = session.configuration.value
+it('US4: loss previews keep configuration/results committed; cancellation and blocked actions draw nothing', () => {
+  const source = vi.fn(() => 0),
+    session = useGameSession({ source })
+  session.enterSetup()
+  expect(session.configurationEditable.value).toBe(true)
+  const config = session.configuration.value,
+    selections = session.selections.value,
+    calls = source.mock.calls.length
   session.dispatch({ type: 'select-content', enabled: false })
+  expect(session.confirmation.value?.title).toBe('Change configuration?')
+  expect(session.configurationEditable.value).toBe(false)
   expect(session.configuration.value).toBe(config)
+  expect(session.selections.value).toBe(selections)
+  session.customize({ type: 'reroll-first-player' })
+  session.requestBoard({ kind: 'manual', boardId: 'hellas' })
+  session.requestReset()
+  session.goBack()
+  session.enterSetup()
+  expect(session.view.value).toBe('setup')
+  expect(session.confirmation.value?.title).toBe('Change configuration?')
+  expect(session.selections.value).toBe(selections)
+  session.cancelPending()
+  expect(session.confirmation.value).toBeNull()
+  expect(session.configurationEditable.value).toBe(true)
+  expect(session.configuration.value).toBe(config)
+  expect(source).toHaveBeenCalledTimes(calls)
+})
+it('US4: confirmation replaces the committed pair atomically; next entry fills only missing selections', () => {
+  const source = vi.fn(() => 0),
+    session = useGameSession({ source })
+  session.dispatch({ type: 'set-player-count', value: 4 })
+  session.enterSetup()
+  session.customize({
+    type: 'set-lock',
+    kind: 'milestone',
+    row: 0,
+    locked: true,
+  })
+  const old = session.selections.value,
+    calls = source.mock.calls.length
+  const observed: unknown[] = []
+  const stop = watch(
+    session.configuration,
+    (configuration) =>
+      observed.push({
+        n: configuration.playerCount,
+        first: session.selections.value.firstPlayer,
+        colonies: session.selections.value.colonies,
+      }),
+    { flush: 'sync' },
+  )
+  session.dispatch({ type: 'set-player-count', value: 5 })
+  expect(session.confirmation.value).toBeTruthy()
+  expect(observed).toEqual([])
+  session.confirmPending()
+  expect(observed).toEqual([{ n: 5, first: null, colonies: null }])
+  expect(session.selections.value.milestones).toBe(old.milestones)
+  expect(session.selections.value.board).toBe(old.board)
+  expect(source).toHaveBeenCalledTimes(calls)
+  session.enterSetup()
+  expect(session.selections.value.colonies).toHaveLength(7)
+  expect(session.selections.value.milestones).toBe(old.milestones)
+  expect(session.summary.value.playerCount).toBe(5)
+  expect(
+    session.instructions.value.find((i) => i.context === 'colonies')?.quantities
+      .fleets,
+  ).toBe(5)
+  stop()
+})
+it('US4: Reset stays pending until consent, then clears state without generation and returns to configuration', () => {
+  const source = vi.fn(() => 0),
+    session = useGameSession({ source })
+  session.dispatch({ type: 'set-player-count', value: 5 })
+  session.enterSetup()
+  const old = session.selections.value,
+    config = session.configuration.value,
+    calls = source.mock.calls.length
+  session.requestReset()
+  expect(session.confirmation.value?.title).toBe('Reset game setup?')
+  expect(session.selections.value).toBe(old)
+  session.cancelPending()
+  expect(session.selections.value).toBe(old)
+  expect(session.configuration.value).toBe(config)
+  session.requestReset()
+  session.confirmPending()
+  expect(session.configuration.value.playerCount).toBe(2)
+  expect(session.view.value).toBe('expansions')
+  expect(session.selections.value).toEqual({
+    board: null,
+    firstPlayer: null,
+    colonies: null,
+    milestones: null,
+    awards: null,
+  })
+  expect(session.instructions.value).toEqual([])
+  expect(session.summary.value.board).toBeNull()
+  expect(source).toHaveBeenCalledTimes(calls)
+  session.enterSetup()
+  expect(source.mock.calls.length).toBeGreaterThan(calls)
+  expect(session.selections.value.colonies).toHaveLength(5)
+})
+it('US4: non-loss edits immediately update instructions and summary while preserving public state', () => {
+  const source = vi.fn(() => 0),
+    session = useGameSession({ source })
+  session.enterSetup()
+  const previous = session.selections.value,
+    calls = source.mock.calls.length
+  session.dispatch({ type: 'set-variant', id: 'extendedStart', enabled: false })
+  expect(session.summary.value.variants.extendedStart).toBe(false)
+  expect(session.confirmation.value).toBeNull()
+  expect(session.instructions.value.some((i) => i.id === 'su-08-4')).toBe(true)
+  session.dispatch({ type: 'set-content', id: 'ce', enabled: false })
+  expect(session.instructions.value.some((i) => i.id === 'su-07-2')).toBe(true)
   expect(session.selections.value).toBe(previous)
+  expect(source).toHaveBeenCalledTimes(calls)
 })
 
 it('US2: customization updates shared results and canceled board previews draw nothing', () => {

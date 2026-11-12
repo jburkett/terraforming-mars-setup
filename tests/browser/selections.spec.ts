@@ -26,9 +26,7 @@ test('AC-07–09: first entry generates public results and unchanged revisits pr
   await expect(page.locator('[data-objective-kind="award"]')).toHaveCount(6)
   const before = await values(page)
   await page.getByRole('button', { name: 'Back', exact: true }).click()
-  await expect(
-    page.getByLabel('Extended Start', { exact: true }),
-  ).toBeDisabled()
+  await expect(page.getByLabel('Extended Start', { exact: true })).toBeEnabled()
   await page.getByRole('button', { name: 'Continue', exact: true }).click()
   expect(await values(page)).toEqual(before)
   await expect(page.getByRole('button', { name: /reset/i })).toHaveCount(0)

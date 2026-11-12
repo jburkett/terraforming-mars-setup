@@ -34,8 +34,8 @@ test('AC-16–25/38: all-on physical setup is visible, sourced, ordered and agre
   await expect(list).toBeVisible()
   const steps = list.locator(':scope > li')
   expect(await steps.count()).toBeGreaterThan(12)
-  const ids = await steps.evaluateAll((nodes) =>
-    nodes.map((n) => n.getAttribute('data-su')),
+  const ids = await Promise.all(
+    (await steps.all()).map((row) => row.getAttribute('data-su')),
   )
   expect([...new Set(ids)]).toEqual(
     Array.from(

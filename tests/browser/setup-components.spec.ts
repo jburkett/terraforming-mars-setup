@@ -18,8 +18,8 @@ test('T047: instructions render one visible ordered sourced list without interac
   await expect(rows.first()).toContainText('Board: Tharsis. First player: 2.')
   await expect(rows.first()).toContainText('Rules · B')
   await expect(rows.first()).toContainText('Product decision · SPEC')
-  const ids = await rows.evaluateAll((nodes) =>
-    nodes.map((n) => n.getAttribute('data-su')),
+  const ids = await Promise.all(
+    (await rows.all()).map((row) => row.getAttribute('data-su')),
   )
   expect(ids).toEqual([...ids].sort())
   for (const row of await rows.all()) {

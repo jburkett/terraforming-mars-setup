@@ -109,7 +109,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 - [x] T029 [P] [US2] Write and establish failing generation/customization cases in `tests/domain/selections.spec.ts` for AC-07–09/AC-15, N=2/3/4/5 colonies 5/5/6/7, inactive tiles, retained visits/missing-only fills, explicit-target rerolls, duplicate prevention, one-candidate/repeat behavior and D6 all-or-nothing conflicts.
 - [x] T030 [P] [US2] Write and establish failing objective cases in `tests/domain/objectives.spec.ts` for AC-09–14, AC-24 and AC-31–35: independent five-row MA sets, source thresholds, fixed Venus pair, complete printed retention/notices, symmetric alternatives, manual auto-lock, stable row positions and all-locked no-op.
-- [ ] T031 [P] [US2] Write and establish failing browser journeys in `tests/browser/selections.spec.ts` for first-entry generation/unchanged revisits, eligible Customize drop-downs and bottom reroll controls, two-column gridless objective tables, independent table filtering/locks and D6 explanation/return behavior; start each scenario with its explicit configuration.
+- [x] T031 [P] [US2] Write and establish failing browser journeys in `tests/browser/selections.spec.ts` for first-entry generation/unchanged revisits, eligible Customize drop-downs and bottom reroll controls, two-column gridless objective tables, independent table filtering/locks and D6 explanation/return behavior; start each scenario with its explicit configuration.
 
 ### Implementation after the relevant failure evidence
 

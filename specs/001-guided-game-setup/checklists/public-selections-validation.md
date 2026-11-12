@@ -9,3 +9,5 @@ Configuration controls become read-only after successful generation in this inte
 - **T029 — intentional red:** 10 selection assertions failed and 1 passed against callable no-generation/no-change baselines. Failures demonstrate missing bounded generation, set sizes, missing-only filling, conflicts and manual targets, not broken imports or tooling. Formatting, lint and type checks pass. Customization assertions remain intentionally red until T035.
 
 - **T030 — intentional red:** All 13 objective projection/customization cases fail before implementation. They cover source/version precedence, fixed Venus additions, complete printed sets/limitations, symmetric alternatives, auto-locking and unlocked-only rerolls. Lint, types and formatting pass; projection resolves in T033 and mutation behavior in T035.
+
+- **T031 — intentional red:** All 6 new browser journeys fail against the pre-US2 setup placeholder/empty conflict fixture. Vite and Chromium start normally; failures are absent results, customization/confirmation or conflict presentation. Static checks pass. UI integration/conflict work in T037–T040 will resolve these failures.

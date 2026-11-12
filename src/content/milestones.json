@@ -1,0 +1,1569 @@
+[
+  {
+    "id": "printed:tharsis:milestone:terraformer",
+    "name": "Terraformer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "tharsis-terraformer",
+      "value": 35,
+      "unit": "TR",
+      "text": "Terraformer: 35 TR."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      },
+      {
+        "kind": "rules",
+        "id": "T",
+        "section": "p. 2: Tharsis Terraformer TR 26 replacement"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:milestone:mayor",
+    "name": "Mayor",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Mayor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:milestone:gardener",
+    "name": "Gardener",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Gardener objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:milestone:builder",
+    "name": "Builder",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 8,
+      "unit": "building tags",
+      "text": "Builder: 8 building tags."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:milestone:planner",
+    "name": "Planner",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Planner objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:milestone:diversifier",
+    "name": "Diversifier",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Diversifier objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:milestone:tactician",
+    "name": "Tactician",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Tactician objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:milestone:polar-explorer",
+    "name": "Polar Explorer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Polar Explorer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:milestone:energizer",
+    "name": "Energizer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Energizer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:milestone:rim-settler",
+    "name": "Rim Settler",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Rim Settler objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:milestone:generalist",
+    "name": "Generalist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "generalist-production",
+      "value": 1,
+      "unit": "production in every resource",
+      "text": "Generalist: 1 production in each resource with Corporate Era; 2 without Corporate Era."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:milestone:specialist",
+    "name": "Specialist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Specialist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:milestone:ecologist",
+    "name": "Ecologist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Ecologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:milestone:tycoon",
+    "name": "Tycoon",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 15,
+      "unit": "played blue/green projects",
+      "text": "Tycoon: 15 played blue/green projects."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:milestone:legend",
+    "name": "Legend",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Legend objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:milestone:manager",
+    "name": "Manager",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Manager objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:milestone:pioneer",
+    "name": "Pioneer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": ["colonies"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Pioneer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:milestone:trader",
+    "name": "Trader",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Trader objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:milestone:metallurgist",
+    "name": "Metallurgist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Metallurgist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:milestone:researcher",
+    "name": "Researcher",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Researcher objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:milestone:planetologist",
+    "name": "Planetologist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": ["venus"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Planetologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:milestone:architect",
+    "name": "Architect",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Architect objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:milestone:coastguard",
+    "name": "Coastguard",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Coastguard objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:milestone:forester",
+    "name": "Forester",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Forester objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:milestone:fundraiser",
+    "name": "Fundraiser",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Fundraiser objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:milestone:terran",
+    "name": "Terran",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Terran objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:milestone:landshaper",
+    "name": "Landshaper",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Landshaper objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:milestone:merchant",
+    "name": "Merchant",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 3,
+      "unit": "of each standard resource",
+      "text": "Merchant: 3 of each standard resource."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:milestone:sponsor",
+    "name": "Sponsor",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Sponsor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:milestone:lobbyist",
+    "name": "Lobbyist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": ["turmoil"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Lobbyist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:milestone:agronomist",
+    "name": "Agronomist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Agronomist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:milestone:engineer",
+    "name": "Engineer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Engineer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:milestone:spacefarer",
+    "name": "Spacefarer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Spacefarer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:milestone:geologist",
+    "name": "Geologist",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Geologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:milestone:farmer",
+    "name": "Farmer",
+    "kind": "milestone",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Farmer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:briber",
+    "name": "Briber",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Briber objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:builder",
+    "name": "Builder",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 7,
+      "unit": "building tags",
+      "text": "Builder: 7 building tags."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:coastguard",
+    "name": "Coastguard",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Coastguard objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:diversifier",
+    "name": "Diversifier",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Diversifier objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:ecologist",
+    "name": "Ecologist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Ecologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:energizer",
+    "name": "Energizer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Energizer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:engineer",
+    "name": "Engineer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Engineer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:farmer",
+    "name": "Farmer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Farmer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:forester",
+    "name": "Forester",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Forester objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:fundraiser",
+    "name": "Fundraiser",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Fundraiser objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:gardener",
+    "name": "Gardener",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Gardener objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:generalist",
+    "name": "Generalist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "generalist-production",
+      "value": 1,
+      "unit": "production in every resource",
+      "text": "Generalist: 1 production in each resource with Corporate Era; 2 without Corporate Era."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:geologist",
+    "name": "Geologist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": ["hellas", "utopia-planitia"],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Geologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:hydrologist",
+    "name": "Hydrologist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Hydrologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:landshaper",
+    "name": "Landshaper",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Landshaper objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:legend",
+    "name": "Legend",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Legend objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:lobbyist",
+    "name": "Lobbyist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": ["turmoil"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Lobbyist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:mayor",
+    "name": "Mayor",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Mayor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:merchant",
+    "name": "Merchant",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 2,
+      "unit": "of each standard resource",
+      "text": "Merchant: 2 of each standard resource."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:metallurgist",
+    "name": "Metallurgist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Metallurgist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:philantropist",
+    "name": "Philantropist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Philantropist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:pioneer",
+    "name": "Pioneer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": ["colonies"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Pioneer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:planetologist",
+    "name": "Planetologist",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": ["venus"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Planetologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:planner",
+    "name": "Planner",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Planner objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:producer",
+    "name": "Producer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Producer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:researcher",
+    "name": "Researcher",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Researcher objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:rim-settler",
+    "name": "Rim Settler",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Rim Settler objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:spacefarer",
+    "name": "Spacefarer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Spacefarer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:sponsor",
+    "name": "Sponsor",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Sponsor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:tactician",
+    "name": "Tactician",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Tactician objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:terraformer",
+    "name": "Terraformer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 29,
+      "unit": "TR",
+      "text": "Terraformer: 29 TR."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:terran",
+    "name": "Terran",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Terran objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:thawer",
+    "name": "Thawer",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Thawer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:trader",
+    "name": "Trader",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Trader objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:milestone:tycoon",
+    "name": "Tycoon",
+    "kind": "milestone",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "fixed",
+      "value": 10,
+      "unit": "played blue/green projects",
+      "text": "Tycoon: 10 played blue/green projects."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "venus:milestone:hoverlord",
+    "name": "Hoverlord",
+    "kind": "milestone",
+    "source": "venus",
+    "boardId": null,
+    "requires": ["venus"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the venus Hoverlord objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "V",
+        "section": "Milestones and awards"
+      }
+    ]
+  }
+]

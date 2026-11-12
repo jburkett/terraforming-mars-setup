@@ -1,0 +1,134 @@
+[
+  {
+    "id": "callisto",
+    "name": "Callisto",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "ceres",
+    "name": "Ceres",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "enceladus",
+    "name": "Enceladus",
+    "marker": "inactive-picture",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "europa",
+    "name": "Europa",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "ganymede",
+    "name": "Ganymede",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "io",
+    "name": "Io",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "luna",
+    "name": "Luna",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "miranda",
+    "name": "Miranda",
+    "marker": "inactive-picture",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "pluto",
+    "name": "Pluto",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "titan",
+    "name": "Titan",
+    "marker": "inactive-picture",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  },
+  {
+    "id": "triton",
+    "name": "Triton",
+    "marker": "second-position",
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: official tiles and initial markers"
+      }
+    ]
+  }
+]

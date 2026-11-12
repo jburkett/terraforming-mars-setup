@@ -1,0 +1,9 @@
+# MVP integration and acceptance validation
+
+**Scope:** T059–T064 only, authorized by the user, starting from fetched `origin/main` at `ccc27c9` (merged US4), 2026-11-12. Follow constitution v1.0.0, the approved specification/technical plan and `AGENTS.md`. Preserve task commits. No specification expansion, new feature, automatic merge or post-MVP redesign is authorized.
+
+New coverage tests existing behavior directly. A defect must be demonstrated by a failing regression before its correction; no artificial red baseline is introduced for behavior already implemented. Final acceptance combines domain, browser, production artifact, sourced-content and rendered-review evidence. Automated or assistant review is not represented as human usability approval.
+
+## Task evidence
+
+- **T059 — deterministic configuration and transition coverage:** All 246 domain/infrastructure tests pass. The 59 new test groups cover 10,752 valid N/map/content/variant combinations (4 × 7 × 96 × 4), 29,568 independent one-step edits, all 127 nonempty board pools in both objective modes/all player counts (1,016 cases), and 56 map/count/source Reset/all-locked boundaries. Frozen inputs and catalog snapshots guard mutation; injected deterministic draws verify membership, uniqueness, missing-only filling, unchanged revisits, lock retention, complete printed limitations, source thresholds, instruction applicability/order/citations and matching summaries. A fixture discriminant was corrected before commit; existing application behavior passed without correction. Lint, strict types and formatting pass. This is finite configuration/boundary coverage, not every random history, statistical distribution sampling or individual-card validation.

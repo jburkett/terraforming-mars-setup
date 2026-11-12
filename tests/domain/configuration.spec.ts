@@ -1,39 +1,11 @@
 import { describe, expect, it } from 'vitest'
 import { BOARD_IDS, EXPANSION_IDS } from '../../src/content/types'
-import type { BoardId, ExpansionId } from '../../src/content/types'
-import type { Configuration, Variants } from '../../src/domain/types'
 
-// T022 red-test seam: no production module exists yet. This callable baseline
-// represents missing defaults/actions, so failures are behavioral assertions.
-export type Action =
-  | { type: 'set-player-count'; value: number }
-  | { type: 'set-content'; id: ExpansionId; enabled: boolean }
-  | { type: 'set-expanded-boards'; enabled: boolean }
-  | { type: 'set-board'; id: BoardId; enabled: boolean }
-  | { type: 'select-content'; enabled: boolean }
-  | { type: 'set-variant'; id: keyof Variants; enabled: boolean }
-  | { type: 'select-variants'; enabled: boolean }
-interface ConfigurationModule {
-  initialConfiguration: () => Configuration
-  updateConfiguration: (config: Configuration, action: Action) => Configuration
-  dependencyNotices: (config: Configuration) => readonly string[]
-}
-const modules = import.meta.glob<ConfigurationModule>(
-  '../../src/domain/configuration.ts',
-  { eager: true },
-)
-const api: ConfigurationModule = Object.values(modules)[0] ?? {
-  initialConfiguration: () => ({
-    playerCount: 2,
-    enabledContent: [],
-    expandedBoards: false,
-    boardCandidates: ['tharsis'],
-    variants: { extendedStart: false, researchDrafting: false },
-  }),
-  updateConfiguration: (config) => config,
-  dependencyNotices: () => [],
-}
-const { initialConfiguration, updateConfiguration, dependencyNotices } = api
+import {
+  initialConfiguration,
+  updateConfiguration,
+  dependencyNotices,
+} from '../../src/domain/configuration'
 
 describe('US1 configuration: AC-01–06, D1/D2 and scope', () => {
   it('starts with two players, all seven content options/boards and both supported variants on', () => {

@@ -89,7 +89,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Implementation after the relevant failure evidence
 
-- [ ] T024 [US1] Implement defaults and pure configuration normalization/actions in `src/domain/configuration.ts`; quote and enforce the board constraint “Removing the last candidate restores off/Tharsis fallback” and preserve N on page-local bulk actions; normalize P2/Prelude bulk changes atomically without variant controls enabling expansions.
+- [x] T024 [US1] Implement defaults and pure configuration normalization/actions in `src/domain/configuration.ts`; quote and enforce the board constraint “Removing the last candidate restores off/Tharsis fallback” and preserve N on page-local bulk actions; normalize P2/Prelude bulk changes atomically without variant controls enabling expansions.
 - [ ] T025 [US1] Establish the application-lifetime Composition API owner in `src/composables/useGameSession.ts` with initial configuration, current view and explicit action boundaries; pass plain values to domain functions, keep catalogs read-only/separate and retain the same session across view remounts, without Pinia, router or persistence.
 - [ ] T026 [US1] Build `src/ui/ExpansionsView.vue` with labeled N/content controls, top select-all/none, Use expanded boards and all seven board checkboxes, fallback/inactive presentation and the P2 dependency explanation; invoke the shared session actions rather than embedding domain rules in components.
 - [ ] T027 [US1] Build `src/ui/VariantsView.vue` with only Extended Start/research drafting, page-local bulk controls, Back and Continue; both toggles remain available without expansions and leave unrelated state intact.

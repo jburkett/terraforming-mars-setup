@@ -113,7 +113,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Implementation after the relevant failure evidence
 
-- [ ] T032 [US2] Implement public-result generation and missing-only filling in `src/domain/selections.ts` using T017/T019; resolve board before board-dependent objectives, enforce “first player is in 1…N” and colony counts, and commit no partial result on an insufficient pool (AC-07–09, D6).
+- [x] T032 [US2] Implement public-result generation and missing-only filling in `src/domain/selections.ts` using T017/T019; resolve board before board-dependent objectives, enforce “first player is in 1…N” and colony counts, and commit no partial result on an insufficient pool (AC-07–09, D6).
 - [ ] T033 [US2] Implement effective objective projection and row alternatives in `src/domain/objectives.ts`: MA five-plus-five with fixed Venus additions, printed complete sets/R1 notices, source/context thresholds and all-other-row exclusion without sorting (AC-09–13, AC-24, AC-31–35).
 - [ ] T034 [US2] Add explicit setup-entry and target generation actions to `src/composables/useGameSession.ts`; fill only missing applicable values, preserve valid unlocked rows as well as locks on revisits, retain values across remounts and never draw in computed values, watchers or rendering.
 - [ ] T035 [US2] Implement objective manual selection, lock/unlock and reroll actions in `src/domain/customization.ts`, preserving row positions, excluding other/locked values and auto-locking manual choices; support eligible board/first-player/colony replacements and target-only rerolls without adding colony lock state (AC-13–15).

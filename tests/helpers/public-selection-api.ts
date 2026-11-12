@@ -83,20 +83,7 @@ export function seeded(config: Configuration): PublicSelections {
 }
 // Intentional red-test seams return no generated values or changes. Once each
 // implementation exists the helper calls it; no import/tooling failures are used.
-const generation = import.meta.glob<{
-  generateMissingSelections: (
-    c: Configuration,
-    s: PublicSelections,
-    r: Uint32Source,
-    d?: Catalogs,
-  ) => Result
-}>('../../src/domain/selections.ts', { eager: true })
-export const generateMissingSelections =
-  Object.values(generation)[0]?.generateMissingSelections ??
-  ((_c: Configuration, selections: PublicSelections): Result => ({
-    ok: true,
-    selections,
-  }))
+export { generateMissingSelections } from '../../src/domain/selections'
 const customization = import.meta.glob<{
   customizeSelections: (
     c: Configuration,

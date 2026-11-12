@@ -9,13 +9,19 @@ const options = [
   { id: 'extendedStart', name: 'Extended Start' },
   { id: 'researchDrafting', name: 'Research drafting' },
 ] as const
+function selectVariants(enabled: boolean, event: Event): void {
+  if (event.currentTarget instanceof HTMLElement) event.currentTarget.focus()
+  props.session.dispatch({ type: 'select-variants', enabled })
+}
 function setVariant(id: keyof Variants, event: Event): void {
-  if (event.target instanceof HTMLInputElement)
-    props.session.dispatch({
-      type: 'set-variant',
-      id,
-      enabled: event.target.checked,
-    })
+  if (!(event.target instanceof HTMLInputElement)) return
+  event.target.focus()
+  props.session.dispatch({
+    type: 'set-variant',
+    id,
+    enabled: event.target.checked,
+  })
+  event.target.checked = variants.value[id]
 }
 </script>
 
@@ -23,27 +29,15 @@ function setVariant(id: keyof Variants, event: Event): void {
   <section aria-labelledby="variants-heading">
     <h2 id="variants-heading">Choose variants</h2>
     <p>These variants are available with any content selection.</p>
-    <p v-if="!session.configurationEditable.value">
-      Configuration is fixed for these selections. Return to setup to customize
-      public choices.
-    </p>
     <div class="bulk-actions" aria-label="Variant selection">
-      <button
-        type="button"
-        :disabled="!session.configurationEditable.value"
-        @click="session.dispatch({ type: 'select-variants', enabled: true })"
-      >
+      <button type="button" @click="selectVariants(true, $event)">
         Select all
       </button>
-      <button
-        type="button"
-        :disabled="!session.configurationEditable.value"
-        @click="session.dispatch({ type: 'select-variants', enabled: false })"
-      >
+      <button type="button" @click="selectVariants(false, $event)">
         Select none
       </button>
     </div>
-    <fieldset :disabled="!session.configurationEditable.value">
+    <fieldset>
       <legend>Variants</legend>
       <label v-for="option in options" :key="option.id" class="option">
         <input

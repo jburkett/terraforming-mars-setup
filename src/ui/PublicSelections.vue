@@ -37,11 +37,15 @@ const colonyName = (id: string) =>
   data.value.colonies.find((c) => c.id === id)?.name ?? id
 function boardChoice(event: Event): void {
   if (!(event.target instanceof HTMLSelectElement)) return
-  const board = boards.value.find(
-    (b) => b.id === (event.target as HTMLSelectElement).value,
-  )
+  event.target.focus()
+  const value = event.target.value
+  const board = boards.value.find((b) => b.id === value)
   if (board) emit('board', { kind: 'manual', boardId: board.id })
   event.target.value = props.selections.board ?? ''
+}
+function rerollBoard(event: Event): void {
+  if (event.currentTarget instanceof HTMLElement) event.currentTarget.focus()
+  emit('board', { kind: 'reroll' })
 }
 function firstChoice(event: Event): void {
   if (!(event.target instanceof HTMLSelectElement)) return
@@ -78,9 +82,7 @@ function colonyChoice(row: number, event: Event): void {
           <option v-for="board in boards" :key="board.id" :value="board.id">
             {{ board.name }}
           </option></select
-        ><button type="button" @click="emit('board', { kind: 'reroll' })">
-          Reroll board
-        </button>
+        ><button type="button" @click="rerollBoard">Reroll board</button>
       </div>
     </section>
     <section class="selection-block" aria-label="First-player selection">

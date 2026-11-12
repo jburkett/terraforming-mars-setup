@@ -1,0 +1,604 @@
+[
+  {
+    "id": "su-01-1",
+    "su": "SU-01",
+    "order": 1,
+    "context": "always",
+    "text": "Identify the selected physical Mars map and give the first-player marker to the player with the selected numerical first-player result.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "pp. 4–5: setup"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-024: numerical first-player override"
+      }
+    ]
+  },
+  {
+    "id": "su-02-1",
+    "su": "SU-02",
+    "order": 1,
+    "context": "always",
+    "text": "Prepare player boards, colors, resource/player markers and tile supplies. Set generation 1, oxygen 0%, temperature −30°C and each player’s TR to 20, before corporation effects.",
+    "quantities": {
+      "generation": 1,
+      "oxygen": 0,
+      "temperature": -30,
+      "tr": 20
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "pp. 4–5: board and supplies"
+      }
+    ]
+  },
+  {
+    "id": "su-02-2",
+    "su": "SU-02",
+    "order": 2,
+    "context": "standard-map",
+    "text": "Prepare nine oceans with the selected board and its printed tracks.",
+    "quantities": {
+      "oceans": 9
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "pp. 4–5: ocean supply"
+      }
+    ]
+  },
+  {
+    "id": "su-02-3",
+    "su": "SU-02",
+    "order": 3,
+    "context": "amazonis",
+    "text": "Prepare eleven oceans, the 13 extra city/greenery tiles and Amazonis Planitia’s Standard Project tile and printed tracks. Corporation effects occur later.",
+    "quantities": {
+      "oceans": 11,
+      "extraCityGreeneryTiles": 13
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Amazonis setup"
+      }
+    ]
+  },
+  {
+    "id": "su-03-1",
+    "su": "SU-03",
+    "order": 1,
+    "context": "turmoil",
+    "text": "Place the Committee and Global Event boards. Each player places one of seven delegates in the Lobby and six in reserve; place a neutral chairman and remaining neutrals in reserve. Prepare and physically shuffle the event deck using selected expansions and printed rules. Reveal Coming and Distant events; place their neutral delegates and dominance as indicated, with a same-party second delegate in the delegate area. No Current event is present in generation 1; put Greens policy on top. Do not digitally draw events or randomize the ruling party.",
+    "quantities": {
+      "lobbyDelegatesPerPlayer": 1,
+      "reserveDelegatesPerPlayer": 6
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "T",
+        "section": "pp. 2–3: setup insertion"
+      }
+    ]
+  },
+  {
+    "id": "su-04-1",
+    "su": "SU-04",
+    "order": 1,
+    "context": "venus",
+    "text": "Prepare the standard Venus board with its marker at 0. Use the standard board with every supported Mars map, including Amazonis.",
+    "quantities": {
+      "venus": 0
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "V",
+        "section": "pp. 2–4: setup"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "R2: standard Venus only"
+      }
+    ]
+  },
+  {
+    "id": "su-04-2",
+    "su": "SU-04",
+    "order": 2,
+    "context": "colonies",
+    "text": "Prepare the selected official colony tiles. Put one trade fleet per player at the fleet tile. Ordinary selected colony markers start at the highlighted second position. Selected Titan, Enceladus and Miranda start on their pictures, inactive until a qualifying resource-collecting card is in play. Handle activation physically.",
+    "quantities": {
+      "fleetsPerPlayer": 1,
+      "ordinaryMarkerPosition": 2
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "pp. 2–4: fleets, tracks and activation"
+      }
+    ]
+  },
+  {
+    "id": "su-04-3",
+    "su": "SU-04",
+    "order": 3,
+    "context": "map-without-volcanoes",
+    "text": "Hellas and Utopia have no volcanic regions. Apply the map’s printed no-volcano placement reminders rather than imposing a nonexistent region.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Map restrictions"
+      },
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Utopia placement restrictions"
+      }
+    ]
+  },
+  {
+    "id": "su-04-4",
+    "su": "SU-04",
+    "order": 4,
+    "context": "outer-maps-without-turmoil",
+    "text": "Ignore the Amazonis/Vastitas delegate bonuses when Turmoil is disabled; do not enable Turmoil for the map.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Conditional map bonuses"
+      }
+    ]
+  },
+  {
+    "id": "su-04-5",
+    "su": "SU-04",
+    "order": 5,
+    "context": "cimmeria-without-colonies",
+    "text": "Ignore Terra Cimmeria’s colony bonus without Colonies; do not enable Colonies for the map.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Cimmeria conditional colony bonus"
+      }
+    ]
+  },
+  {
+    "id": "su-05-1",
+    "su": "SU-05",
+    "order": 1,
+    "context": "ma-on",
+    "text": "Use the selected five distinct MA milestones and five distinct MA awards before dealing any player cards. Use MA versions and eligible pools, not same-named printed-board thresholds.",
+    "quantities": {
+      "milestones": 5,
+      "awards": 5
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Setup and tile index"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-012/013: filtered replacement pools"
+      }
+    ]
+  },
+  {
+    "id": "su-05-2",
+    "su": "SU-05",
+    "order": 2,
+    "context": "ma-off",
+    "text": "Retain the selected board’s complete printed five milestones and five awards. Identify every unattainable printed objective and every disabled expansion causing its limitation in setup and summary. Do not replace/remove objectives, enable expansions or exclude the map. This retention policy is an intentional product decision.",
+    "quantities": {
+      "milestones": 5,
+      "awards": 5
+    },
+    "sources": [
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "R1; AC-31–35: complete printed retention"
+      }
+    ]
+  },
+  {
+    "id": "su-05-3",
+    "su": "SU-05",
+    "order": 3,
+    "context": "venus",
+    "text": "Add the fixed Hoverlord milestone and Venuphile award in either objective-source mode; do not include them in MA rerolls.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "V",
+        "section": "Additional milestone and award"
+      },
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Venus additions"
+      }
+    ]
+  },
+  {
+    "id": "su-05-4",
+    "su": "SU-05",
+    "order": 4,
+    "context": "printed-tharsis-turmoil",
+    "text": "Replace only printed Tharsis Terraformer with TR 26 when Turmoil is enabled. MA Terraformer remains TR 29.",
+    "quantities": {
+      "printedTharsisTerraformer": 26,
+      "maTerraformer": 29
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "T",
+        "section": "p. 2: Terraformer replacement"
+      },
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Terraformer tile"
+      }
+    ]
+  },
+  {
+    "id": "su-06-1",
+    "su": "SU-06",
+    "order": 1,
+    "context": "always",
+    "text": "Prepare and physically shuffle project and corporation decks using selected expansions and applicable printed dependency/replacement rules. Make space for facedown discards. Players inspect and handle cards; the assistant does not identify, catalog, filter or validate individual cards.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "pp. 4–7: physical decks"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "R3; AC-38: no individual-card handling"
+      }
+    ]
+  },
+  {
+    "id": "su-06-2",
+    "su": "SU-06",
+    "order": 2,
+    "context": "ce-on",
+    "text": "Include Corporate Era-marked corporations and projects. Ordinary corporations remain available.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Corporate Era setup"
+      }
+    ]
+  },
+  {
+    "id": "su-06-3",
+    "su": "SU-06",
+    "order": 3,
+    "context": "ce-off",
+    "text": "Physically exclude Corporate Era-marked corporations and projects. Ordinary non-CE corporations remain available; this is not an instruction to use only Beginner Corporations.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Corporate Era setup"
+      }
+    ]
+  },
+  {
+    "id": "su-06-4",
+    "su": "SU-06",
+    "order": 4,
+    "context": "prelude",
+    "text": "Prepare a separate physical Prelude deck using enabled content and printed rules.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P",
+        "section": "p. 2: deck preparation"
+      }
+    ]
+  },
+  {
+    "id": "su-06-5",
+    "su": "SU-06",
+    "order": 5,
+    "context": "prelude2",
+    "text": "Before any discards, prepare separate facedown corporation and Prelude discard piles. Follow printed dependency/replacement rules; Prelude 2 permits physical preparation beforehand or discard-and-redraw under its rules, without a prescribed app prefiltering method.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P2",
+        "section": "pp. 2–3: deck and discard preparation"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "R3: physical handling"
+      }
+    ]
+  },
+  {
+    "id": "su-07-1",
+    "su": "SU-07",
+    "order": 1,
+    "context": "ce-on",
+    "text": "Set initial production to 0 in every resource before corporation effects.",
+    "quantities": {
+      "production": 0
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Corporate Era production"
+      }
+    ]
+  },
+  {
+    "id": "su-07-2",
+    "su": "SU-07",
+    "order": 2,
+    "context": "ce-off",
+    "text": "Set initial production to 1 in every resource before corporation effects.",
+    "quantities": {
+      "production": 1
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Base-game production"
+      }
+    ]
+  },
+  {
+    "id": "su-07-3",
+    "su": "SU-07",
+    "order": 3,
+    "context": "always",
+    "text": "Explain the ordinary-corporation and Beginner Corporation branches. Beginner Corporation supplies 42 M€ and ten free starting projects; do not apply the ordinary purchase rule to that branch. No beginner configuration selector or automated deal is needed.",
+    "quantities": {
+      "beginnerCredits": 42,
+      "beginnerFreeProjects": 10
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "pp. 4–7: beginner setup"
+      }
+    ]
+  },
+  {
+    "id": "su-08-1",
+    "su": "SU-08",
+    "order": 1,
+    "context": "always",
+    "text": "Physically deal ten projects per ordinary player. Beginners follow their printed corporation instructions. Research drafting does not introduce an initial-hand draft; there are no expansion-source corporation quotas.",
+    "quantities": {
+      "projectsPerOrdinaryPlayer": 10
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Initial projects"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-017/026: dealing overrides"
+      }
+    ]
+  },
+  {
+    "id": "su-08-2",
+    "su": "SU-08",
+    "order": 2,
+    "context": "extended-start-off",
+    "text": "Physically deal any two corporations per ordinary player.",
+    "quantities": {
+      "corporations": 2
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Ordinary corporation deal"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-017: no source quotas"
+      }
+    ]
+  },
+  {
+    "id": "su-08-3",
+    "su": "SU-08",
+    "order": 3,
+    "context": "extended-start-on",
+    "text": "Physically deal any three corporations per ordinary player. Extended Start remains available without Prelude, changing only corporation dealing in that case.",
+    "quantities": {
+      "corporations": 3
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P2",
+        "section": "Extended Start"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-017: availability and no quotas"
+      }
+    ]
+  },
+  {
+    "id": "su-08-4",
+    "su": "SU-08",
+    "order": 4,
+    "context": "prelude-normal-start",
+    "text": "With Prelude enabled and Extended Start off, deal four Preludes per ordinary player and keep two at no purchase cost.",
+    "quantities": {
+      "preludes": 4,
+      "keep": 2
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P",
+        "section": "p. 2: dealing"
+      }
+    ]
+  },
+  {
+    "id": "su-08-5",
+    "su": "SU-08",
+    "order": 5,
+    "context": "prelude-extended-start",
+    "text": "With Prelude and Extended Start enabled, deal six Preludes per ordinary player and keep two at no purchase cost.",
+    "quantities": {
+      "preludes": 6,
+      "keep": 2
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P2",
+        "section": "Extended Start"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-017: any six Preludes"
+      }
+    ]
+  },
+  {
+    "id": "su-09-1",
+    "su": "SU-09",
+    "order": 1,
+    "context": "always",
+    "text": "Choose and discard physically facedown. Reveal corporations and apply printed starting effects in player order, then ordinary corporations pay 3 M€ for each retained project. Beginners follow their ten-free-project branch. Follow printed card-specific exceptions; no private-card input or digital effects are used.",
+    "quantities": {
+      "projectCost": 3
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "pp. 4–7: reveal, effects and purchases"
+      }
+    ]
+  },
+  {
+    "id": "su-10-1",
+    "su": "SU-10",
+    "order": 1,
+    "context": "prelude2",
+    "text": "Use the separate facedown corporation and Prelude discard piles already prepared in SU-06 for discards in SU-09, rather than sending unused corporations to the box. This is a reminder, not a later preparation step.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P2",
+        "section": "pp. 2–3: discard destination"
+      }
+    ]
+  },
+  {
+    "id": "su-11-1",
+    "su": "SU-11",
+    "order": 1,
+    "context": "prelude",
+    "text": "After all starting purchases, each player resolves their two chosen Preludes in player order before the first action phase. Apply effects physically, including any dependent colony activation, and follow printed exceptions.",
+    "quantities": {
+      "resolvePreludes": 2
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P",
+        "section": "p. 2: resolution"
+      },
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "Colony activation"
+      }
+    ]
+  },
+  {
+    "id": "su-11-2",
+    "su": "SU-11",
+    "order": 2,
+    "context": "prelude2",
+    "text": "An unplayable Prelude is revealed and discarded for 15 M€ under Prelude 2’s printed rule.",
+    "quantities": {
+      "unplayablePreludeCredits": 15
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P2",
+        "section": "pp. 2–3: unplayable Prelude"
+      }
+    ]
+  },
+  {
+    "id": "su-12-1",
+    "su": "SU-12",
+    "order": 1,
+    "context": "always",
+    "text": "Review the configuration summary, including first-player number, board, enabled content, Extended Start, research drafting, colonies and objective versions/limitations. Hand off to the first action phase, skipping first-generation player-order and research phases. Research drafting is recorded only; do not execute recurring gameplay phases.",
+    "quantities": {},
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "First-generation handoff"
+      },
+      {
+        "kind": "product",
+        "id": "SPEC",
+        "section": "FR-005/024/026; D7: summary and scope"
+      }
+    ]
+  }
+]

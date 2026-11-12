@@ -1,0 +1,1564 @@
+[
+  {
+    "id": "printed:tharsis:award:landlord",
+    "name": "Landlord",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Landlord objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:award:banker",
+    "name": "Banker",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Banker objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:award:scientist",
+    "name": "Scientist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Scientist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:award:thermalist",
+    "name": "Thermalist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Thermalist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:tharsis:award:miner",
+    "name": "Miner",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "tharsis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Miner objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:award:cultivator",
+    "name": "Cultivator",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Cultivator objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:award:magnate",
+    "name": "Magnate",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Magnate objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:award:space-baron",
+    "name": "Space Baron",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Space Baron objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:award:excentric",
+    "name": "Excentric",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Excentric objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:hellas:award:contractor",
+    "name": "Contractor",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "hellas",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Contractor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:award:celebrity",
+    "name": "Celebrity",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Celebrity objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:award:industrialist",
+    "name": "Industrialist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Industrialist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:award:desert-settler",
+    "name": "Desert Settler",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Desert Settler objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:award:estate-dealer",
+    "name": "Estate Dealer",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Estate Dealer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:elysium:award:benefactor",
+    "name": "Benefactor",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "elysium",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Benefactor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:award:suburbian",
+    "name": "Suburbian",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Suburbian objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:award:investor",
+    "name": "Investor",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Investor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:award:botanist",
+    "name": "Botanist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Botanist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:award:incorporator",
+    "name": "Incorporator",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Incorporator objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:utopia-planitia:award:metropolist",
+    "name": "Metropolist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "utopia-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Metropolist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:award:electrician",
+    "name": "Electrician",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Electrician objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:award:founder",
+    "name": "Founder",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Founder objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:award:mogul",
+    "name": "Mogul",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Mogul objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:award:zoologist",
+    "name": "Zoologist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Zoologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:terra-cimmeria:award:forecaster",
+    "name": "Forecaster",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "terra-cimmeria",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Forecaster objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:award:collector",
+    "name": "Collector",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Collector objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:award:innovator",
+    "name": "Innovator",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Innovator objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:award:constructor",
+    "name": "Constructor",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Constructor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:award:manufacturer",
+    "name": "Manufacturer",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Manufacturer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:amazonis-planitia:award:physicist",
+    "name": "Physicist",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "amazonis-planitia",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Physicist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:award:traveller",
+    "name": "Traveller",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Traveller objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:award:landscaper",
+    "name": "Landscaper",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Landscaper objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:award:highlander",
+    "name": "Highlander",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Highlander objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:award:promoter",
+    "name": "Promoter",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Promoter objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "printed:vastitas-borealis:award:blacksmith",
+    "name": "Blacksmith",
+    "kind": "award",
+    "source": "printed",
+    "boardId": "vastitas-borealis",
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the printed Blacksmith objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Board objectives"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:administrator",
+    "name": "Administrator",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Administrator objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:banker",
+    "name": "Banker",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Banker objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:benefactor",
+    "name": "Benefactor",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Benefactor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:biologist",
+    "name": "Biologist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Biologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:botanist",
+    "name": "Botanist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Botanist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:celebrity",
+    "name": "Celebrity",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Celebrity objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:collector",
+    "name": "Collector",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Collector objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:constructor",
+    "name": "Constructor",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Constructor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:contractor",
+    "name": "Contractor",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Contractor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:cultivator",
+    "name": "Cultivator",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Cultivator objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:electrician",
+    "name": "Electrician",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Electrician objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:estate-dealer",
+    "name": "Estate Dealer",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Estate Dealer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:excentric",
+    "name": "Excentric",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Excentric objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:forecaster",
+    "name": "Forecaster",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Forecaster objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:founder",
+    "name": "Founder",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Founder objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:highlander",
+    "name": "Highlander",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Highlander objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:incorporator",
+    "name": "Incorporator",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Incorporator objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:industrialist",
+    "name": "Industrialist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Industrialist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:investor",
+    "name": "Investor",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Investor objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:landlord",
+    "name": "Landlord",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Landlord objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:landscaper",
+    "name": "Landscaper",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Landscaper objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:magnate",
+    "name": "Magnate",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Magnate objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:manufacturer",
+    "name": "Manufacturer",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Manufacturer objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:metropolist",
+    "name": "Metropolist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Metropolist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:miner",
+    "name": "Miner",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Miner objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:mogul",
+    "name": "Mogul",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Mogul objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:politician",
+    "name": "Politician",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": ["turmoil"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Politician objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:promoter",
+    "name": "Promoter",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Promoter objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:scientist",
+    "name": "Scientist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Scientist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:space-baron",
+    "name": "Space Baron",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Space Baron objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:suburbian",
+    "name": "Suburbian",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Suburbian objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:thermalist",
+    "name": "Thermalist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Thermalist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:traveller",
+    "name": "Traveller",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Traveller objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:visionary",
+    "name": "Visionary",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Visionary objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "ma:award:zoologist",
+    "name": "Zoologist",
+    "kind": "award",
+    "source": "ma",
+    "boardId": null,
+    "requires": [],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the ma Zoologist objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Milestones and awards"
+      }
+    ]
+  },
+  {
+    "id": "venus:award:venuphile",
+    "name": "Venuphile",
+    "kind": "award",
+    "source": "venus",
+    "boardId": null,
+    "requires": ["venus"],
+    "excludedBoards": [],
+    "threshold": {
+      "context": "physical",
+      "value": null,
+      "unit": "",
+      "text": "Use the venus Venuphile objective from its cited physical source."
+    },
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "V",
+        "section": "Milestones and awards"
+      }
+    ]
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "ce",
+    "name": "Corporate Era",
+    "requires": [],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Setup and supported content"
+      }
+    ]
+  },
+  {
+    "id": "venus",
+    "name": "Venus Next",
+    "requires": [],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "V",
+        "section": "Setup and supported content"
+      }
+    ]
+  },
+  {
+    "id": "prelude",
+    "name": "Prelude",
+    "requires": [],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P",
+        "section": "Setup and supported content"
+      }
+    ]
+  },
+  {
+    "id": "prelude2",
+    "name": "Prelude 2",
+    "requires": ["prelude"],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "P2",
+        "section": "Setup and supported content"
+      }
+    ]
+  },
+  {
+    "id": "colonies",
+    "name": "Colonies",
+    "requires": [],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "C",
+        "section": "Setup and supported content"
+      }
+    ]
+  },
+  {
+    "id": "turmoil",
+    "name": "Turmoil",
+    "requires": [],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "T",
+        "section": "Setup and supported content"
+      }
+    ]
+  },
+  {
+    "id": "ma",
+    "name": "Milestones & Awards",
+    "requires": [],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "MA",
+        "section": "Setup and supported content"
+      }
+    ]
+  }
+]

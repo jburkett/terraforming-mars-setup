@@ -1,0 +1,205 @@
+[
+  {
+    "id": "tharsis",
+    "name": "Tharsis",
+    "hasVolcanoes": true,
+    "oceans": 9,
+    "extraCityGreeneryTiles": 0,
+    "standardProjectTile": false,
+    "milestones": [
+      "printed:tharsis:milestone:terraformer",
+      "printed:tharsis:milestone:mayor",
+      "printed:tharsis:milestone:gardener",
+      "printed:tharsis:milestone:builder",
+      "printed:tharsis:milestone:planner"
+    ],
+    "awards": [
+      "printed:tharsis:award:landlord",
+      "printed:tharsis:award:banker",
+      "printed:tharsis:award:scientist",
+      "printed:tharsis:award:thermalist",
+      "printed:tharsis:award:miner"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "B",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  },
+  {
+    "id": "hellas",
+    "name": "Hellas",
+    "hasVolcanoes": false,
+    "oceans": 9,
+    "extraCityGreeneryTiles": 0,
+    "standardProjectTile": false,
+    "milestones": [
+      "printed:hellas:milestone:diversifier",
+      "printed:hellas:milestone:tactician",
+      "printed:hellas:milestone:polar-explorer",
+      "printed:hellas:milestone:energizer",
+      "printed:hellas:milestone:rim-settler"
+    ],
+    "awards": [
+      "printed:hellas:award:cultivator",
+      "printed:hellas:award:magnate",
+      "printed:hellas:award:space-baron",
+      "printed:hellas:award:excentric",
+      "printed:hellas:award:contractor"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  },
+  {
+    "id": "elysium",
+    "name": "Elysium",
+    "hasVolcanoes": true,
+    "oceans": 9,
+    "extraCityGreeneryTiles": 0,
+    "standardProjectTile": false,
+    "milestones": [
+      "printed:elysium:milestone:generalist",
+      "printed:elysium:milestone:specialist",
+      "printed:elysium:milestone:ecologist",
+      "printed:elysium:milestone:tycoon",
+      "printed:elysium:milestone:legend"
+    ],
+    "awards": [
+      "printed:elysium:award:celebrity",
+      "printed:elysium:award:industrialist",
+      "printed:elysium:award:desert-settler",
+      "printed:elysium:award:estate-dealer",
+      "printed:elysium:award:benefactor"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "HE",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  },
+  {
+    "id": "utopia-planitia",
+    "name": "Utopia Planitia",
+    "hasVolcanoes": false,
+    "oceans": 9,
+    "extraCityGreeneryTiles": 0,
+    "standardProjectTile": false,
+    "milestones": [
+      "printed:utopia-planitia:milestone:manager",
+      "printed:utopia-planitia:milestone:pioneer",
+      "printed:utopia-planitia:milestone:trader",
+      "printed:utopia-planitia:milestone:metallurgist",
+      "printed:utopia-planitia:milestone:researcher"
+    ],
+    "awards": [
+      "printed:utopia-planitia:award:suburbian",
+      "printed:utopia-planitia:award:investor",
+      "printed:utopia-planitia:award:botanist",
+      "printed:utopia-planitia:award:incorporator",
+      "printed:utopia-planitia:award:metropolist"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  },
+  {
+    "id": "terra-cimmeria",
+    "name": "Terra Cimmeria",
+    "hasVolcanoes": true,
+    "oceans": 9,
+    "extraCityGreeneryTiles": 0,
+    "standardProjectTile": false,
+    "milestones": [
+      "printed:terra-cimmeria:milestone:planetologist",
+      "printed:terra-cimmeria:milestone:architect",
+      "printed:terra-cimmeria:milestone:coastguard",
+      "printed:terra-cimmeria:milestone:forester",
+      "printed:terra-cimmeria:milestone:fundraiser"
+    ],
+    "awards": [
+      "printed:terra-cimmeria:award:electrician",
+      "printed:terra-cimmeria:award:founder",
+      "printed:terra-cimmeria:award:mogul",
+      "printed:terra-cimmeria:award:zoologist",
+      "printed:terra-cimmeria:award:forecaster"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "UC",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  },
+  {
+    "id": "amazonis-planitia",
+    "name": "Amazonis Planitia",
+    "hasVolcanoes": true,
+    "oceans": 11,
+    "extraCityGreeneryTiles": 13,
+    "standardProjectTile": true,
+    "milestones": [
+      "printed:amazonis-planitia:milestone:terran",
+      "printed:amazonis-planitia:milestone:landshaper",
+      "printed:amazonis-planitia:milestone:merchant",
+      "printed:amazonis-planitia:milestone:sponsor",
+      "printed:amazonis-planitia:milestone:lobbyist"
+    ],
+    "awards": [
+      "printed:amazonis-planitia:award:collector",
+      "printed:amazonis-planitia:award:innovator",
+      "printed:amazonis-planitia:award:constructor",
+      "printed:amazonis-planitia:award:manufacturer",
+      "printed:amazonis-planitia:award:physicist"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  },
+  {
+    "id": "vastitas-borealis",
+    "name": "Vastitas Borealis",
+    "hasVolcanoes": true,
+    "oceans": 9,
+    "extraCityGreeneryTiles": 0,
+    "standardProjectTile": false,
+    "milestones": [
+      "printed:vastitas-borealis:milestone:agronomist",
+      "printed:vastitas-borealis:milestone:engineer",
+      "printed:vastitas-borealis:milestone:spacefarer",
+      "printed:vastitas-borealis:milestone:geologist",
+      "printed:vastitas-borealis:milestone:farmer"
+    ],
+    "awards": [
+      "printed:vastitas-borealis:award:traveller",
+      "printed:vastitas-borealis:award:landscaper",
+      "printed:vastitas-borealis:award:highlander",
+      "printed:vastitas-borealis:award:promoter",
+      "printed:vastitas-borealis:award:blacksmith"
+    ],
+    "sources": [
+      {
+        "kind": "rules",
+        "id": "AV",
+        "section": "Map setup and printed objectives"
+      }
+    ]
+  }
+]

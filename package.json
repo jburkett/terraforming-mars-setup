@@ -13,7 +13,9 @@
     "lint": "eslint . --max-warnings 0",
     "typecheck": "vue-tsc --noEmit",
     "test": "vitest",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "validate:catalogs": "node scripts/validate-catalogs.ts",
+    "build": "node scripts/build.ts"
   },
   "dependencies": {
     "vue": "3.5.45"

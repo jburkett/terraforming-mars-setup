@@ -8,6 +8,8 @@
 
 **US1 commit history:** T022 and T023 are preserved as intentional red-test commits. Each implementation task T024–T028 has a separate commit with passing relevant checks. The final tree resolves the intentional failures.
 
+**US2 progress:** T029–T040 is now authorized; task-level evidence and intentional red states are recorded in [US2 verification](checklists/public-selections-validation.md). Other phase status statements below record earlier work.
+
 **Generation baseline:** This task list was generated from `origin/main` at `f9cf968` using the approved specification and technical plan; project setup starts from `f25ebec`, which includes the merged task artifact. Earlier phase scope statements are historical and do not authorize later tasks.
 
 **Tests:** Required by constitution III and the approved plan, overriding the template's optional-test wording. For every behavior, write the relevant tests first, run them and establish failure for the missing behavior before the corresponding implementation; then establish success. A syntax/tooling failure alone does not prove the required behavior is missing. Task descriptions below describe future test work, not generated tests or claimed results.
@@ -105,7 +107,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Required tests first
 
-- [ ] T029 [P] [US2] Write and establish failing generation/customization cases in `tests/domain/selections.spec.ts` for AC-07–09/AC-15, N=2/3/4/5 colonies 5/5/6/7, inactive tiles, retained visits/missing-only fills, explicit-target rerolls, duplicate prevention, one-candidate/repeat behavior and D6 all-or-nothing conflicts.
+- [x] T029 [P] [US2] Write and establish failing generation/customization cases in `tests/domain/selections.spec.ts` for AC-07–09/AC-15, N=2/3/4/5 colonies 5/5/6/7, inactive tiles, retained visits/missing-only fills, explicit-target rerolls, duplicate prevention, one-candidate/repeat behavior and D6 all-or-nothing conflicts.
 - [ ] T030 [P] [US2] Write and establish failing objective cases in `tests/domain/objectives.spec.ts` for AC-09–14, AC-24 and AC-31–35: independent five-row MA sets, source thresholds, fixed Venus pair, complete printed retention/notices, symmetric alternatives, manual auto-lock, stable row positions and all-locked no-op.
 - [ ] T031 [P] [US2] Write and establish failing browser journeys in `tests/browser/selections.spec.ts` for first-entry generation/unchanged revisits, eligible Customize drop-downs and bottom reroll controls, two-column gridless objective tables, independent table filtering/locks and D6 explanation/return behavior; start each scenario with its explicit configuration.
 

@@ -13,3 +13,5 @@ Configuration controls become read-only after successful generation in this inte
 - **T031 — intentional red:** All 6 new browser journeys fail against the pre-US2 setup placeholder/empty conflict fixture. Vite and Chromium start normally; failures are absent results, customization/confirmation or conflict presentation. Static checks pass. UI integration/conflict work in T037–T040 will resolve these failures.
 
 - **T032 — green generation:** All 9 generation cases pass. The domain fills only missing results, resolves the board before objective eligibility, preserves valid row references/locks, includes inactive colonies and returns conflicts without partial output. Static checks pass; the previously committed customization/projection/browser red groups remain intentionally pending their assigned tasks.
+
+- **T033 — green objective projection:** All 9 projection cases pass. Corrected the retention assertion to compare printed identities only: enabling Venus legitimately adds its fixed pair. Source thresholds, fixed additions, R1 notices and symmetric alternatives pass; static checks pass. The 4 mutation cases remain intentionally red until T035.

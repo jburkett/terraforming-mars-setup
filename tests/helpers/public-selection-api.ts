@@ -99,22 +99,7 @@ export const customizeSelections =
     ok: true,
     selections,
   }))
-const projection = import.meta.glob<{
-  objectiveSets: (
-    c: Configuration,
-    s: PublicSelections,
-    d?: Catalogs,
-  ) => ObjectiveSets
-  objectiveAlternatives: (
-    k: 'milestone' | 'award',
-    row: number,
-    c: Configuration,
-    s: PublicSelections,
-    d?: Catalogs,
-  ) => readonly ObjectiveDefinition[]
-}>('../../src/domain/objectives.ts', { eager: true })
-export const objectiveSets =
-  Object.values(projection)[0]?.objectiveSets ??
-  (() => ({ milestones: [], awards: [] }))
-export const objectiveAlternatives =
-  Object.values(projection)[0]?.objectiveAlternatives ?? (() => [])
+export {
+  objectiveSets,
+  objectiveAlternatives,
+} from '../../src/domain/objectives'

@@ -67,7 +67,9 @@ describe('US2 objective projection', () => {
         )?.limitations,
       ).toEqual([])
       expect(
-        objectiveSets(enabled, s).milestones.map((o) => o.objective.id),
+        objectiveSets(enabled, s)
+          .milestones.filter((o) => o.objective.source === 'printed')
+          .map((o) => o.objective.id),
       ).toEqual(projected.milestones.map((o) => o.objective.id))
       expect(objectiveAlternatives('milestone', 0, c, s)).toEqual([])
     },

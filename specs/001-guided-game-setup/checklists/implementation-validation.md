@@ -127,3 +127,12 @@ Node 24.22.1 and npm 11.9.0; committed lockfile installed with `npm ci --cache /
 | `git diff --check` | Pass. |
 
 The three a11y regressions were observed failing before T061's two focus corrections; workflow/reporting regressions likewise failed before T062's configuration changes. Existing matrix, lifetime and source-catalog behavior already satisfied the added assertions, so no artificial failing implementation was introduced. Earlier story-specific red/green evidence remains in the linked incremental validation records.
+
+
+- **T064 — complete MVP acceptance:** Fresh local locked installation, formatting, lint, strict types, catalog validation, all 253 domain/infrastructure/source-review checks, 46 Chromium journeys, gated production build and five smoke checks pass. Four new sourced-content tests compare the approved inventory/citations/quantities; no catalog correction or requirements expansion was required. The acceptance matrices above account individually for AC-01–39, SC-001–005 and SU-01–12. Human usability/assistive-technology review and PR approval remain explicitly unclaimed.
+
+## GitHub-hosted verification
+
+[Run 43288896358](https://github.com/jburkett/terraforming-mars-setup/actions/runs/43288896358), commit `886fa80`, passes all 253 domain/infrastructure/source checks, **138 browser journeys (46 each in Chromium, Firefox and WebKit)**, catalog-gated production build and all **5 production smoke tests**. Formatting, lint, strict types, catalog validation and report retention also pass. The same previously crashing Firefox summary scenario passes after replacing the bulk-text query with the equivalent locator assertion; all three engines and zero automatic retries remain enabled. Both browser/production HTML reports are retained in the run's seven-day artifact. Pages upload and deploy are correctly skipped on the PR; main-only guards are unchanged.
+
+The final follow-up commit closes the task status and records this successful run; it changes documentation only. Its own final-head CI status is linked from the draft PR before handoff. No new feature, post-MVP enhancement, requirement amendment, automatic merge or live deployment is included.

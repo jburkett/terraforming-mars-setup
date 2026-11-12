@@ -1,36 +1,12 @@
-import type { Catalogs } from '../../src/content/types'
-import type { ConfigurationAction } from '../../src/domain/configuration'
 import type {
   Configuration,
-  PendingEdit,
+  GameState,
   PublicSelections,
 } from '../../src/domain/types'
-export interface GameState {
-  readonly configuration: Configuration
-  readonly selections: PublicSelections
-}
-export interface EditPreview extends PendingEdit {
-  readonly previous: GameState
-}
-// Callable baselines demonstrate missing behavior without broken imports/tooling.
+import type { EditPreview } from '../../src/domain/edits'
 export { calculateInvalidation } from '../../src/domain/invalidation'
-export const previewEdit: (
-  configuration: Configuration,
-  selections: PublicSelections,
-  action: ConfigurationAction,
-  data?: Catalogs,
-) => EditPreview = (configuration, selections) => ({
-  configuration,
-  selections,
-  losses: [],
-  previous: { configuration, selections },
-})
-export const commitEdit: (
-  preview: EditPreview,
-  confirmed?: boolean,
-) => GameState | null = (preview) => preview.previous
-export const cancelEdit: (preview: EditPreview) => GameState = (preview) =>
-  preview.previous
+export { previewEdit, commitEdit, cancelEdit } from '../../src/domain/edits'
+// Callable Reset baselines remain intentionally red until T055.
 export const previewReset: (
   configuration: Configuration,
   selections: PublicSelections,

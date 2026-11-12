@@ -48,9 +48,11 @@ export interface LossDescription {
   readonly lockedIds: readonly string[]
   readonly reason: string
 }
-export interface PendingEdit {
+export interface GameState {
   readonly configuration: Configuration
   readonly selections: PublicSelections
+}
+export interface PendingEdit extends GameState {
   readonly losses: readonly LossDescription[]
 }
 export interface Session {

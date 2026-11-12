@@ -18,7 +18,7 @@ These settings are documented, not changed by this PR. No personal access token 
 
 ## Verification and deployment
 
-`.github/workflows/pages.yml` runs on pull requests targeting `main` and pushes to `main`, including merges. Its verification job installs locked dependencies, checks formatting/lint/types, runs the domain/infrastructure tests, builds through the catalog gate, runs the configuration browser journeys in Chromium, Firefox and WebKit, and smoke-tests the production preview with Chromium.
+`.github/workflows/pages.yml` runs on pull requests targeting `main` and pushes to `main`, including merges. Its verification job installs locked dependencies, checks formatting/lint/types, runs the domain/infrastructure tests, builds through the catalog gate, runs the complete MVP browser regressions in Chromium, Firefox and WebKit, and smoke-tests the production preview with Chromium.
 
 Only a successful `main` push run uploads `dist` and enters the dependent deployment job. That job uses the `github-pages` environment and the official Pages actions. PR verification has no Pages/OIDC write permissions and never deploys. Runs for a ref are serialized so deployments cannot race. Actions are pinned to immutable commit SHAs.
 
@@ -50,7 +50,7 @@ Where Playwright-managed browser downloads are unavailable but compatible Chromi
 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:smoke
 ```
 
-CI installs Playwright's own Chromium, Firefox and WebKit with system dependencies; it does not set that override. The regular three-engine browser configuration verifies the configuration journeys; the infrastructure smoke project uses Chromium only.
+CI installs Playwright's own Chromium, Firefox and WebKit with system dependencies; it does not set that override. The regular three-engine browser configuration verifies the complete MVP journeys; the infrastructure smoke project uses Chromium only.
 
 For manual inspection:
 
@@ -58,4 +58,14 @@ For manual inspection:
 npm run preview -- --host 127.0.0.1 --port 4173 --strictPort
 ```
 
-Open http://127.0.0.1:4173/terraforming-mars-setup/. The game-content configuration page is the expected result. You can choose content and variants and navigate to the setup placeholder; public selections and physical setup guidance remain unimplemented.
+Open http://127.0.0.1:4173/terraforming-mars-setup/. The game-content configuration page is the expected result. Choose content and variants, generate/customize public selections, follow sourced physical setup instructions and review the matching summary. Post-generation edits preview affected losses; Reset restores defaults after confirmation. Refresh starts a new in-memory session.
+
+## Retained verification evidence
+
+CI validates catalogs explicitly, runs the entire domain/configuration matrix and
+selects all three browser engines. Separate HTML reports for browser journeys
+and production smoke tests, plus available failure traces, are uploaded as
+`mvp-validation-<run>-<attempt>` artifacts for seven days even when verification
+fails. This artifact upload uses the verification job's existing privileges;
+Pages/OIDC write permissions remain confined to the dependent main-only deploy
+job. Failed verification still prevents Pages artifact publication/deployment.

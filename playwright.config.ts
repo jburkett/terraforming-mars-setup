@@ -1,10 +1,12 @@
 import { defineConfig, devices } from '@playwright/test'
 
-const baseURL = 'http://127.0.0.1:4173'
+const baseURL = 'http://127.0.0.1:4173/terraforming-mars-setup/'
 
 export default defineConfig({
   testDir: './tests/browser',
   testMatch: '**/*.spec.ts',
+  // Production-asset checks use playwright.smoke.config.ts and Vite preview.
+  testIgnore: '**/deployment.spec.ts',
   fullyParallel: true,
   forbidOnly: Boolean(process.env.CI),
   retries: 0,

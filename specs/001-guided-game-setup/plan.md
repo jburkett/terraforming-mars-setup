@@ -110,3 +110,11 @@ No violations identified. Vue 3 and the Composition API provide the requested co
 ## Completion and limits
 
 Phase 0/1 design artifacts approved by the user on 2026-11-12. No `.specify/extensions.yml` exists, so no before/after planning hooks are registered. No task list, source, executable tests or requirements changes were produced. Application correctness and rendered usability remain untested. The approved tentative all-visible layout and selective clearing remain tentative v1 decisions.
+
+## Deployment infrastructure — authorized 2026-11-12
+
+The user explicitly authorized an infrastructure story between Foundations and US1 to publish a minimal blank Vue application to GitHub Pages. Reuse the Vue/Vite architecture with a blank `App.vue` mounted by `src/main.ts`, without session state, configuration controls or US1 functionality. This infrastructure shell is reused and extended by the later US1 task; that task remains unstarted.
+
+Use the repository project base `/terraforming-mars-setup/`. The Pages workflow verifies pull requests and `main` pushes, builds through catalog validation and tests the production preview for HTTP 200, valid compiled asset URLs and actual blank Vue mounting. Only a successful `main` push verification run uploads/deploys the static artifact. Pages/OIDC write permissions belong only to the dependent deployment job. This authorizes the deployment pipeline requested by the user, not product functionality or automatic merging.
+
+The one-time repository/environment settings and local commands are documented in [GitHub Pages deployment](../../docs/github-pages.md). The workflow and local preview tests do not by themselves establish that the live site has been deployed. Product requirements and Vue-independent domain logic remain unchanged.

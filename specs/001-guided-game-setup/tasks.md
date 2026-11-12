@@ -4,17 +4,17 @@
 
 **Input:** [spec.md](spec.md), [plan.md](plan.md), [research.md](research.md), [data-model.md](data-model.md), [contracts/ui.md](contracts/ui.md), [quickstart.md](quickstart.md), [rules-reference.md](rules-reference.md), constitution v1.0.0.
 
-**Status:** T001–T021 completed under the user's explicit setup/foundations authorizations. T022–T064 remain unstarted. Foundations were implemented test-first on 2026-11-12 from latest fetched `origin/main` at `0044246`: static JSON catalogs, TypeScript schemas, validation/loading, plain domain types, context rules, random primitives and the validate-before-Vite build gate. See [foundation verification](checklists/foundations-validation.md) for red/green evidence and limits. No configuration actions, Vue session/views, story-level selection workflow or later task was implemented. Requirements and technical architecture remain unchanged.
+**Status:** T001–T021 were completed in the setup/foundations work. The user-authorized deployment infrastructure story T065–T072 is completed on 2026-11-12 from latest fetched `origin/main` at `4b6856d`. See [foundation verification](checklists/foundations-validation.md) and [deployment verification](checklists/deployment-validation.md) for test-first evidence and limits. T022–T064 remain unstarted. The application is a blank Vue shell; there are no configuration controls, session/actions or other US1 functionality. Product requirements and domain behavior are unchanged.
 
 **Generation baseline:** This task list was generated from `origin/main` at `f9cf968` using the approved specification and technical plan; project setup starts from `f25ebec`, which includes the merged task artifact. Earlier phase scope statements are historical and do not authorize later tasks.
 
 **Tests:** Required by constitution III and the approved plan, overriding the template's optional-test wording. For every behavior, write the relevant tests first, run them and establish failure for the missing behavior before the corresponding implementation; then establish success. A syntax/tooling failure alone does not prove the required behavior is missing. Task descriptions below describe future test work, not generated tests or claimed results.
 
-**Organization:** Setup → shared foundations → US1/US2/US3 (P1) → US4 (P2) → cross-cutting validation. Story priorities are the specification's advisory labels, not authority to omit lower-priority approved requirements. Paths are relative to repository root; paths not yet present are future deliverables.
+**Organization:** Setup → shared foundations → deployment infrastructure → US1/US2/US3 (P1) → US4 (P2) → cross-cutting validation. Story priorities are the specification's advisory labels, not authority to omit lower-priority approved requirements. Paths are relative to repository root; paths not yet present are future deliverables.
 
 ## Format and execution rules
 
-Every task uses `- [ ] Tnnn [P?] [USn?] Description with exact file paths`. IDs are sequential; checked boxes denote verified completed work and unchecked boxes denote remaining work. `[P]` means the task can run alongside other marked tasks in its stated group once prerequisites are complete; it never bypasses a dependency or test-first gate. Story labels occur only in story phases. Tasks that touch the same file must be sequenced.
+Every task uses `- [ ] Tnnn [P?] [USn?] Description with exact file paths`. IDs are stable identifiers; follow phase/dependency order rather than numeric order. Infrastructure additions use T065–T072 so existing story references are not renumbered. Checked boxes denote verified completed work and unchecked boxes denote remaining work. `[P]` means the task can run alongside other marked tasks in its stated group once prerequisites are complete; it never bypasses a dependency or test-first gate. Story labels occur only in story phases; the infrastructure story uses `[INFRA]`. Tasks that touch the same file must be sequenced.
 
 Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code free of Vue imports and expose plain-data inputs/outputs. Keep mutable configuration/results separate from read-only catalogs. No Pinia or Vue Router without a concrete requirement and review of the resulting architectural change. No backend, database, persistence, WGT setting/guidance, longer Venus option, digital cards, individual-card inventory/filtering, gameplay execution, progress tracking, accounts, exports or sharing.
 
@@ -53,7 +53,28 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 **Checkpoint:** All catalog schemas/data and foundation behavior are verified against the approved evidence; semantic source review supplements structural validation. Vue-independent primitives and domain types are available. No story is considered done merely because its data exists.
 
-## Phase 3: User Story 1 — Configure the physical game (P1)
+## Phase 3: Infrastructure story — Deploy the minimal application to GitHub Pages
+
+**Authorization:** The user requested this infrastructure story and its implementation on 2026-11-12, after Foundations and before US1. This authorizes a blank runnable Vue shell and a merge-to-main deployment pipeline, without configuration/gameplay functionality.
+
+**Goal:** After a verified merge/push to `main`, publish the blank Vue application at `https://jburkett.github.io/terraforming-mars-setup/`. Pull requests run verification and build/smoke checks only; they cannot deploy.
+
+**Independent acceptance:** INFRA-01: Vue mounts a blank page with no US1 controls or runtime errors. INFRA-02: built module URLs use `/terraforming-mars-setup/`. INFRA-03: the production preview page and compiled JavaScript return HTTP 200, with JavaScript content type. INFRA-04: Pages deploys only from a successful verification job on a `main` push; PR jobs have read-only repository permissions. INFRA-05: the one-time Pages/environment settings and local verification commands are documented.
+
+### Required tests first, then implementation
+
+- [x] T065 [INFRA] Establish failing build-prefix and blank-shell tests in `tests/domain/deployment.spec.ts` and `tests/browser/deployment.spec.ts`; an empty HTML response must not count as a mounted Vue application (INFRA-01–03).
+- [x] T066 [INFRA] Mount the smallest blank Vue shell in `src/main.ts`, `src/App.vue` and `index.html`, with the SFC import boundary in `src/vue.d.ts`; expose no state, configuration controls, router, persistence or US1 behavior (INFRA-01).
+- [x] T067 [INFRA] Set Vite's repository base to `/terraforming-mars-setup/` in `vite.config.ts`, add `preview` in `package.json`, and adapt isolated build fixtures in `tests/domain/build-gate.spec.ts` to include the minimal shell without weakening catalog gating (INFRA-02).
+- [x] T068 [INFRA] Configure `playwright.smoke.config.ts`, the shared base URL in `playwright.config.ts` and `test:smoke` in `package.json` to test the production preview; verify HTTP 200 for HTML/compiled assets and actual blank Vue mounting (INFRA-01–03).
+- [x] T069 [INFRA] Establish failing workflow-policy tests in `tests/domain/pages-workflow.spec.ts` for verification gates, main-push-only deployment, least-privilege job permissions and official pinned actions; use the development-only YAML parser in `package.json`/`package-lock.json` to check real workflow structure (INFRA-04).
+- [x] T070 [INFRA] Add `.github/workflows/pages.yml` to verify PRs/main pushes, build through catalog validation, smoke-test the production artifact and upload/deploy only after successful verification on `main`; scope Pages/OIDC write permissions to the deployment job (INFRA-04).
+- [x] T071 [INFRA] Document one-time GitHub Pages Source=GitHub Actions, environment branch/protection settings, project URL and local run/smoke commands in `docs/github-pages.md` and `README.md`; describe deployment infrastructure in `specs/001-guided-game-setup/plan.md` without changing product requirements (INFRA-05).
+- [x] T072 [INFRA] Run formatting, lint, types, all domain/infrastructure tests, the gated production build and HTTP/browser smoke checks; record red/green results and hosting limits in `specs/001-guided-game-setup/checklists/deployment-validation.md`, leaving T022–T064 unchecked.
+
+**Checkpoint:** The application is a blank Vue shell, not US1. The workflow publishes only after this work is merged to `main` and the documented repository settings are applied. No live deployment is claimed by local smoke tests or PR creation.
+
+## Phase 4: User Story 1 — Configure the physical game (P1)
 
 **Goal:** Configure player count, content, boards and variants across the first two views while retaining live choices.
 
@@ -70,11 +91,11 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 - [ ] T025 [US1] Establish the application-lifetime Composition API owner in `src/composables/useGameSession.ts` with initial configuration, current view and explicit action boundaries; pass plain values to domain functions, keep catalogs read-only/separate and retain the same session across view remounts, without Pinia, router or persistence.
 - [ ] T026 [US1] Build `src/ui/ExpansionsView.vue` with labeled N/content controls, top select-all/none, Use expanded boards and all seven board checkboxes, fallback/inactive presentation and the P2 dependency explanation; invoke the shared session actions rather than embedding domain rules in components.
 - [ ] T027 [US1] Build `src/ui/VariantsView.vue` with only Extended Start/research drafting, page-local bulk controls, Back and Continue; both toggles remain available without expansions and leave unrelated state intact.
-- [ ] T028 [US1] Connect `src/App.vue` and `src/main.ts` to Vue/Vite, create one shared session above the three view boundaries and semantic navigation, and satisfy T023; do not treat setup rendering/mounting as permission to draw selections or introduce URL routing.
+- [ ] T028 [US1] Extend the existing blank infrastructure shell in `src/App.vue` and `src/main.ts`, create one shared session above the three view boundaries and semantic navigation, and satisfy T023; do not treat setup rendering/mounting as permission to draw selections or introduce URL routing.
 
 **Checkpoint:** US1 can be demonstrated with configuration journeys alone. This is a development increment, not a complete approved product or permission to deploy.
 
-## Phase 4: User Story 2 — Receive and customize public selections (P1)
+## Phase 5: User Story 2 — Receive and customize public selections (P1)
 
 **Goal:** Generate only eligible public results on first setup entry, retain them across unchanged visits and offer bounded manual choices/rerolls.
 
@@ -100,7 +121,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 **Checkpoint:** US2 works against explicit configurations and live unchanged navigation. Board-dependent selection is reconciled before commit; other post-generation configuration-edit behavior remains an explicit US4 dependency for integrated delivery.
 
-## Phase 5: User Story 3 — Prepare the table and review configuration (P1)
+## Phase 6: User Story 3 — Prepare the table and review configuration (P1)
 
 **Goal:** Show all applicable physical setup instructions in order and an exact summary of the committed configuration/results.
 
@@ -123,7 +144,7 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 **Checkpoint:** With supplied state, SU coverage and summary correctness can be validated without random selection. Live end-to-end guidance still requires integrated US1/US2 and US4 edit semantics.
 
-## Phase 6: User Story 4 — Change configuration without losing unrelated choices (P2)
+## Phase 7: User Story 4 — Change configuration without losing unrelated choices (P2)
 
 **Goal:** Confirm affected state loss, preserve unrelated results/locks, cancel atomically and deliberately reset to defaults. Preserve the approved tentative v1 policy rather than redesigning it.
 
@@ -146,14 +167,14 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 **Checkpoint:** All four stories can now be integrated without violating configuration-edit safety. Confirmed MA removal clears MA Pioneer, while printed Utopia Pioneer remains under R1; no colony locks are assumed.
 
-## Phase 7: Polish and cross-cutting concerns
+## Phase 8: Polish and cross-cutting concerns
 
 **Purpose:** Verify the complete approved scope and quality gates; do not add speculative features or performance targets. T059 and T060 can run together after all four story phases; any behavioral defect found must first gain a failing regression case before a correction.
 
 - [ ] T059 [P] Add and execute deterministic cross-configuration/invariant coverage in `tests/domain/configuration-matrix.spec.ts` for all supported player counts/maps/content/variant combinations, source precedence, eligible counts, all disabled printed prerequisites, missing-only generation and transition/lock boundaries; prove SC-001–SC-005 without claiming every possible random history or individual-card coverage.
 - [ ] T060 [P] Add and execute end-to-end scope/lifetime regressions in `tests/browser/scope-and-lifetime.spec.ts` for shared Vue state across view remounts, unchanged-navigation randomness, no catalog mutation, no storage-based recovery, scope exclusions after select-all/Reset/Venus toggling and summary consistency; no private inventories, WGT, longer Venus or progress/gameplay controls (AC-37–39).
 - [ ] T061 Review the rendered three-view experience against `specs/001-guided-game-setup/contracts/ui.md` and adjust `src/ui/styles.css` and relevant Vue components for labeled keyboard-operable controls, gridless objective tables and readable all-visible instructions; record busyness/selective-clearing findings in `specs/001-guided-game-setup/checklists/implementation-validation.md` and seek human direction before substantive requirement/architecture changes.
-- [ ] T062 Add continuous verification in `.github/workflows/verify.yml` running the locked install, formatting, lint, Vue/TypeScript checking, domain tests, browser journeys and catalog-gated build; fail on invalid catalogs and relevant test failures, with no deployment workflow or new service.
+- [ ] T062 Extend verification in `.github/workflows/pages.yml` running the locked install, formatting, lint, Vue/TypeScript checking, domain tests, browser journeys and catalog-gated build; fail on invalid catalogs and relevant test failures, while preserving the existing main-only Pages deployment guard and adding no new service.
 - [ ] T063 Update actual installation/run/verification guidance in `README.md` and `specs/001-guided-game-setup/quickstart.md` to match implemented scripts and pinned runtime, keeping exclusions and physical setup boundaries intact; do not present planned commands or unrun checks as measured application results.
 - [ ] T064 Execute the complete quickstart verification and sourced-content review, recording commands/results, SU-01–SU-12 coverage, AC-01–39/SC-001–SC-005 outcomes and any human usability-review findings in `specs/001-guided-game-setup/checklists/implementation-validation.md`; resolve failures through test-first corrections and leave merge/deployment decisions to their separately authorized workflow.
 
@@ -163,6 +184,8 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 Setup T001–T004
        ↓
 Foundations T005–T021
+       ↓
+Deployment infrastructure T065–T072
        ↓
 US1 configuration T022–T028
        ↓
@@ -175,7 +198,7 @@ US4 safe edits/Reset T050–T058
 Cross-cutting validation T059–T064
 ```
 
-This is the recommended integration order, not a claim that story domain tests require preceding UI implementations. Within foundations: T005→T006; T007→T008; T009 precedes catalog population; T010/T011/T012/T013→T014; T015→T016→T017; T018→T019; T020 precedes T021, which requires T008 and completed catalogs. All foundation work completes before story implementation.
+This is the recommended integration order, not a claim that story domain tests require preceding UI implementations. Within foundations: T005→T006; T007→T008; T009 precedes catalog population; T010/T011/T012/T013→T014; T015→T016→T017; T018→T019; T020 precedes T021, which requires T008 and completed catalogs. All foundation work completes before story implementation. Deployment infrastructure follows Foundations and precedes US1; existing user-story IDs remain unchanged.
 
 Within each story, the test group precedes its relevant implementation, with recorded missing-behavior failures. US1 configuration actions precede its composable/views/shell. US2 generation/projections/customization precede reactive integration and conflict rendering; direct board preview depends on source/eligibility projections. US3 context precedes ordered projection and views. US4 affected-state calculations precede transactional edits, session integration and confirmation UI. T062 follows completed tooling/application behavior; T064 follows all other final checks and documentation alignment.
 
@@ -216,8 +239,10 @@ SC-001 maps to T009/T013/T041/T043–T045/T047/T059/T064; SC-002 to T016–T019/
 ## Implementation strategy and review gate
 
 1. Review this task artifact before separately authorizing implementation. Its generated checkboxes do not confer that authorization.
-2. After authorization, complete setup/foundations and US1 as the smallest configuration demonstration. Validate US1 independently; it is not a complete setup assistant or approved deployment scope.
+2. After authorization, complete setup/foundations and deployment infrastructure, then US1 as the smallest configuration demonstration. Validate US1 independently; it is not a complete setup assistant or approved deployment scope.
 3. Add US2 selections, US3 physical guidance/summary and US4 selective edits in the recommended integration order, maintaining test-first failure/success evidence per behavior. Do not expose partially implemented destructive edits as completed functionality.
 4. Run cross-cutting verification and human rendered review before proposing the finished feature for merge. Do not infer deployment/merge permission from task completion or from earlier documentation approvals.
 
 **Generation checks (initial task generation):** 64 sequential tasks; US1 7, US2 12, US3 9, US4 9; setup 4, foundations 17, cross-cutting 6. All tasks use unchecked checklist IDs, story labels where required and concrete file paths. No `.specify/extensions.yml` exists, so no before/after task-generation hooks are registered. This artifact records intended future work, not application test results.
+
+**Current infrastructure addition:** 72 tasks total: the original 64 plus T065–T072. Execute the new infrastructure phase before US1 despite its higher numeric IDs. T022–T064 remain unstarted; the blank entry point is an infrastructure prerequisite reused by T028, not completion of that user-story task.

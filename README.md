@@ -23,10 +23,11 @@ with a dollar prefix, such as `$speckit-constitution`. Shared templates,
 Bash helpers, workflow metadata, and an unfilled constitution template live in
 `.specify/`.
 
-## Minimal application and GitHub Pages
+## Game configuration and GitHub Pages
 
-The current application is a blank Vue shell. Configuration and setup-assistant
-views are not implemented yet. Use the Node 24 LTS version in `.nvmrc`:
+US1 configures player count, expansions, eligible boards and variants. Choices
+remain in memory across Back/Continue navigation. The setup destination is a
+placeholder; public selections and physical setup guidance are not implemented. Use the Node 24 LTS version in `.nvmrc`:
 
 ```sh
 npm ci

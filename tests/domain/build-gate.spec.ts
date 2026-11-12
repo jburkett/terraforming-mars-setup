@@ -6,6 +6,7 @@ import {
   existsSync,
   rmSync,
   copyFileSync,
+  cpSync,
   symlinkSync,
 } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -30,14 +31,11 @@ function workspace() {
     'package.json',
     'index.html',
     'vite.config.ts',
-    'src/main.ts',
-    'src/App.vue',
     'scripts/build.ts',
     'scripts/validate-catalogs.ts',
-    'src/content/types.ts',
-    'src/content/validation.ts',
   ])
     copyFileSync(resolve(path), join(root, path))
+  cpSync(resolve('src'), join(root, 'src'), { recursive: true })
   symlinkSync(resolve('node_modules'), join(root, 'node_modules'), 'dir')
   for (const [name, data] of Object.entries(catalogs))
     writeFileSync(join(input, `${name}.json`), JSON.stringify(data))

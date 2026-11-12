@@ -1,6 +1,6 @@
 # Implementation Plan: Guided Game Setup
 
-**Git branch:** `feature/001-guided-game-setup` | **Spec Kit feature:** `001-guided-game-setup` | **Date:** 2026-11-11
+**Spec Kit feature:** `001-guided-game-setup` | **Date:** 2026-11-11
 
 **Input:** [approved spec](spec.md), [rules evidence](rules-reference.md), constitution v1.0.0.
 
@@ -12,7 +12,7 @@ Provide three browser views for configuring a physical 2–5-player game, custom
 
 ## Feature context
 
-The existing feature is `001-guided-game-setup`, with approved requirements in [spec.md](spec.md) and an 18/18 requirements checklist. Spec Kit selects `specs/001-guided-game-setup` through ignored local `.specify/feature.json`; the Git branch is `feature/001-guided-game-setup`.
+The existing feature is `001-guided-game-setup`, with approved requirements in [spec.md](spec.md) and an 18/18 requirements checklist. Spec Kit selects `specs/001-guided-game-setup` through ignored local `.specify/feature.json`.
 
 This revision incorporates the user's requested architectural direction. The revised technical plan as a whole remains subject to explicit human approval; task generation, tests and implementation are outside this revision's scope.
 

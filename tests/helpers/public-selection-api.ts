@@ -1,44 +1,12 @@
 import { catalogs } from '../../src/content/catalogs'
 import { isEligibleObjective } from '../../src/domain/context'
-import type {
-  Catalogs,
-  ObjectiveDefinition,
-  Five,
-} from '../../src/content/types'
+import type { ObjectiveDefinition, Five } from '../../src/content/types'
 import type {
   Configuration,
   PublicSelections,
-  SelectionConflict,
   ObjectiveRow,
 } from '../../src/domain/types'
-import type { Uint32Source } from '../../src/domain/random'
-import type { ObjectiveContext } from '../../src/domain/context'
 
-export type Result =
-  | { ok: true; selections: PublicSelections }
-  | { ok: false; conflict: SelectionConflict }
-export type Action =
-  | { type: 'set-first-player'; value: number }
-  | { type: 'reroll-first-player' }
-  | { type: 'set-colony'; row: number; id: string }
-  | { type: 'reroll-colonies' }
-  | {
-      type: 'set-objective'
-      kind: 'milestone' | 'award'
-      row: number
-      id: string
-    }
-  | {
-      type: 'set-lock'
-      kind: 'milestone' | 'award'
-      row: number
-      locked: boolean
-    }
-  | { type: 'reroll-objectives'; kind: 'milestone' | 'award' }
-export interface ObjectiveSets {
-  milestones: readonly ObjectiveContext[]
-  awards: readonly ObjectiveContext[]
-}
 export const empty = (): PublicSelections => ({
   board: null,
   firstPlayer: null,
@@ -81,24 +49,8 @@ export function seeded(config: Configuration): PublicSelections {
       : null,
   }
 }
-// Intentional red-test seams return no generated values or changes. Once each
-// implementation exists the helper calls it; no import/tooling failures are used.
 export { generateMissingSelections } from '../../src/domain/selections'
-const customization = import.meta.glob<{
-  customizeSelections: (
-    c: Configuration,
-    s: PublicSelections,
-    a: Action,
-    r: Uint32Source,
-    d?: Catalogs,
-  ) => Result
-}>('../../src/domain/customization.ts', { eager: true })
-export const customizeSelections =
-  Object.values(customization)[0]?.customizeSelections ??
-  ((_c: Configuration, selections: PublicSelections): Result => ({
-    ok: true,
-    selections,
-  }))
+export { customizeSelections } from '../../src/domain/customization'
 export {
   objectiveSets,
   objectiveAlternatives,

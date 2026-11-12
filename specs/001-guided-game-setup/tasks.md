@@ -4,7 +4,9 @@
 
 **Input:** [spec.md](spec.md), [plan.md](plan.md), [research.md](research.md), [data-model.md](data-model.md), [contracts/ui.md](contracts/ui.md), [quickstart.md](quickstart.md), [rules-reference.md](rules-reference.md), constitution v1.0.0.
 
-**Status:** T001–T021 were completed in the setup/foundations work. The user-authorized deployment infrastructure story T065–T072 is completed on 2026-11-12 from latest fetched `origin/main` at `4b6856d`. See [foundation verification](checklists/foundations-validation.md) and [deployment verification](checklists/deployment-validation.md) for test-first evidence and limits. T022–T064 remain unstarted. The application is a blank Vue shell; there are no configuration controls, session/actions or other US1 functionality. Product requirements and domain behavior are unchanged.
+**Status:** T001–T028 and infrastructure tasks T065–T072 are complete under the user’s separate setup, foundations, deployment and US1 authorizations. T029–T064 remain unstarted. US1 provides configuration, shared in-memory view ownership and navigation to a setup placeholder; no public results, physical setup instructions, summary or Reset workflow are generated. See [US1 verification](checklists/configuration-validation.md) for task-level red/green evidence and [foundation verification](checklists/foundations-validation.md)/[deployment verification](checklists/deployment-validation.md) for earlier phase records. Existing product requirements and architecture remain unchanged.
+
+**US1 commit history:** T022 and T023 are preserved as intentional red-test commits. Each implementation task T024–T028 has a separate commit with passing relevant checks. The final tree resolves the intentional failures.
 
 **Generation baseline:** This task list was generated from `origin/main` at `f9cf968` using the approved specification and technical plan; project setup starts from `f25ebec`, which includes the merged task artifact. Earlier phase scope statements are historical and do not authorize later tasks.
 
@@ -82,16 +84,16 @@ Use Vue 3, strict TypeScript, Vite and the Composition API. Keep domain code fre
 
 ### Required tests first
 
-- [ ] T022 [P] [US1] Write and establish failing configuration behavior cases in `tests/domain/configuration.spec.ts` for AC-01–06, D1/D2, P2→Prelude normalization including atomic bulk-none, all-seven board defaults/fallback, variant independence and exclusion of WGT/longer Venus.
-- [ ] T023 [P] [US1] Write and establish failing labeled-control/navigation journeys in `tests/browser/configuration.spec.ts` for top-of-page bulk controls, N preservation, visible P2 dependency reason, unchecked/disabled boards, variants→expansions Back retention and Continue to setup (AC-01–06, AC-37, AC-39).
+- [x] T022 [P] [US1] Write and establish failing configuration behavior cases in `tests/domain/configuration.spec.ts` for AC-01–06, D1/D2, P2→Prelude normalization including atomic bulk-none, all-seven board defaults/fallback, variant independence and exclusion of WGT/longer Venus.
+- [x] T023 [P] [US1] Write and establish failing labeled-control/navigation journeys in `tests/browser/configuration.spec.ts` for top-of-page bulk controls, N preservation, visible P2 dependency reason, unchecked/disabled boards, variants→expansions Back retention and Continue to setup (AC-01–06, AC-37, AC-39).
 
 ### Implementation after the relevant failure evidence
 
-- [ ] T024 [US1] Implement defaults and pure configuration normalization/actions in `src/domain/configuration.ts`; quote and enforce the board constraint “Removing the last candidate restores off/Tharsis fallback” and preserve N on page-local bulk actions; normalize P2/Prelude bulk changes atomically without variant controls enabling expansions.
-- [ ] T025 [US1] Establish the application-lifetime Composition API owner in `src/composables/useGameSession.ts` with initial configuration, current view and explicit action boundaries; pass plain values to domain functions, keep catalogs read-only/separate and retain the same session across view remounts, without Pinia, router or persistence.
-- [ ] T026 [US1] Build `src/ui/ExpansionsView.vue` with labeled N/content controls, top select-all/none, Use expanded boards and all seven board checkboxes, fallback/inactive presentation and the P2 dependency explanation; invoke the shared session actions rather than embedding domain rules in components.
-- [ ] T027 [US1] Build `src/ui/VariantsView.vue` with only Extended Start/research drafting, page-local bulk controls, Back and Continue; both toggles remain available without expansions and leave unrelated state intact.
-- [ ] T028 [US1] Extend the existing blank infrastructure shell in `src/App.vue` and `src/main.ts`, create one shared session above the three view boundaries and semantic navigation, and satisfy T023; do not treat setup rendering/mounting as permission to draw selections or introduce URL routing.
+- [x] T024 [US1] Implement defaults and pure configuration normalization/actions in `src/domain/configuration.ts`; quote and enforce the board constraint “Removing the last candidate restores off/Tharsis fallback” and preserve N on page-local bulk actions; normalize P2/Prelude bulk changes atomically without variant controls enabling expansions.
+- [x] T025 [US1] Establish the application-lifetime Composition API owner in `src/composables/useGameSession.ts` with initial configuration, current view and explicit action boundaries; pass plain values to domain functions, keep catalogs read-only/separate and retain the same session across view remounts, without Pinia, router or persistence.
+- [x] T026 [US1] Build `src/ui/ExpansionsView.vue` with labeled N/content controls, top select-all/none, Use expanded boards and all seven board checkboxes, fallback/inactive presentation and the P2 dependency explanation; invoke the shared session actions rather than embedding domain rules in components.
+- [x] T027 [US1] Build `src/ui/VariantsView.vue` with only Extended Start/research drafting, page-local bulk controls, Back and Continue; both toggles remain available without expansions and leave unrelated state intact.
+- [x] T028 [US1] Extend the existing blank infrastructure shell in `src/App.vue` and `src/main.ts`, create one shared session above the three view boundaries and semantic navigation, and satisfy T023; do not treat setup rendering/mounting as permission to draw selections or introduce URL routing.
 
 **Checkpoint:** US1 can be demonstrated with configuration journeys alone. This is a development increment, not a complete approved product or permission to deploy.
 
@@ -245,4 +247,4 @@ SC-001 maps to T009/T013/T041/T043–T045/T047/T059/T064; SC-002 to T016–T019/
 
 **Generation checks (initial task generation):** 64 sequential tasks; US1 7, US2 12, US3 9, US4 9; setup 4, foundations 17, cross-cutting 6. All tasks use unchecked checklist IDs, story labels where required and concrete file paths. No `.specify/extensions.yml` exists, so no before/after task-generation hooks are registered. This artifact records intended future work, not application test results.
 
-**Current infrastructure addition:** 72 tasks total: the original 64 plus T065–T072. Execute the new infrastructure phase before US1 despite its higher numeric IDs. T022–T064 remain unstarted; the blank entry point is an infrastructure prerequisite reused by T028, not completion of that user-story task.
+**Current infrastructure addition:** 72 tasks total: the original 64 plus T065–T072. Execute the new infrastructure phase before US1 despite its higher numeric IDs. T029–T064 remain unstarted. The blank infrastructure entry point has now been extended by T028 for US1 configuration navigation only.

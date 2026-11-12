@@ -1,6 +1,6 @@
 # GitHub Pages deployment
 
-The site is a blank Vue 3 application at:
+The Vue 3 configuration application is served at:
 
 https://jburkett.github.io/terraforming-mars-setup/
 
@@ -18,11 +18,11 @@ These settings are documented, not changed by this PR. No personal access token 
 
 ## Verification and deployment
 
-`.github/workflows/pages.yml` runs on pull requests targeting `main` and pushes to `main`, including merges. Its verification job installs locked dependencies, checks formatting/lint/types, runs the domain/infrastructure tests, builds through the catalog gate, and smoke-tests the production preview with Chromium.
+`.github/workflows/pages.yml` runs on pull requests targeting `main` and pushes to `main`, including merges. Its verification job installs locked dependencies, checks formatting/lint/types, runs the domain/infrastructure tests, builds through the catalog gate, runs the configuration browser journeys in Chromium, Firefox and WebKit, and smoke-tests the production preview with Chromium.
 
 Only a successful `main` push run uploads `dist` and enters the dependent deployment job. That job uses the `github-pages` environment and the official Pages actions. PR verification has no Pages/OIDC write permissions and never deploys. Runs for a ref are serialized so deployments cannot race. Actions are pinned to immutable commit SHAs.
 
-After merging, inspect **Actions → GitHub Pages**. If environment approval is required, approve that deployment, then follow the deployment URL in the run/environment. Verify that the project URL returns HTTP 200 and shows a blank page. The local smoke test proves the production artifact is served correctly; only a successful GitHub deployment verifies hosting settings and the live URL.
+After merging, inspect **Actions → GitHub Pages**. If environment approval is required, approve that deployment, then follow the deployment URL in the run/environment. Verify that the project URL returns HTTP 200 and shows the game-content configuration page. The local smoke test proves the production artifact is served correctly; only a successful GitHub deployment verifies hosting settings and the live URL.
 
 If deployment fails because Pages is not enabled or an environment rule excludes `main`, fix the one-time setting and rerun the failed workflow job. Keep **Source: GitHub Actions** and the `/terraforming-mars-setup/` base path aligned. A repository rename or custom-domain change would require reviewing that base path and its tests.
 
@@ -37,19 +37,20 @@ npm run lint
 npm run typecheck
 npm run test -- --run
 npm run build
-npx playwright install chromium
+npx playwright install chromium firefox webkit
+npm run test:e2e
 npm run test:smoke
 ```
 
-`build` always validates the real `src/content/` catalogs before Vite emits assets. `test:smoke` expects an existing build, starts its own strict-port preview server on port 4173, verifies HTTP 200 and JavaScript asset content types, and checks that Vue mounts a blank page without controls or runtime errors. Stop any other process using that port first.
+`build` always validates the real `src/content/` catalogs before Vite emits assets. `test:smoke` expects an existing build, starts its own strict-port preview server on port 4173, verifies HTTP 200 and JavaScript asset content types, and checks that Vue mounts the configuration entry with its expected defaults and no runtime errors. Stop any other process using that port first.
 
-Where Playwright-managed browser downloads are unavailable but compatible Chromium is installed, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to its absolute path for the smoke command. For example, in the prepared Linux environment:
+Where Playwright-managed browser downloads are unavailable but compatible Chromium is installed, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to its absolute path for the smoke command or a Chromium-only `test:e2e` run. For example, in the prepared Linux environment:
 
 ```sh
 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:smoke
 ```
 
-CI installs Playwright's own Chromium with system dependencies; it does not set that override. The regular three-engine browser configuration remains available for later stories; the infrastructure smoke project uses Chromium only.
+CI installs Playwright's own Chromium, Firefox and WebKit with system dependencies; it does not set that override. The regular three-engine browser configuration verifies the configuration journeys; the infrastructure smoke project uses Chromium only.
 
 For manual inspection:
 
@@ -57,4 +58,4 @@ For manual inspection:
 npm run preview -- --host 127.0.0.1 --port 4173 --strictPort
 ```
 
-Open http://127.0.0.1:4173/terraforming-mars-setup/. A blank page is the expected result; player configuration, content controls and setup guidance are not implemented by this infrastructure story.
+Open http://127.0.0.1:4173/terraforming-mars-setup/. The game-content configuration page is the expected result. You can choose content and variants and navigate to the setup placeholder; public selections and physical setup guidance remain unimplemented.

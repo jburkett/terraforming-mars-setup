@@ -34,11 +34,13 @@ jobs:
         run: npm run typecheck
       - name: Run domain and infrastructure tests
         run: npm run test -- --run
+      - name: Install browser-test engines
+        run: npx playwright install --with-deps chromium firefox webkit
+      - name: Run configuration browser journeys
+        run: npm run test:e2e
       - name: Validate catalogs and build
         run: npm run build
-      - name: Install smoke-test browser
-        run: npx playwright install --with-deps chromium
-      - name: Check production HTTP and blank Vue shell
+      - name: Check production HTTP and Vue entry
         run: npm run test:smoke
       - name: Upload verified Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

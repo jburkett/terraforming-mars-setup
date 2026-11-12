@@ -19,7 +19,7 @@ test('production Pages URL and its compiled module return HTTP 200', async ({
   }
 })
 
-test('Vue mounts a blank page without US1 controls or runtime errors', async ({
+test('Vue mounts game configuration without runtime errors', async ({
   page,
 }) => {
   const errors: string[] = []
@@ -28,8 +28,10 @@ test('Vue mounts a blank page without US1 controls or runtime errors', async ({
   expect(response?.status()).toBe(200)
   await expect(page).toHaveTitle('Terraforming Mars Setup')
   await expect(page.locator('#app')).toHaveAttribute('data-v-app', '')
-  await expect(page.getByRole('main')).toBeEmpty()
-  await expect(page.locator('body')).toHaveText('')
-  await expect(page.locator('input, button, select, textarea')).toHaveCount(0)
+  await expect(
+    page.getByRole('heading', { name: 'Choose game content' }),
+  ).toBeVisible()
+  await expect(page.getByLabel('Player count')).toHaveValue('2')
+  await expect(page.getByLabel('Use expanded boards')).toBeChecked()
   expect(errors).toEqual([])
 })
